@@ -49,7 +49,7 @@
 </div>
 
 <!-- Menu Mobile -->
-<div id="Menu"class="fixed top-0 left-0 h-full max-w-0 overflow-hidden w-1/2 bg-gradient-to-r from-[#7ed957]/0 to-[#007e50] z-1 rounded-r-lg flex flex-col items-center justify-center transition-all duration-300">
+<div id="Menu"class="lg:hidden fixed top-0 left-0 h-full max-w-0 overflow-hidden w-1/2 bg-gradient-to-r from-[#7ed957]/0 to-[#007e50] z-1 rounded-r-lg flex flex-col items-center justify-center transition-all duration-300">
     <div class="overflow-y-scroll h-screen scrollbar-hide backdrop-blur-[5px] flex flex-col items-center justify-start  py-30 gap-10">
         <div class="flex flex-col gap-5 items-center">
             <h1 class="text-3xl text-white text-center font-bold">Tutorias do Aplicativo</h1>
