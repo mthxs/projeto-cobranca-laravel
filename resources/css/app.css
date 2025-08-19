@@ -10,6 +10,47 @@
         'Segoe UI Symbol', 'Noto Color Emoji';
     --color-grey-blue: #47415d;
     --color-primary: #0693e3;
+    --scroll-bar:   
+}
+html {
+  scroll-behavior: smooth;
+}
+.highlight {
+  outline: 2px solid #00c896;
+  transition: outline 0.3s ease;
+}
+.highlight-remove {
+  box-shadow: none;
+  transition: box-shadow 0.3s ease;
 }
 
+.scrollbar-nav {
+  overflow: auto;
 
+  /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: #26201E transparent;
+
+  /* Internet Explorer 10+ */
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+/* WebKit (Chrome, Safari, Edge) */
+.scrollbar-nav::-webkit-scrollbar {
+  width: 6px;
+  height: 3px;
+}
+
+.scrollbar-nav::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-nav::-webkit-scrollbar-thumb {
+  background-color: #00c896;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.scrollbar-nav::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}

@@ -11,9 +11,9 @@
 <script src="https://unpkg.com/@heroicons/vue@2.0.16/24/solid/star.js"></script>
 
 <!-- Navbar/Menu -->
-<div class="bg-gradient-to-r from-[#7ed957]/0 to-[#007e50] w-40 h-screen fixed rounded-r-lg hidden lg:flex flex-col items-center justify-center">
-    <div class="fixed top-0 items-start ">
-        <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 852 150" width="120" height="60">
+<div class="bg-gradient-to-r from-[#7ed957]/0 to-[#007e50] w-56 px-1 h-screen fixed rounded-r-lg hidden lg:flex flex-col items-center justify-center">
+    <div class="fixed top-0 items-start z-1 bg-007e50-500">
+        <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 852 160" width="180" height="100">
         <title>logotipo-boltech-2</title>
         <style>
             .s0 { fill: #54ae7b } 
@@ -29,21 +29,44 @@
         <path id="Preencher com Cor Sólida 1" fill-rule="evenodd" class="s4" d="m332.8 74.1c0.9-0.1 1.2 14.8 1.2 142.9h-30l-0.4-133.6 13.9-4.6c7.7-2.5 14.6-4.7 15.2-4.7zm430.1 0c0.9-0.1 1.2 5.6 1.2 25.4 0 14 0.2 25.5 0.5 25.5 0.3 0 2.6-1.6 5.2-3.6 2.7-2 6.8-4.6 9.3-5.6 3.4-1.5 7.6-2.1 17-2.5 6.9-0.3 15.9 0 20 0.6 4.3 0.6 9.9 2.2 13 3.8 3 1.5 7.6 4.9 10.2 7.5 2.7 2.7 6.3 7.8 11.3 18.3l0.5 73.5h-30v-67l-2.8-2.9c-1.9-2-4.1-3.1-7.7-3.6-2.8-0.4-12.2-0.6-21-0.3-10.9 0.3-16.9 0.9-18.9 1.9-1.5 0.8-3.6 2.8-4.5 4.4-1.4 2.6-1.6 7.7-2.1 67.5h-29l-0.4-133.8 13.4-4.5c7.4-2.5 14.1-4.6 14.7-4.6zm-705.8 8.9c30.8 0 58.9 0.5 63.1 1.1 4.1 0.5 9.7 2 12.5 3.3 2.7 1.3 7 4.1 9.4 6.2 2.5 2.3 5.6 6.5 7.5 10.4 2.8 5.9 3.1 7.3 3.1 16 0 8.2-0.4 10.2-2.7 15-1.5 3.2-4.6 7.3-7.5 9.8-2.6 2.3-4.2 4.3-3.6 4.2 0.7 0 3.2 1.7 5.4 3.8 2.3 2 5.3 6 6.8 8.7 2.3 4.5 2.6 6.1 2.6 15.5 0 9.4-0.3 11.1-2.8 16.3-1.5 3.1-4.9 8.1-7.6 11-2.7 2.8-7.3 6.4-10.2 7.9-3 1.5-7.9 3.2-10.9 3.8-3.4 0.6-28.1 1-122 1l-0.2-66.3c-0.1-36.5 0.2-66.7 0.7-67 0.5-0.4 25.8-0.7 56.4-0.7zm170.6 30.1c11 0 22.7 0.3 26 0.8 3.3 0.4 8.6 2 11.7 3.5 3.4 1.5 8.1 4.9 11.3 8.1 3 3 6.7 8.1 8.2 11.3 2.8 5.7 2.8 5.7 2.8 28.2 0 22.1 0 22.6-2.6 28-1.4 3-4.6 7.8-7.1 10.5-2.5 2.8-7.1 6.4-10.4 8.2-3.3 1.8-8.7 3.6-12.4 4.2-3.6 0.6-15.5 1.1-26.5 1.1-11 0-22.9-0.5-26.5-1.1-3.7-0.6-9-2.4-12.4-4.2-3.2-1.8-7.8-5.3-10.2-7.9-2.4-2.7-5.6-7.4-7.1-10.5-1.4-3.2-3-8.7-3.4-12.3-0.5-3.6-0.8-10.8-0.8-16 0-5.2 0.3-12.4 0.8-16 0.4-3.6 1.9-9 3.3-12 1.4-3 4.7-7.9 7.4-10.9 3-3.2 7.3-6.5 10.9-8.3 3.3-1.6 8.5-3.3 11.5-3.7 3-0.5 14.5-0.9 25.5-1zm306 0c11 0 22.7 0.3 26 0.8 3.3 0.4 8.6 2 11.7 3.5 3.2 1.4 8.1 4.7 10.9 7.4 2.9 2.7 6.3 7.3 8 10.7 1.7 3.4 3.4 9.1 4 13 0.5 3.9 0.8 11.1 0.4 25l-89.5 0.5v3.5c0 2.6 0.8 4.3 6 9.5h39.7c21.9 0 40 0.2 40.3 0.4 0.3 0.3-0.3 6.7-1.2 14.3-1 7.6-1.7 14.1-1.8 14.6 0 0.4-16.5 0.7-36.8 0.7-20.2 0-39.5-0.5-43-1-3.4-0.6-8.5-2.1-11.2-3.5-2.8-1.4-6.7-4-8.8-5.9-2-1.8-5.1-5.3-6.7-7.7-1.7-2.4-3.8-6.8-4.8-9.9-1.4-4.4-1.7-9-1.7-24 0-13.9 0.4-19.8 1.6-23.5 0.8-2.7 3-7.2 4.9-10 1.8-2.7 5.3-6.6 7.6-8.7 2.4-2 6.6-4.6 9.4-5.9 2.7-1.2 7.2-2.5 10-2.9 2.7-0.4 14-0.8 25-0.9zm134.5 0c11.3 0 23.2 0.3 26.5 0.8 3.3 0.5 8.7 2.1 12 3.7 3.3 1.5 8.5 5.2 17 13.3l-7 6.4c-3.9 3.5-8.9 8-15.5 13.7l-3.3-3.4c-2.3-2.5-4.4-3.6-7.7-4.1-2.5-0.3-13.5-0.5-24.5-0.3-15.7 0.2-20.5 0.6-22.2 1.8-1.3 0.8-2.8 2.6-3.5 3.9-0.9 1.6-1.3 6.9-1.3 16.1 0 9.2 0.4 14.5 1.3 16.1 0.7 1.3 2.2 3.1 3.5 3.9 1.7 1.2 6.6 1.6 23.2 1.8 11.5 0.2 22.6 0 24.5-0.3 2.2-0.5 4.7-2.1 10.1-8l4.2 4c2.3 2.2 7.2 6.9 17.7 16.5l-4.8 5.1c-2.7 2.9-7.2 6.3-10.7 8-3.3 1.6-8.5 3.3-11.5 3.9-3 0.6-15 1-26.5 1-11.6 0-23.9-0.5-27.5-1.1-3.6-0.5-8.9-2.2-11.9-3.7-2.9-1.5-7.9-5.4-11-8.7-3.7-3.9-6.6-8.1-8.1-12-2.3-5.7-2.5-7.1-2.5-26.5 0-19.4 0.2-20.8 2.5-26.5 1.5-3.8 4.4-8.1 8-11.8 3.3-3.6 7.9-7 11.5-8.8 3.3-1.7 8.5-3.4 11.5-3.8 3-0.5 14.7-0.9 26-1zm-638 20.9h88.2c5-5.2 5.8-7 5.8-9.5 0-1.9-0.5-4.5-1.2-5.7-0.6-1.3-1.8-2.8-2.7-3.5-1.2-0.9-12.6-1.2-45.9-1.3h-44.2zm478 10.9c-2.2 2.3-2.9 3.9-2.9 7.5l-0.1 4.6 59.5-0.5c-0.4-8.1-1-9.5-3.5-11.7l-3-2.8h-47.2zm-301.3-1.3c-1.5 0.3-3.9 1.7-5.2 3.2-2.5 2.6-2.5 3-2.5 17.9 0 12.9 0.3 15.7 1.8 17.8 1 1.4 3.1 3 4.7 3.5 1.7 0.6 12 1 23 1 11 0 21.4-0.4 23-1 1.7-0.5 3.8-2.1 4.8-3.5 1.5-2.1 1.7-4.9 1.8-17.8v-15.2l-6.2-6c-32.8-0.2-43.6-0.1-45.2 0.1zm-176.7 43.4c68.2 0 85.8-0.4 87.8-1 2-0.6 3.8-2.2 4.7-4 0.9-1.7 1.5-4.6 1.5-6.5 0-1.9-0.4-4.5-1-5.8-0.6-1.2-2-2.9-3.2-3.7-1.9-1.3-9.1-1.6-46-1.8l-43.7-0.3z"/>
         </svg>
     </div>
-    <div class="flex flex-col gap-10 items-center">
-        <button class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-32 h-12 rounded-full drop-shadow-xl/50 text-white font-bold">Início</button>
-        <button class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-32 h-12 rounded-full drop-shadow-xl/50 text-white font-bold">Botão 2</button>
-        <button class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-32 h-12 rounded-full drop-shadow-xl/50 text-white font-bold">Botão 3</button>
-        <button class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-32 h-12 rounded-full drop-shadow-xl/50 text-white font-bold">Botão 4</button>
+    <div class="overflow-y-scroll mt-[120px] h-screen scrollbar-nav flex flex-col items-center justify-start  gap-10">
+        <div class="flex flex-col gap-5 items-center">
+            <h1 class="text-3xl text-white text-center font-bold">Tutorias do Aplicativo</h1>
+            <button onclick="scrollToSection('info-geral')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white text-m font-helvetica">Inicio</button>
+            <button onclick="scrollToSection('ult-loc')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white text-m font-sans-serif">Como Ver a Última localização?</button>
+            <button onclick="scrollToSection('ult-loc')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white text-m font-sans-serif">Funcionamento Completo</button>
+            <button onclick="scrollToSection('ult-loc')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white text-m font-sans-serif">Como Funciona o Bloqueio?</button>
+            <button onclick="scrollToSection('ult-loc')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white text-m font-sans-serif">Como Ver Relatórios E Trajetos?</button>
+        </div>
+        <div class="flex flex-col gap-5 items-center mb-3">
+            <h1 class="text-3xl text-white text-center font-bold">Tutorias do Site</h1>
+            <button onclick="scrollToSection('ult-loc')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white font-sans-serif">Início</button>
+            <button onclick="scrollToSection('ult-loc')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white font-sans-serif">Botão 2</button>
+            <button onclick="scrollToSection('ult-loc')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white font-sans-serif">Botão 3</button>
+            <button onclick="scrollToSection('ult-loc')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white font-sans-serif">Botão 4</button>
+        </div>
     </div>
 </div>
 
 <!-- Menu Mobile -->
 <div id="Menu"class="fixed top-0 left-0 h-full max-w-0 overflow-hidden w-1/2 bg-gradient-to-r from-[#7ed957]/0 to-[#007e50] z-1 rounded-r-lg flex flex-col items-center justify-center transition-all duration-300">
-    <div class="flex flex-col gap-10 items-center">
-        <button class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-32 h-12 rounded-full drop-shadow-xl/50 text-white font-bold">Início</button>
-        <button class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-32 h-12 rounded-full drop-shadow-xl/50 text-white font-bold">Botão 2</button>
-        <button class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-32 h-12 rounded-full drop-shadow-xl/50 text-white font-bold">Botão 3</button>
-        <button class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-32 h-12 rounded-full drop-shadow-xl/50 text-white font-bold">Botão 4</button>
+    <div class="overflow-y-scroll h-screen scrollbar-hide backdrop-blur-[5px] flex flex-col items-center justify-start  py-30 gap-10">
+        <div class="flex flex-col gap-5 items-center">
+            <h1 class="text-3xl text-white text-center font-bold">Tutorias do Aplicativo</h1>
+            <button onclick="scrollToSection('info-geral')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white font-sans-serif">Início</button>
+            <button onclick="scrollToSection('ult-loc')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white font-sans-serif">Funcionamento Completo</button>
+            <button onclick="scrollToSection('ult-loc')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white font-sans-serif">Como Ver a Última localização?</button>
+            <button onclick="scrollToSection('ult-loc')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white font-sans-serif">Como Funciona o Bloqueio?</button>
+            <button onclick="scrollToSection('ult-loc')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white font-sans-serif">Como Ver Relatórios E Trajetos?</button>
+
+        </div>
+        <div class="flex flex-col gap-5 items-center">
+            <h1 class="text-3xl text-white text-center font-bold">Tutorias do Site</h1>
+            <button onclick="scrollToSection('ult-loc')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white font-sans-serif">Início</button>
+            <button onclick="scrollToSection('ult-loc')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white font-sans-serif">Botão 2</button>
+            <button onclick="scrollToSection('ult-loc')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white font-sans-serif">Botão 3</button>
+            <button onclick="scrollToSection('ult-loc')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white font-sans-serif">Botão 4</button>
+        </div>
     </div>
 </div>
 
@@ -71,27 +94,47 @@
 </div>
 
 <!-- Conteúdo Principal/Containers -->
-<div class="lg:ml-40 h-auto overflow-y-auto flex flex-col justify-center items-center px-4 py-0 lg:py-20">
+<div class="lg:ml-56 h-auto overflow-y-auto flex flex-col justify-center items-center px-4 py-0 lg:py-20">
     <div class="flex flex-col justify-center gap-18">
-        <div class="bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg flex flex-row gap-x-2 my-8 p-5 ">
-                <div class="text-white max-w-2xl">
-                    <h1 class="text-center text-3xl font-bold mb-4">Como Funciona o Aplicativo da Boltech?</h1>
-                    <p class="text-xl">Este tutorial foi criado para te guiar passo a passo pelas principais funcionalidades do nosso aplicativo. Com ele, você terá controle total sobre seus veículos, podendo acompanhar em tempo real localização, status de ignição, bloqueio e muito mais.>
+        <div id="info-geral" class="bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg flex flex-row gap-x-2 my-8 p-5 ">
+                <div class="text-white  max-w-2xl">
+                    <h1 class="text-center text-shadow-lg/80 text-3xl font-bold mb-4">Como Funciona o Aplicativo da Boltech?</h1>
+                    <p class="text-xl font-sans-serif">Este tutorial foi criado para te guiar passo a passo pelas principais funcionalidades do nosso aplicativo. Com ele, você terá controle total sobre seus veículos, podendo acompanhar em tempo real localização, status de ignição, bloqueio e muito mais.</p>
               
                 </div>
                 <img class="hidden sm:block aspect-3/2 w-2xs h-135 object-cover" src="/Images/app_boltech.png">
         </div>
-        <div class="bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg flex flex-col items-center gap-y-6 my-8 p-5 ">
+        <div id="ult-loc" class="bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg flex flex-col items-center gap-y-6 my-8 p-5 ">
                 <div class="text-white max-w-2xl">
-                    <h1 class="text-center text-3xl font-bold mb-4">Como Descbrir Sua Última Localização?</h1>
-                    <p class="text-xl">Este tutorial foi criado para te guiar passo a passo pelas principais funcionalidades do nosso aplicativo. Com ele, você terá controle total sobre seus veículos, podendo acompanhar em tempo real localização, status de ignição, bloqueio e muito mais.>
+                    <h1 class="text-center text-shadow-lg/80 text-3xl font-bold mb-4">Como Descbrir Sua Última Localização?</h1>
+                    <p class="text-xl font-sans-serif">Este tutorial foi criado para te guiar passo a passo pelas principais funcionalidades do nosso aplicativo. Com ele, você terá controle total sobre seus veículos, podendo acompanhar em tempo real localização, status de ignição, bloqueio e muito mais.</p>
 
                 </div>
                 
-                <iframe class="aspect-video w-full max-w-3xl rounded-lg" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen>
+                <iframe class="aspect-video drop-shadow-xl/80 w-full max-w-3xl rounded-lg" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen>
                 </iframe>
         </div>
-        <button id="whatsapp onclick="openWhatsApp() class="fixed right-5 bottom-5 border-3 border-white rounded-full ">
+        <div class="bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg flex flex-col items-center gap-y-6 my-8 p-5 ">
+                <div class="text-white max-w-2xl">
+                    <h1 class="text-center text-shadow-lg/80 text-3xl font-bold mb-4">Como Descbrir Sua Última Localização?</h1>
+                    <p class="text-xl">Este tutorial foi criado para te guiar passo a passo pelas principais funcionalidades do nosso aplicativo. Com ele, você terá controle total sobre seus veículos, podendo acompanhar em tempo real localização, status de ignição, bloqueio e muito mais.</p>
+
+                </div>
+                
+                <iframe class="aspect-video drop-shadow-xl/80 w-full max-w-3xl rounded-lg" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen>
+                </iframe>
+        </div>
+        <div class="bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg flex flex-col items-center gap-y-6 my-8 p-5 ">
+                <div class="text-white max-w-2xl">
+                    <h1 class="text-center text-shadow-lg/80 text-3xl font-bold mb-4">Como Descbrir Sua Última Localização?</h1>
+                    <p class="text-xl">Este tutorial foi criado para te guiar passo a passo pelas principais funcionalidades do nosso aplicativo. Com ele, você terá controle total sobre seus veículos, podendo acompanhar em tempo real localização, status de ignição, bloqueio e muito mais.</p>
+
+                </div>
+                
+                <iframe class="aspect-video drop-shadow-xl/80 w-full max-w-3xl rounded-lg" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen>
+                </iframe>
+        </div>
+        <button id="whatsapp" onclick="openWhatsApp()" class="fixed right-5 bottom-5 border-3 border-white rounded-full ">
             <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="48px" height="48px" fill-rule="evenodd" clip-rule="evenodd"><path fill="#fff" d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z"/><path fill="#fff" d="M4.868,43.803c-0.132,0-0.26-0.052-0.355-0.148c-0.125-0.127-0.174-0.312-0.127-0.483l2.639-9.636c-1.636-2.906-2.499-6.206-2.497-9.556C4.532,13.238,13.273,4.5,24.014,4.5c5.21,0.002,10.105,2.031,13.784,5.713c3.679,3.683,5.704,8.577,5.702,13.781c-0.004,10.741-8.746,19.48-19.486,19.48c-3.189-0.001-6.344-0.788-9.144-2.277l-9.875,2.589C4.953,43.798,4.911,43.803,4.868,43.803z"/><path fill="#cfd8dc" d="M24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,4C24.014,4,24.014,4,24.014,4C12.998,4,4.032,12.962,4.027,23.979c-0.001,3.367,0.849,6.685,2.461,9.622l-2.585,9.439c-0.094,0.345,0.002,0.713,0.254,0.967c0.19,0.192,0.447,0.297,0.711,0.297c0.085,0,0.17-0.011,0.254-0.033l9.687-2.54c2.828,1.468,5.998,2.243,9.197,2.244c11.024,0,19.99-8.963,19.995-19.98c0.002-5.339-2.075-10.359-5.848-14.135C34.378,6.083,29.357,4.002,24.014,4L24.014,4z"/><path fill="#40c351" d="M35.176,12.832c-2.98-2.982-6.941-4.625-11.157-4.626c-8.704,0-15.783,7.076-15.787,15.774c-0.001,2.981,0.833,5.883,2.413,8.396l0.376,0.597l-1.595,5.821l5.973-1.566l0.577,0.342c2.422,1.438,5.2,2.198,8.032,2.199h0.006c8.698,0,15.777-7.077,15.78-15.776C39.795,19.778,38.156,15.814,35.176,12.832z"/><path fill="#fff" fill-rule="evenodd" d="M19.268,16.045c-0.355-0.79-0.729-0.806-1.068-0.82c-0.277-0.012-0.593-0.011-0.909-0.011c-0.316,0-0.83,0.119-1.265,0.594c-0.435,0.475-1.661,1.622-1.661,3.956c0,2.334,1.7,4.59,1.937,4.906c0.237,0.316,3.282,5.259,8.104,7.161c4.007,1.58,4.823,1.266,5.693,1.187c0.87-0.079,2.807-1.147,3.202-2.255c0.395-1.108,0.395-2.057,0.277-2.255c-0.119-0.198-0.435-0.316-0.909-0.554s-2.807-1.385-3.242-1.543c-0.435-0.158-0.751-0.237-1.068,0.238c-0.316,0.474-1.225,1.543-1.502,1.859c-0.277,0.317-0.554,0.357-1.028,0.119c-0.474-0.238-2.002-0.738-3.815-2.354c-1.41-1.257-2.362-2.81-2.639-3.285c-0.277-0.474-0.03-0.731,0.208-0.968c0.213-0.213,0.474-0.554,0.712-0.831c0.237-0.277,0.316-0.475,0.474-0.791c0.158-0.317,0.079-0.594-0.04-0.831C20.612,19.329,19.69,16.983,19.268,16.045z" clip-rule="evenodd"/>
             </svg>
         </button>
@@ -104,13 +147,46 @@
         
         if (menuOpen) {
         menu.classList.remove('max-w-0');
-        menu.classList.add('max-w-[300px]');
+        menu.classList.add('max-w-[400px]');
+        menu.classList.add('w-80')
         } else {
-        menu.classList.remove('max-w-[300px]');
+        menu.classList.remove('max-w-[400px]');
         menu.classList.add('max-w-0');
         }
     }
 
+    function openWhatsApp() {
+        const url = `https://wa.me/5541987879447?text=Ol%C3%A1%2C%20solicito%20ajuda%20do%20suporte!`;
+        window.open(url, '_blank');
+    }
+
+    function closeMenuIfOpen() {
+        const menu = document.getElementById('Menu');
+        if (menuOpen) {
+            menu.classList.remove('max-w-[400px]');
+            menu.classList.add('max-w-0');
+            menuOpen = false;
+        }
+    }
+
+    function scrollToSection(id) {
+        const section = document.getElementById(id);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            section.classList.add('highlight');
+
+            setTimeout(() => {
+            section.classList.remove('highlight');
+            section.classList.add('highlight-remove');
+
+            setTimeout(() => {
+                section.classList.remove('highlight-remove');
+            }, 300);
+            }, 1000);
+            closeMenuIfOpen();
+        }
+        }
 </script>
 </body>
 </html>
