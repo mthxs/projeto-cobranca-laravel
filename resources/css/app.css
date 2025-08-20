@@ -6,19 +6,22 @@
 @source '../**/*.js';
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
-    --color-grey-blue: #47415d;
-    --color-primary: #0693e3;
-    --scroll-bar:   
+  --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
+  --color-grey-blue: #47415d;
+  --color-primary: #0693e3;
+  --scroll-bar:
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 .highlight {
   outline: 2px solid #00c896;
   transition: outline 0.3s ease;
 }
+
 .highlight-remove {
   box-shadow: none;
   transition: box-shadow 0.3s ease;
@@ -53,4 +56,24 @@ html {
 
 .scrollbar-nav::-webkit-scrollbar-thumb:hover {
   background-color: rgba(0, 0, 0, 0.2);
+}
+
+@layer {
+  @keyframes animationzap {
+    0% {
+      box-shadow: 0 0 0 0 #fff
+    }
+
+    50% {
+      box-shadow: 0 0 20px 5px #fff
+    }
+
+    100% {
+      box-shadow: 0 0 0 0 #fff
+    }
+  }
+
+  .animationzap{
+    animation: animationzap 2s infinite;
+  }
 }
