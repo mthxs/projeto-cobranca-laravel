@@ -96,7 +96,7 @@
 <!-- Conteúdo Principal/Containers -->
 <div class="lg:ml-56 h-auto overflow-y-auto flex flex-col justify-center items-center px-4 py-0 lg:py-20">
     <div class="flex flex-col justify-center gap-18">
-        <div class="grid grid-flow-col grid-rows-3 grid-cols-1 sm:grid-cols-[2fr_1fr] bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg my-8 p-5 max-w-250">
+        <div id="info-geral" class="grid grid-flow-col grid-rows-3 grid-cols-1 sm:grid-cols-[2fr_1fr] bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg my-8 p-5 max-w-250">
 
         <!-- Coluna 1: Texto + Imagem de Tela do App -->
         <div class="row-span-3 justify-between text-white">
