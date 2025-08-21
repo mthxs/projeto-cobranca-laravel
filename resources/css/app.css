@@ -76,4 +76,7 @@ html {
   .animationzap{
     animation: animationzap 2s infinite;
   }
+  .group-hover\:no-zap:hover {
+    animation: none !important;
+  }
 }
