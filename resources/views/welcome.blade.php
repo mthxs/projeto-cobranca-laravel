@@ -33,10 +33,10 @@
         <div class="flex flex-col gap-5 items-center">
             <h1 class="text-3xl text-white text-center font-bold">Tutorias do Aplicativo</h1>
             <button onclick="scrollToSection('info-geral')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white text-m font-helvetica">Inicio</button>
+            <button onclick="scrollToSection('fun-completo')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white text-m font-sans-serif">Funcionamento Completo</button>
             <button onclick="scrollToSection('ult-loc')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white text-m font-sans-serif">Como Ver a Última localização?</button>
-            <button onclick="scrollToSection('ult-loc')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white text-m font-sans-serif">Funcionamento Completo</button>
-            <button onclick="scrollToSection('ult-loc')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white text-m font-sans-serif">Como Funciona o Bloqueio?</button>
-            <button onclick="scrollToSection('ult-loc')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white text-m font-sans-serif">Como Ver Relatórios E Trajetos?</button>
+            <button onclick="scrollToSection('bloq')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white text-m font-sans-serif">Como Funciona o Bloqueio?</button>
+            <button onclick="scrollToSection('rela-traj')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white text-m font-sans-serif">Como Ver Relatórios E Trajetos?</button>
         </div>
         <div class="flex flex-col gap-5 items-center mb-3">
             <h1 class="text-3xl text-white text-center font-bold">Tutorias do Site</h1>
@@ -54,10 +54,10 @@
         <div class="flex flex-col gap-5 items-center">
             <h1 class="text-3xl text-white text-center font-bold">Tutorias do Aplicativo</h1>
             <button onclick="scrollToSection('info-geral')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white font-sans-serif">Início</button>
-            <button onclick="scrollToSection('ult-loc')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white font-sans-serif">Funcionamento Completo</button>
+            <button onclick="scrollToSection('fun-completo')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white font-sans-serif">Funcionamento Completo</button>
             <button onclick="scrollToSection('ult-loc')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white font-sans-serif">Como Ver a Última localização?</button>
-            <button onclick="scrollToSection('ult-loc')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white font-sans-serif">Como Funciona o Bloqueio?</button>
-            <button onclick="scrollToSection('ult-loc')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white font-sans-serif">Como Ver Relatórios E Trajetos?</button>
+            <button onclick="scrollToSection('bloq')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white font-sans-serif">Como Funciona o Bloqueio?</button>
+            <button onclick="scrollToSection('rela-traj')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white font-sans-serif">Como Ver Relatórios E Trajetos?</button>
 
         </div>
         <div class="flex flex-col gap-5 items-center">
@@ -98,7 +98,6 @@
     <div class="flex flex-col justify-center gap-18">
         <div id="info-geral" class="grid grid-flow-col grid-rows-3 grid-cols-1 sm:grid-cols-[2fr_1fr] bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg my-8 p-5 max-w-250">
 
-        <!-- Coluna 1: Texto + Imagem de Tela do App -->
         <div class="row-span-3 justify-between text-white">
             <div>
             <h1 class="text-center text-shadow-lg/80 text-3xl font-bold mb-4">
@@ -112,18 +111,16 @@
             <img src="/Images/Tela_app.png" alt="Tela do App"
                 class="hidden mt-2 sm:block w-auto h-auto object-cover rounded-md">
         </div>
-
-        <!-- Coluna 2: Imagem principal do app -->
         <div class="flex flex-col row-span-3 justify-center items-center">
             <img src="/Images/app_boltech.png" alt="App Boltech"
                 class="hidden sm:block w-auto h-100 object-contain">
         </div>
 
-</div>
+        </div>
 
-        <div id="ult-loc" class="bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg flex flex-col items-center gap-y-6 my-8 p-5 ">
+        <div id="fun-completo" class="bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg flex flex-col items-center gap-y-6 my-8 p-5 ">
                 <div class="text-white max-w-2xl">
-                    <h1 class="text-center text-shadow-lg/80 text-3xl font-bold mb-4">Como Descbrir Sua Última Localização?</h1>
+                    <h1 class="text-center text-shadow-lg/80 text-3xl font-bold mb-4">Funcionamento Completo</h1>
                     <p class="text-xl font-sans-serif">Este tutorial foi criado para te guiar passo a passo pelas principais funcionalidades do nosso aplicativo. Com ele, você terá controle total sobre seus veículos, podendo acompanhar em tempo real localização, status de ignição, bloqueio e muito mais.</p>
 
                 </div>
@@ -131,7 +128,7 @@
                 <iframe class="aspect-video drop-shadow-xl/80 w-full max-w-3xl rounded-lg" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen>
                 </iframe>
         </div>
-        <div class="bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg flex flex-col items-center gap-y-6 my-8 p-5 ">
+        <div id="ult-loc" class="bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg flex flex-col items-center gap-y-6 my-8 p-5 ">
                 <div class="text-white max-w-2xl">
                     <h1 class="text-center text-shadow-lg/80 text-3xl font-bold mb-4">Como Descbrir Sua Última Localização?</h1>
                     <p class="text-xl">Este tutorial foi criado para te guiar passo a passo pelas principais funcionalidades do nosso aplicativo. Com ele, você terá controle total sobre seus veículos, podendo acompanhar em tempo real localização, status de ignição, bloqueio e muito mais.</p>
@@ -141,9 +138,19 @@
                 <iframe class="aspect-video drop-shadow-xl/80 w-full max-w-3xl rounded-lg" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen>
                 </iframe>
         </div>
-        <div class="bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg flex flex-col items-center gap-y-6 my-8 p-5 ">
+        <div id="bloq" class="bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg flex flex-col items-center gap-y-6 my-8 p-5 ">
                 <div class="text-white max-w-2xl">
-                    <h1 class="text-center text-shadow-lg/80 text-3xl font-bold mb-4">Como Descbrir Sua Última Localização?</h1>
+                    <h1 class="text-center text-shadow-lg/80 text-3xl font-bold mb-4">Como Funciona o Bloqueio?</h1>
+                    <p class="text-xl">Este tutorial foi criado para te guiar passo a passo pelas principais funcionalidades do nosso aplicativo. Com ele, você terá controle total sobre seus veículos, podendo acompanhar em tempo real localização, status de ignição, bloqueio e muito mais.</p>
+
+                </div>
+                
+                <iframe class="aspect-video drop-shadow-xl/80 w-full max-w-3xl rounded-lg" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen>
+                </iframe>
+        </div>
+        <div id="rela-traj" class="bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg flex flex-col items-center gap-y-6 my-8 p-5 ">
+                <div class="text-white max-w-2xl">
+                    <h1 class="text-center text-shadow-lg/80 text-3xl font-bold mb-4">Como Ver Relátorios e Trajetos?</h1>
                     <p class="text-xl">Este tutorial foi criado para te guiar passo a passo pelas principais funcionalidades do nosso aplicativo. Com ele, você terá controle total sobre seus veículos, podendo acompanhar em tempo real localização, status de ignição, bloqueio e muito mais.</p>
 
                 </div>
