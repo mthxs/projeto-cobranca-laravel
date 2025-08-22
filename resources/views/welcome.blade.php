@@ -32,18 +32,96 @@
     <div class="overflow-y-scroll mt-[120px] h-screen scrollbar-nav flex flex-col items-center justify-start  gap-10">
         <div class="flex flex-col gap-5 items-center">
             <h1 class="text-3xl text-white text-center font-bold">Tutorias do Aplicativo</h1>
-            <button onclick="scrollToSection('info-geral')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white text-m font-helvetica">Inicio</button>
-            <button onclick="scrollToSection('fun-completo')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white text-m font-sans-serif">Funcionamento Completo</button>
-            <button onclick="scrollToSection('ult-loc')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white text-m font-sans-serif">Como Ver a Última localização?</button>
-            <button onclick="scrollToSection('bloq')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white text-m font-sans-serif">Como Funciona o Bloqueio?</button>
-            <button onclick="scrollToSection('rela-traj')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white text-m font-sans-serif">Como Ver Relatórios E Trajetos?</button>
+            <!-- Botões de navegação -->
+            <button onclick="scrollToSection('info-geral')" class="cursor-pointer flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2  focus:ontline-primary focus:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="size-7">
+                <path d="M10.5 18.75a.75.75 0 0 0 0 1.5h3a.75.75 0 0 0 0-1.5h-3Z" />
+                <path fill-rule="evenodd" d="M8.625.75A3.375 3.375 0 0 0 5.25 4.125v15.75a3.375 3.375 0 0 0 3.375 3.375h6.75a3.375 3.375 0 0 0 3.375-3.375V4.125A3.375 3.375 0 0 0 15.375.75h-6.75ZM7.5 4.125C7.5 3.504 8.004 3 8.625 3H9.75v.375c0 .621.504 1.125 1.125 1.125h2.25c.621 0 1.125-.504 1.125-1.125V3h1.125c.621 0 1.125.504 1.125 1.125v15.75c0 .621-.504 1.125-1.125 1.125h-6.75A1.125 1.125 0 0 1 7.5 19.875V4.125Z" clip-rule="evenodd" />
+                </svg>
+
+                <span class="m-auto">Inicio</span>
+            </button>
+            
+            <button onclick="scrollToSection('fun-completo')" class="cursor-pointer flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="size-10">
+                <path d="M21.721 12.752a9.711 9.711 0 0 0-.945-5.003 12.754 12.754 0 0 1-4.339 2.708 18.991 18.991 0 0 1-.214 4.772 17.165 17.165 0 0 0 5.498-2.477ZM14.634 15.55a17.324 17.324 0 0 0 .332-4.647c-.952.227-1.945.347-2.966.347-1.021 0-2.014-.12-2.966-.347a17.515 17.515 0 0 0 .332 4.647 17.385 17.385 0 0 0 5.268 0ZM9.772 17.119a18.963 18.963 0 0 0 4.456 0A17.182 17.182 0 0 1 12 21.724a17.18 17.18 0 0 1-2.228-4.605ZM7.777 15.23a18.87 18.87 0 0 1-.214-4.774 12.753 12.753 0 0 1-4.34-2.708 9.711 9.711 0 0 0-.944 5.004 17.165 17.165 0 0 0 5.498 2.477ZM21.356 14.752a9.765 9.765 0 0 1-7.478 6.817 18.64 18.64 0 0 0 1.988-4.718 18.627 18.627 0 0 0 5.49-2.098ZM2.644 14.752c1.682.971 3.53 1.688 5.49 2.099a18.64 18.64 0 0 0 1.988 4.718 9.765 9.765 0 0 1-7.478-6.816ZM13.878 2.43a9.755 9.755 0 0 1 6.116 3.986 11.267 11.267 0 0 1-3.746 2.504 18.63 18.63 0 0 0-2.37-6.49ZM12 2.276a17.152 17.152 0 0 1 2.805 7.121c-.897.23-1.837.353-2.805.353-.968 0-1.908-.122-2.805-.353A17.151 17.151 0 0 1 12 2.276ZM10.122 2.43a18.629 18.629 0 0 0-2.37 6.49 11.266 11.266 0 0 1-3.746-2.504 9.754 9.754 0 0 1 6.116-3.985Z" />
+                </svg>
+                <span class="m-auto">Funcionamento Completo</span>
+            </button>
+            
+            <button onclick="scrollToSection('ult-loc')" class="cursor-pointer flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="size-8">
+                <path fill-rule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd" />
+                </svg>
+                <span class="m-auto">Última Localização</span>
+            </button>
+            
+            <button onclick="scrollToSection('bloq')" class="cursor-pointer flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="size-7">
+                <path fill-rule="evenodd" d="M12 1.5a5.25 5.25 0 0 0-5.25 5.25v3a3 3 0 0 0-3 3v6.75a3 3 0 0 0 3 3h10.5a3 3 0 0 0 3-3v-6.75a3 3 0 0 0-3-3v-3c0-2.9-2.35-5.25-5.25-5.25Zm3.75 8.25v-3a3.75 3.75 0 1 0-7.5 0v3h7.5Z" clip-rule="evenodd" />
+                </svg>
+                <span class="m-auto">Bloqueio</span>
+            </button>
+            
+            <button onclick="scrollToSection('rela-traj')" class="cursor-pointer flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="size-9">
+                <path fill-rule="evenodd" d="M7.502 6h7.128A3.375 3.375 0 0 1 18 9.375v9.375a3 3 0 0 0 3-3V6.108c0-1.505-1.125-2.811-2.664-2.94a48.972 48.972 0 0 0-.673-.05A3 3 0 0 0 15 1.5h-1.5a3 3 0 0 0-2.663 1.618c-.225.015-.45.032-.673.05C8.662 3.295 7.554 4.542 7.502 6ZM13.5 3A1.5 1.5 0 0 0 12 4.5h4.5A1.5 1.5 0 0 0 15 3h-1.5Z" clip-rule="evenodd" />
+                <path fill-rule="evenodd" d="M3 9.375C3 8.339 3.84 7.5 4.875 7.5h9.75c1.036 0 1.875.84 1.875 1.875v11.25c0 1.035-.84 1.875-1.875 1.875h-9.75A1.875 1.875 0 0 1 3 20.625V9.375ZM6 12a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H6.75a.75.75 0 0 1-.75-.75V12Zm2.25 0a.75.75 0 0 1 .75-.75h3.75a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75ZM6 15a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H6.75a.75.75 0 0 1-.75-.75V15Zm2.25 0a.75.75 0 0 1 .75-.75h3.75a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75ZM6 18a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H6.75a.75.75 0 0 1-.75-.75V18Zm2.25 0a.75.75 0 0 1 .75-.75h3.75a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+                </svg>
+                <span class="m-auto">Relátorios e Trajetos</span>
+            </button>
         </div>
         <div class="flex flex-col gap-5 items-center mb-3">
             <h1 class="text-3xl text-white text-center font-bold">Tutorias do Site</h1>
-            <button onclick="scrollToSection('ult-loc')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white font-sans-serif">Início</button>
-            <button onclick="scrollToSection('ult-loc')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white font-sans-serif">Botão 2</button>
-            <button onclick="scrollToSection('ult-loc')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white font-sans-serif">Botão 3</button>
-            <button onclick="scrollToSection('ult-loc')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white font-sans-serif">Botão 4</button>
+            <button onclick="scrollToSection('info-site')" class="cursor-pointer flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="size-8">
+                <path fill-rule="evenodd" d="M2.25 5.25a3 3 0 0 1 3-3h13.5a3 3 0 0 1 3 3V15a3 3 0 0 1-3 3h-3v.257c0 .597.237 1.17.659 1.591l.621.622a.75.75 0 0 1-.53 1.28h-9a.75.75 0 0 1-.53-1.28l.621-.622a2.25 2.25 0 0 0 .659-1.59V18h-3a3 3 0 0 1-3-3V5.25Zm1.5 0v7.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5v-7.5a1.5 1.5 0 0 0-1.5-1.5H5.25a1.5 1.5 0 0 0-1.5 1.5Z" clip-rule="evenodd" />
+                </svg>
+                <span class="m-auto">Informações Gerais</span>
+            </button>
+            <button onclick="scrollToSection('trajeto-site')" class="cursor-pointer flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
+                <svg version="1.0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="size-8 fill-none stroke-[#82C34C]" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                    <path d="M9.09557 20.7929L11.9274 14.6574C11.9505 14.6073 11.962 14.5822 11.978 14.5744C11.9919 14.5676 12.0081 14.5676 12.022 14.5744C12.038 14.5822 12.0495 14.6073 12.0726 14.6574L14.9044 20.7929C14.9337 20.8564 14.9484 20.8882 14.9425 20.9067C14.9374 20.9227 14.9247 20.9351 14.9085 20.9396C14.8899 20.9449 14.8586 20.9293 14.796 20.898L12.0358 19.5179C12.0227 19.5113 12.0161 19.508 12.0092 19.5068C12.0031 19.5056 11.9969 19.5056 11.9908 19.5068C11.9839 19.508 11.9773 19.5113 11.9642 19.5179L9.20399 20.898C9.14142 20.9293 9.11014 20.9449 9.09149 20.9396C9.07533 20.9351 9.06256 20.9227 9.05748 20.9067C9.0516 20.8882 9.06626 20.8564 9.09557 20.7929Z"/>
+                    <path d="M4 18L7 4"/>
+                    <path d="M20 18L17 4"/>
+                    <path d="M12 11L12 9"/>
+                    <path d="M12 6L12 4"/>
+                </svg>
+                <span class="m-auto">Trajeto do Site</span>
+            </button>
+
+            <button onclick="scrollToSection('cerca')" class="cursor-pointer flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
+                <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 578" fill="#82C34C" class="size-8">
+                    <path fill-rule="evenodd" d="m70 0.3c36.6 0.2 37.6 0.3 42.3 2.5 2.6 1.2 6.8 4.2 9.5 6.6 2.6 2.4 5.8 6.6 7.2 9.2 2.1 4.2 2.5 6.5 3 27.4h486v-9.2c0-5.7 0.6-11.4 1.6-14.8 1.3-4.4 2.9-6.7 7.8-11.5 4.3-4.3 7.7-6.6 11.6-8 5.1-1.9 8.1-2 85.5-2l5.5 2.7c3 1.4 7.4 4.7 9.8 7.2 2.3 2.5 5 6.5 6.1 8.9 1 2.3 2.4 5.8 3 7.7 0.8 2.5 1.1 75.2 1 258 0 140-0.3 257.6-0.8 261.5-0.4 3.9-1.7 9-3 11.5-1.3 2.5-3.8 6.4-5.7 8.8-2.3 2.8-5.7 5.3-16.9 10.7l-37.5 0.3c-36 0.3-37.8 0.2-44.5-1.9-6-1.8-7.8-3-13-8.3-3.3-3.3-6.9-7.9-8-10.1-1.9-3.8-2-6.4-2.5-125.5h-486l-0.5 122.5-3 5.4c-1.7 3-5 7.1-7.5 9.3-2.5 2.1-7 4.9-10 6.1-5.3 2.1-6.6 2.2-85.5 2.2l-5.9-3c-3.2-1.7-7.9-5.3-10.5-8-3-3.4-5.3-7.1-6.6-11-2-5.9-2-9.4-2.3-265-0.2-192.5 0-260 0.9-263 0.6-2.2 2.1-6.2 3.3-8.9 1.1-2.6 4.2-6.8 6.9-9.2 2.6-2.4 6.4-5.1 8.5-6 2-0.9 5.7-2 8.2-2.4 2.5-0.5 21.4-0.8 42-0.7zm62 205.7h486v-91h-486zm0 157h486v-89h-486z"/>
+                </svg>
+                <span class="m-auto">Cerca</span>
+            </button>
+            
+            <button onclick="scrollToSection('comandos')" class="cursor-pointer flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="size-8">
+                    <path fill-rule="evenodd" d="M2.25 6a3 3 0 0 1 3-3h13.5a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V6Zm3.97.97a.75.75 0 0 1 1.06 0l2.25 2.25a.75.75 0 0 1 0 1.06l-2.25 2.25a.75.75 0 0 1-1.06-1.06l1.72-1.72-1.72-1.72a.75.75 0 0 1 0-1.06Zm4.28 4.28a.75.75 0 0 0 0 1.5h3a.75.75 0 0 0 0-1.5h-3Z" clip-rule="evenodd" />
+                </svg>
+                <span class="m-auto">Comandos</span>
+            </button>
+            
+            <button onclick="scrollToSection('his-velo')" class="cursor-pointer flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="#82C34C" class="size-10">
+                <path d="M425.7,118.25A240,240,0,0,0,76.32,447l.18.2c.33.35.64.71,1,1.05.74.84,1.58,1.79,2.57,2.78a41.17,41.17,0,0,0,60.36-.42,157.13,157.13,0,0,1,231.26,0,41.18,41.18,0,0,0,60.65.06l3.21-3.5.18-.2a239.93,239.93,0,0,0-10-328.76ZM240,128a16,16,0,0,1,32,0v32a16,16,0,0,1-32,0ZM128,304H96a16,16,0,0,1,0-32h32a16,16,0,0,1,0,32Zm48.8-95.2a16,16,0,0,1-22.62,0l-22.63-22.62a16,16,0,0,1,22.63-22.63l22.62,22.63A16,16,0,0,1,176.8,208.8Zm149.3,23.1-47.5,75.5a31,31,0,0,1-7,7,30.11,30.11,0,0,1-35-49l75.5-47.5a10.23,10.23,0,0,1,11.7,0A10.06,10.06,0,0,1,326.1,231.9Zm31.72-23.1a16,16,0,0,1-22.62-22.62l22.62-22.63a16,16,0,0,1,22.63,22.63ZM423.7,436.4h0ZM416,304H384a16,16,0,0,1,0-32h32a16,16,0,0,1,0,32Z"/>
+                </svg>
+            <span class="m-auto">Histórico de Velocidade</span>
+            
+            <button onclick="scrollToSection('odometro')" class="cursor-pointer flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
+                <svg fill="#82C34C" class="size-10" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12,2A10,10,0,1,0,22,12,10.011,10.011,0,0,0,12,2Zm7.411,13H12.659L9.919,8.606a1,1,0,1,0-1.838.788L10.484,15H4.589a8,8,0,1,1,14.822,0Z"/>
+                </svg>
+                <span class="m-auto"> Histórico Odômetro</span>
+            </button>
+            <button onclick="scrollToSection('link-compar')" class="cursor-pointer flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
+                <svg version="1.2" xmlns="http://www.w3.org/2000/svg" fill="#82C34C" class="size-8" viewBox="0 0 261 260">
+                    <path  d="m170 2.1c-4.1 1.1-11.1 3.8-15.5 6.1-7.3 3.8-10.3 6.5-34.5 30.7-20 20-27.5 28.2-30.3 33.1-2.1 3.6-4.9 10.1-6.3 14.5-1.7 5.4-2.8 11.3-3.1 18-0.4 7.2-0.1 12.3 1.1 18.5 1.1 5.2 3.4 12 6.1 17.5 3 6.2 6.3 11.1 10.7 15.8 4.4 4.8 7.6 7.3 10.8 8.4 3.1 1.1 6 1.4 9.5 1 3-0.4 6.6-1.8 9-3.5 2.2-1.5 5-4.6 6.2-6.7 1.6-2.9 2.3-5.7 2.3-9.8 0-3.1-0.5-6.9-1.1-8.5-0.6-1.5-2.8-4.7-4.9-7.2-2.2-2.5-4.8-6.5-5.9-9-1-2.5-2.3-6.5-2.6-9-0.6-3.3-0.2-6.4 1.5-12l2.2-7.5c41.3-41.5 47.4-47 51.3-48.7 3.7-1.7 7-2.2 12.5-2.3 6.1 0 8.5 0.5 13 2.7 3 1.4 7.3 4.6 9.4 7 2.2 2.3 4.9 6.3 6 8.8 1.4 3.1 2 6.7 2.1 11.5 0 4.5-0.7 8.8-1.9 12-1.5 4-5 8.2-17.6 21-8.7 8.8-16.5 17.5-17.4 19.3-0.9 1.7-1.6 5.3-1.7 8l-0.1 4.7c-2.1-7.8-4.5-13.6-6.7-18-2.5-5-6.3-10.5-10.3-14.8-4.5-4.9-7.6-7.3-10.8-8.4-3.1-1.1-6-1.4-9.5-1-3 0.4-6.6 1.8-9 3.5-2.2 1.5-5 4.6-6.2 6.7-1.6 2.9-2.3 5.7-2.3 9.8 0 3.1 0.5 6.9 1.1 8.5 0.6 1.5 2.8 4.7 4.9 7.2 2.2 2.5 4.9 6.8 6.1 9.5 1.5 3.3 2.3 7 2.3 11 0 3.3-0.8 8.5-1.8 11.5-1.7 5-4 7.6-25 28.8-18.1 18.2-24.2 23.7-28.1 25.4-3.7 1.7-7 2.2-12.5 2.2-5.4 0.1-8.7-0.5-12-2-2.5-1.1-6.5-3.8-8.8-6-2.4-2.1-5.6-6.4-7-9.4-2.1-4.4-2.7-7-2.7-12.5 0-4.5 0.7-8.8 1.9-12 1.5-3.9 4.8-8 14.6-18 7-7.2 13.5-14.5 14.4-16.3 0.9-1.9 1.6-5.6 1.6-9.2 0-3.3-0.6-7.2-1.4-8.7-0.8-1.6-2.9-4.2-4.8-5.9-1.8-1.8-4.4-3.7-5.8-4.4-1.4-0.8-5-1.3-8-1.4-3.1 0-7 0.7-9 1.7-1.9 0.9-10 8.3-18 16.4-12 12.2-15.3 16.2-18.7 22.8-2.3 4.4-5.1 11.6-6.3 16-1.4 5.6-2 11.2-2 18.5 0 7.3 0.6 12.9 2 18.5 1.2 4.4 3.6 10.9 5.5 14.5 1.9 3.6 5.6 9.2 8.3 12.5 2.6 3.3 7.5 8.1 10.7 10.8 3.3 2.6 8.9 6.3 12.5 8.2 3.6 1.9 10.1 4.3 14.5 5.5 5.6 1.4 11.2 2 18.5 2 7.3 0 12.9-0.6 18.5-2 4.4-1.2 11.6-4 16-6.2 7.3-3.8 10.3-6.5 34.5-30.7 20-20 27.5-28.2 30.3-33.1 2.1-3.6 4.9-10.1 6.4-14.5 2.2-6.8 2.6-9.8 2.7-20.5l0.1-12.6c4 6.3 6.4 9 8.1 10 1.6 1 5.2 2.3 7.9 2.9 3.6 0.7 6.3 0.6 9.5-0.2 3.9-1.1 6.9-3.6 23.1-19.9 16.1-16.3 19.1-19.7 22.7-26.7 2.2-4.4 5-11.6 6.2-16 1.4-5.6 2-11.2 2-18.5 0-7.3-0.6-12.9-2-18.5-1.2-4.4-3.6-10.9-5.5-14.5-1.9-3.6-5.5-9.1-8-12.3-2.5-3.1-7.3-8-10.7-10.8-3.5-2.9-9.4-6.7-13.3-8.7-3.8-1.9-10.4-4.3-14.5-5.3-5.2-1.3-10.8-1.9-18.5-1.9-7.6 0.1-13.3 0.7-18.5 2.1z"/>
+                </svg>
+                <span class="m-auto">Link Compartilhado</span>
+            </button>   
         </div>
     </div>
 </div>
@@ -53,19 +131,95 @@
     <div class="overflow-y-scroll h-screen scrollbar-hide backdrop-blur-[5px] flex flex-col items-center justify-start  py-30 gap-10">
         <div class="flex flex-col gap-5 items-center">
             <h1 class="text-3xl text-white text-center font-bold">Tutorias do Aplicativo</h1>
-            <button onclick="scrollToSection('info-geral')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white font-sans-serif">Início</button>
-            <button onclick="scrollToSection('fun-completo')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white font-sans-serif">Funcionamento Completo</button>
-            <button onclick="scrollToSection('ult-loc')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white font-sans-serif">Como Ver a Última localização?</button>
-            <button onclick="scrollToSection('bloq')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white font-sans-serif">Como Funciona o Bloqueio?</button>
-            <button onclick="scrollToSection('rela-traj')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white font-sans-serif">Como Ver Relatórios E Trajetos?</button>
+            <!-- Botões de navegação Mobile-->
+            <button onclick="scrollToSection('info-geral')" class="flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="size-7">
+                <path d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
+                <path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
+                </svg>
+                <span class="m-auto">Inicio</span>
+            </button>                                           
+            
+            <button onclick="scrollToSection('fun-completo')" class="flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="size-10">
+                <path d="M21.721 12.752a9.711 9.711 0 0 0-.945-5.003 12.754 12.754 0 0 1-4.339 2.708 18.991 18.991 0 0 1-.214 4.772 17.165 17.165 0 0 0 5.498-2.477ZM14.634 15.55a17.324 17.324 0 0 0 .332-4.647c-.952.227-1.945.347-2.966.347-1.021 0-2.014-.12-2.966-.347a17.515 17.515 0 0 0 .332 4.647 17.385 17.385 0 0 0 5.268 0ZM9.772 17.119a18.963 18.963 0 0 0 4.456 0A17.182 17.182 0 0 1 12 21.724a17.18 17.18 0 0 1-2.228-4.605ZM7.777 15.23a18.87 18.87 0 0 1-.214-4.774 12.753 12.753 0 0 1-4.34-2.708 9.711 9.711 0 0 0-.944 5.004 17.165 17.165 0 0 0 5.498 2.477ZM21.356 14.752a9.765 9.765 0 0 1-7.478 6.817 18.64 18.64 0 0 0 1.988-4.718 18.627 18.627 0 0 0 5.49-2.098ZM2.644 14.752c1.682.971 3.53 1.688 5.49 2.099a18.64 18.64 0 0 0 1.988 4.718 9.765 9.765 0 0 1-7.478-6.816ZM13.878 2.43a9.755 9.755 0 0 1 6.116 3.986 11.267 11.267 0 0 1-3.746 2.504 18.63 18.63 0 0 0-2.37-6.49ZM12 2.276a17.152 17.152 0 0 1 2.805 7.121c-.897.23-1.837.353-2.805.353-.968 0-1.908-.122-2.805-.353A17.151 17.151 0 0 1 12 2.276ZM10.122 2.43a18.629 18.629 0 0 0-2.37 6.49 11.266 11.266 0 0 1-3.746-2.504 9.754 9.754 0 0 1 6.116-3.985Z" />
+                </svg>
+                <span class="m-auto">Funcionamento Completo</span>
+            </button>    
+            
+            <button onclick="scrollToSection('ult-loc')" class="flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="size-8">
+                <path fill-rule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd" />
+                </svg>
+                <span class="m-auto">Última Localização</span>
+            </button>
+            
+            <button onclick="scrollToSection('bloq')" class="flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="size-7">
+                <path fill-rule="evenodd" d="M12 1.5a5.25 5.25 0 0 0-5.25 5.25v3a3 3 0 0 0-3 3v6.75a3 3 0 0 0 3 3h10.5a3 3 0 0 0 3-3v-6.75a3 3 0 0 0-3-3v-3c0-2.9-2.35-5.25-5.25-5.25Zm3.75 8.25v-3a3.75 3.75 0 1 0-7.5 0v3h7.5Z" clip-rule="evenodd" />
+                </svg>
+                <span class="m-auto">Bloqueio</span>
+            </button>
 
+            <button onclick="scrollToSection('rela-traj')" class="flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="size-9">
+                <path fill-rule="evenodd" d="M7.502 6h7.128A3.375 3.375 0 0 1 18 9.375v9.375a3 3 0 0 0 3-3V6.108c0-1.505-1.125-2.811-2.664-2.94a48.972 48.972 0 0 0-.673-.05A3 3 0 0 0 15 1.5h-1.5a3 3 0 0 0-2.663 1.618c-.225.015-.45.032-.673.05C8.662 3.295 7.554 4.542 7.502 6ZM13.5 3A1.5 1.5 0 0 0 12 4.5h4.5A1.5 1.5 0 0 0 15 3h-1.5Z" clip-rule="evenodd" />
+                <path fill-rule="evenodd" d="M3 9.375C3 8.339 3.84 7.5 4.875 7.5h9.75c1.036 0 1.875.84 1.875 1.875v11.25c0 1.035-.84 1.875-1.875 1.875h-9.75A1.875 1.875 0 0 1 3 20.625V9.375ZM6 12a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H6.75a.75.75 0 0 1-.75-.75V12Zm2.25 0a.75.75 0 0 1 .75-.75h3.75a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75ZM6 15a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H6.75a.75.75 0 0 1-.75-.75V15Zm2.25 0a.75.75 0 0 1 .75-.75h3.75a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75ZM6 18a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H6.75a.75.75 0 0 1-.75-.75V18Zm2.25 0a.75.75 0 0 1 .75-.75h3.75a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+                </svg>
+                <span class="m-auto">Relátorios e Trajetos</span>
+            </button>
         </div>
         <div class="flex flex-col gap-5 items-center">
             <h1 class="text-3xl text-white text-center font-bold">Tutorias do Site</h1>
-            <button onclick="scrollToSection('ult-loc')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white font-sans-serif">Início</button>
-            <button onclick="scrollToSection('ult-loc')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white font-sans-serif">Botão 2</button>
-            <button onclick="scrollToSection('ult-loc')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white font-sans-serif">Botão 3</button>
-            <button onclick="scrollToSection('ult-loc')" class="bg-primary hover:bg-sky-700 focus:outline-2 focus:outline-offset-5 focus:outline-sky-700 active:bg-sky-700 w-48 h-12 rounded-full drop-shadow-xl/70 text-white font-sans-serif">Botão 4</button>
+            <button onclick="scrollToSection('info-site')" class="flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="size-8">
+                <path fill-rule="evenodd" d="M2.25 5.25a3 3 0 0 1 3-3h13.5a3 3 0 0 1 3 3V15a3 3 0 0 1-3 3h-3v.257c0 .597.237 1.17.659 1.591l.621.622a.75.75 0 0 1-.53 1.28h-9a.75.75 0 0 1-.53-1.28l.621-.622a2.25 2.25 0 0 0 .659-1.59V18h-3a3 3 0 0 1-3-3V5.25Zm1.5 0v7.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5v-7.5a1.5 1.5 0 0 0-1.5-1.5H5.25a1.5 1.5 0 0 0-1.5 1.5Z" clip-rule="evenodd" />
+                </svg>
+                <span class="m-auto">Informações Gerais</span>
+            </button>
+            <button onclick="scrollToSection('trajeto-site')" class="flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
+                <svg version="1.0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="size-8 fill-none stroke-[#82C34C]" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                    <path d="M9.09557 20.7929L11.9274 14.6574C11.9505 14.6073 11.962 14.5822 11.978 14.5744C11.9919 14.5676 12.0081 14.5676 12.022 14.5744C12.038 14.5822 12.0495 14.6073 12.0726 14.6574L14.9044 20.7929C14.9337 20.8564 14.9484 20.8882 14.9425 20.9067C14.9374 20.9227 14.9247 20.9351 14.9085 20.9396C14.8899 20.9449 14.8586 20.9293 14.796 20.898L12.0358 19.5179C12.0227 19.5113 12.0161 19.508 12.0092 19.5068C12.0031 19.5056 11.9969 19.5056 11.9908 19.5068C11.9839 19.508 11.9773 19.5113 11.9642 19.5179L9.20399 20.898C9.14142 20.9293 9.11014 20.9449 9.09149 20.9396C9.07533 20.9351 9.06256 20.9227 9.05748 20.9067C9.0516 20.8882 9.06626 20.8564 9.09557 20.7929Z"/>
+                    <path d="M4 18L7 4"/>
+                    <path d="M20 18L17 4"/>
+                    <path d="M12 11L12 9"/>
+                    <path d="M12 6L12 4"/>
+                </svg>
+                <span class="m-auto">Trajeto do Site</span>
+            </button>
+
+            <button onclick="scrollToSection('cerca')" class="flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
+                <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 578" fill="#82C34C" class="size-8">
+                    <path fill-rule="evenodd" d="m70 0.3c36.6 0.2 37.6 0.3 42.3 2.5 2.6 1.2 6.8 4.2 9.5 6.6 2.6 2.4 5.8 6.6 7.2 9.2 2.1 4.2 2.5 6.5 3 27.4h486v-9.2c0-5.7 0.6-11.4 1.6-14.8 1.3-4.4 2.9-6.7 7.8-11.5 4.3-4.3 7.7-6.6 11.6-8 5.1-1.9 8.1-2 85.5-2l5.5 2.7c3 1.4 7.4 4.7 9.8 7.2 2.3 2.5 5 6.5 6.1 8.9 1 2.3 2.4 5.8 3 7.7 0.8 2.5 1.1 75.2 1 258 0 140-0.3 257.6-0.8 261.5-0.4 3.9-1.7 9-3 11.5-1.3 2.5-3.8 6.4-5.7 8.8-2.3 2.8-5.7 5.3-16.9 10.7l-37.5 0.3c-36 0.3-37.8 0.2-44.5-1.9-6-1.8-7.8-3-13-8.3-3.3-3.3-6.9-7.9-8-10.1-1.9-3.8-2-6.4-2.5-125.5h-486l-0.5 122.5-3 5.4c-1.7 3-5 7.1-7.5 9.3-2.5 2.1-7 4.9-10 6.1-5.3 2.1-6.6 2.2-85.5 2.2l-5.9-3c-3.2-1.7-7.9-5.3-10.5-8-3-3.4-5.3-7.1-6.6-11-2-5.9-2-9.4-2.3-265-0.2-192.5 0-260 0.9-263 0.6-2.2 2.1-6.2 3.3-8.9 1.1-2.6 4.2-6.8 6.9-9.2 2.6-2.4 6.4-5.1 8.5-6 2-0.9 5.7-2 8.2-2.4 2.5-0.5 21.4-0.8 42-0.7zm62 205.7h486v-91h-486zm0 157h486v-89h-486z"/>
+                </svg>
+                <span class="m-auto">Cerca</span>
+            </button>
+            
+            <button onclick="scrollToSection('comandos')" class="flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="size-8">
+                    <path fill-rule="evenodd" d="M2.25 6a3 3 0 0 1 3-3h13.5a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V6Zm3.97.97a.75.75 0 0 1 1.06 0l2.25 2.25a.75.75 0 0 1 0 1.06l-2.25 2.25a.75.75 0 0 1-1.06-1.06l1.72-1.72-1.72-1.72a.75.75 0 0 1 0-1.06Zm4.28 4.28a.75.75 0 0 0 0 1.5h3a.75.75 0 0 0 0-1.5h-3Z" clip-rule="evenodd" />
+                </svg>
+                <span class="m-auto">Comandos</span>
+            </button>
+            
+            <button onclick="scrollToSection('his-velo')" class="flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="#82C34C" class="size-10">
+                <path d="M425.7,118.25A240,240,0,0,0,76.32,447l.18.2c.33.35.64.71,1,1.05.74.84,1.58,1.79,2.57,2.78a41.17,41.17,0,0,0,60.36-.42,157.13,157.13,0,0,1,231.26,0,41.18,41.18,0,0,0,60.65.06l3.21-3.5.18-.2a239.93,239.93,0,0,0-10-328.76ZM240,128a16,16,0,0,1,32,0v32a16,16,0,0,1-32,0ZM128,304H96a16,16,0,0,1,0-32h32a16,16,0,0,1,0,32Zm48.8-95.2a16,16,0,0,1-22.62,0l-22.63-22.62a16,16,0,0,1,22.63-22.63l22.62,22.63A16,16,0,0,1,176.8,208.8Zm149.3,23.1-47.5,75.5a31,31,0,0,1-7,7,30.11,30.11,0,0,1-35-49l75.5-47.5a10.23,10.23,0,0,1,11.7,0A10.06,10.06,0,0,1,326.1,231.9Zm31.72-23.1a16,16,0,0,1-22.62-22.62l22.62-22.63a16,16,0,0,1,22.63,22.63ZM423.7,436.4h0ZM416,304H384a16,16,0,0,1,0-32h32a16,16,0,0,1,0,32Z"/>
+                </svg>
+                <span class="m-auto">Histórico de Velocidade</span>
+            
+            <button onclick="scrollToSection('odometro')" class="flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
+                <svg fill="#82C34C" class="size-10" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12,2A10,10,0,1,0,22,12,10.011,10.011,0,0,0,12,2Zm7.411,13H12.659L9.919,8.606a1,1,0,1,0-1.838.788L10.484,15H4.589a8,8,0,1,1,14.822,0Z"/>
+                </svg>
+                <span class="m-auto"> Histórico Odômetro</span>
+            </button>
+            <button onclick="scrollToSection('link-compar')" class="flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
+                <svg version="1.2" xmlns="http://www.w3.org/2000/svg" fill="#82C34C" class="size-8" viewBox="0 0 261 260">
+                    <path  d="m170 2.1c-4.1 1.1-11.1 3.8-15.5 6.1-7.3 3.8-10.3 6.5-34.5 30.7-20 20-27.5 28.2-30.3 33.1-2.1 3.6-4.9 10.1-6.3 14.5-1.7 5.4-2.8 11.3-3.1 18-0.4 7.2-0.1 12.3 1.1 18.5 1.1 5.2 3.4 12 6.1 17.5 3 6.2 6.3 11.1 10.7 15.8 4.4 4.8 7.6 7.3 10.8 8.4 3.1 1.1 6 1.4 9.5 1 3-0.4 6.6-1.8 9-3.5 2.2-1.5 5-4.6 6.2-6.7 1.6-2.9 2.3-5.7 2.3-9.8 0-3.1-0.5-6.9-1.1-8.5-0.6-1.5-2.8-4.7-4.9-7.2-2.2-2.5-4.8-6.5-5.9-9-1-2.5-2.3-6.5-2.6-9-0.6-3.3-0.2-6.4 1.5-12l2.2-7.5c41.3-41.5 47.4-47 51.3-48.7 3.7-1.7 7-2.2 12.5-2.3 6.1 0 8.5 0.5 13 2.7 3 1.4 7.3 4.6 9.4 7 2.2 2.3 4.9 6.3 6 8.8 1.4 3.1 2 6.7 2.1 11.5 0 4.5-0.7 8.8-1.9 12-1.5 4-5 8.2-17.6 21-8.7 8.8-16.5 17.5-17.4 19.3-0.9 1.7-1.6 5.3-1.7 8l-0.1 4.7c-2.1-7.8-4.5-13.6-6.7-18-2.5-5-6.3-10.5-10.3-14.8-4.5-4.9-7.6-7.3-10.8-8.4-3.1-1.1-6-1.4-9.5-1-3 0.4-6.6 1.8-9 3.5-2.2 1.5-5 4.6-6.2 6.7-1.6 2.9-2.3 5.7-2.3 9.8 0 3.1 0.5 6.9 1.1 8.5 0.6 1.5 2.8 4.7 4.9 7.2 2.2 2.5 4.9 6.8 6.1 9.5 1.5 3.3 2.3 7 2.3 11 0 3.3-0.8 8.5-1.8 11.5-1.7 5-4 7.6-25 28.8-18.1 18.2-24.2 23.7-28.1 25.4-3.7 1.7-7 2.2-12.5 2.2-5.4 0.1-8.7-0.5-12-2-2.5-1.1-6.5-3.8-8.8-6-2.4-2.1-5.6-6.4-7-9.4-2.1-4.4-2.7-7-2.7-12.5 0-4.5 0.7-8.8 1.9-12 1.5-3.9 4.8-8 14.6-18 7-7.2 13.5-14.5 14.4-16.3 0.9-1.9 1.6-5.6 1.6-9.2 0-3.3-0.6-7.2-1.4-8.7-0.8-1.6-2.9-4.2-4.8-5.9-1.8-1.8-4.4-3.7-5.8-4.4-1.4-0.8-5-1.3-8-1.4-3.1 0-7 0.7-9 1.7-1.9 0.9-10 8.3-18 16.4-12 12.2-15.3 16.2-18.7 22.8-2.3 4.4-5.1 11.6-6.3 16-1.4 5.6-2 11.2-2 18.5 0 7.3 0.6 12.9 2 18.5 1.2 4.4 3.6 10.9 5.5 14.5 1.9 3.6 5.6 9.2 8.3 12.5 2.6 3.3 7.5 8.1 10.7 10.8 3.3 2.6 8.9 6.3 12.5 8.2 3.6 1.9 10.1 4.3 14.5 5.5 5.6 1.4 11.2 2 18.5 2 7.3 0 12.9-0.6 18.5-2 4.4-1.2 11.6-4 16-6.2 7.3-3.8 10.3-6.5 34.5-30.7 20-20 27.5-28.2 30.3-33.1 2.1-3.6 4.9-10.1 6.4-14.5 2.2-6.8 2.6-9.8 2.7-20.5l0.1-12.6c4 6.3 6.4 9 8.1 10 1.6 1 5.2 2.3 7.9 2.9 3.6 0.7 6.3 0.6 9.5-0.2 3.9-1.1 6.9-3.6 23.1-19.9 16.1-16.3 19.1-19.7 22.7-26.7 2.2-4.4 5-11.6 6.2-16 1.4-5.6 2-11.2 2-18.5 0-7.3-0.6-12.9-2-18.5-1.2-4.4-3.6-10.9-5.5-14.5-1.9-3.6-5.5-9.1-8-12.3-2.5-3.1-7.3-8-10.7-10.8-3.5-2.9-9.4-6.7-13.3-8.7-3.8-1.9-10.4-4.3-14.5-5.3-5.2-1.3-10.8-1.9-18.5-1.9-7.6 0.1-13.3 0.7-18.5 2.1z"/>
+                </svg>
+                <span class="m-auto">Link Compartilhado</span>
+            </button>   
         </div>
     </div>
 </div>
@@ -158,7 +312,7 @@
                 <iframe class="aspect-video drop-shadow-xl/80 w-full max-w-3xl rounded-lg" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen>
                 </iframe>
         </div>
-        <button id="whatsapp" onclick="openWhatsApp()" class="group fixed flex items-center gap-2 right-5 bottom-5 bg-green-500 border-4 border-white rounded-full overflow-hidden transition-all duration-300 ease-in-out w-14 h-14 hover:w-48 animationzap group-hover:no-zap shadow-lg">
+        <button id="whatsapp" onclick="openWhatsApp()" class="cursor-pointer group fixed flex items-center gap-2 right-5 bottom-5 bg-green-500 border-4 border-white rounded-full overflow-hidden transition-all duration-300 ease-in-out w-14 h-14 hover:w-48 animationzap group-hover:no-zap shadow-lg">
             <div class="h-12 w-12 flex justify-center items-center transition-all duration-300 transform group-hover:translate-x-2 ">
                 <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="48px" height="48px" fill-rule="evenodd" clip-rule="evenodd"><path fill="#fff" d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z"/><path fill="#fff" d="M4.868,43.803c-0.132,0-0.26-0.052-0.355-0.148c-0.125-0.127-0.174-0.312-0.127-0.483l2.639-9.636c-1.636-2.906-2.499-6.206-2.497-9.556C4.532,13.238,13.273,4.5,24.014,4.5c5.21,0.002,10.105,2.031,13.784,5.713c3.679,3.683,5.704,8.577,5.702,13.781c-0.004,10.741-8.746,19.48-19.486,19.48c-3.189-0.001-6.344-0.788-9.144-2.277l-9.875,2.589C4.953,43.798,4.911,43.803,4.868,43.803z"/><path fill="#cfd8dc" d="M24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,4C24.014,4,24.014,4,24.014,4C12.998,4,4.032,12.962,4.027,23.979c-0.001,3.367,0.849,6.685,2.461,9.622l-2.585,9.439c-0.094,0.345,0.002,0.713,0.254,0.967c0.19,0.192,0.447,0.297,0.711,0.297c0.085,0,0.17-0.011,0.254-0.033l9.687-2.54c2.828,1.468,5.998,2.243,9.197,2.244c11.024,0,19.99-8.963,19.995-19.98c0.002-5.339-2.075-10.359-5.848-14.135C34.378,6.083,29.357,4.002,24.014,4L24.014,4z"/><path fill="#40c351" d="M35.176,12.832c-2.98-2.982-6.941-4.625-11.157-4.626c-8.704,0-15.783,7.076-15.787,15.774c-0.001,2.981,0.833,5.883,2.413,8.396l0.376,0.597l-1.595,5.821l5.973-1.566l0.577,0.342c2.422,1.438,5.2,2.198,8.032,2.199h0.006c8.698,0,15.777-7.077,15.78-15.776C39.795,19.778,38.156,15.814,35.176,12.832z"/><path fill="#fff" fill-rule="evenodd" d="M19.268,16.045c-0.355-0.79-0.729-0.806-1.068-0.82c-0.277-0.012-0.593-0.011-0.909-0.011c-0.316,0-0.83,0.119-1.265,0.594c-0.435,0.475-1.661,1.622-1.661,3.956c0,2.334,1.7,4.59,1.937,4.906c0.237,0.316,3.282,5.259,8.104,7.161c4.007,1.58,4.823,1.266,5.693,1.187c0.87-0.079,2.807-1.147,3.202-2.255c0.395-1.108,0.395-2.057,0.277-2.255c-0.119-0.198-0.435-0.316-0.909-0.554s-2.807-1.385-3.242-1.543c-0.435-0.158-0.751-0.237-1.068,0.238c-0.316,0.474-1.225,1.543-1.502,1.859c-0.277,0.317-0.554,0.357-1.028,0.119c-0.474-0.238-2.002-0.738-3.815-2.354c-1.41-1.257-2.362-2.81-2.639-3.285c-0.277-0.474-0.03-0.731,0.208-0.968c0.213-0.213,0.474-0.554,0.712-0.831c0.237-0.277,0.316-0.475,0.474-0.791c0.158-0.317,0.079-0.594-0.04-0.831C20.612,19.329,19.69,16.983,19.268,16.045z" clip-rule="evenodd"/>
                 </svg>
