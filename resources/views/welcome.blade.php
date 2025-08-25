@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
-    <title>Bem-vindo</title>
+    <title>Tutoriais Boltech</title>
     @vite(['resources/css/app.css'])
     <link rel="stylesheet" href="omeoakeosae">
 </head>
@@ -31,7 +31,7 @@
     </div>
     <div class="overflow-y-scroll mt-[120px] h-screen scrollbar-nav flex flex-col items-center justify-start  gap-10">
         <div class="flex flex-col gap-5 items-center">
-            <h1 class="text-3xl text-white text-center font-bold">Tutorias do Aplicativo</h1>
+            <h1 class="text-3xl text-white text-center font-bold">Tutoriais do Aplicativo</h1>
             <!-- Botões de navegação -->
             <button onclick="scrollToSection('info-geral')" class="cursor-pointer flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2  focus:ontline-primary focus:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="size-7">
@@ -72,7 +72,7 @@
             </button>
         </div>
         <div class="flex flex-col gap-5 items-center mb-3">
-            <h1 class="text-3xl text-white text-center font-bold">Tutorias do Site</h1>
+            <h1 class="text-3xl text-white text-center font-bold">Tutoriais do Site</h1>
             <button onclick="scrollToSection('info-site')" class="cursor-pointer flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="size-8">
                 <path fill-rule="evenodd" d="M2.25 5.25a3 3 0 0 1 3-3h13.5a3 3 0 0 1 3 3V15a3 3 0 0 1-3 3h-3v.257c0 .597.237 1.17.659 1.591l.621.622a.75.75 0 0 1-.53 1.28h-9a.75.75 0 0 1-.53-1.28l.621-.622a2.25 2.25 0 0 0 .659-1.59V18h-3a3 3 0 0 1-3-3V5.25Zm1.5 0v7.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5v-7.5a1.5 1.5 0 0 0-1.5-1.5H5.25a1.5 1.5 0 0 0-1.5 1.5Z" clip-rule="evenodd" />
@@ -130,7 +130,7 @@
 <div id="Menu"class="lg:hidden fixed top-0 left-0 h-full max-w-0 overflow-hidden w-1/2 bg-gradient-to-r from-[#7ed957]/0 to-[#007e50] z-1 rounded-r-lg flex flex-col items-center justify-center transition-all duration-300">
     <div class="overflow-y-scroll h-screen scrollbar-hide backdrop-blur-[5px] flex flex-col items-center justify-start  py-30 gap-10">
         <div class="flex flex-col gap-5 items-center">
-            <h1 class="text-3xl text-white text-center font-bold">Tutorias do Aplicativo</h1>
+            <h1 class="text-3xl text-white text-center left-1 font-bold">Tutoriais do Aplicativo</h1>
             <!-- Botões de navegação Mobile-->
             <button onclick="scrollToSection('info-geral')" class="flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="size-7">
@@ -170,7 +170,7 @@
             </button>
         </div>
         <div class="flex flex-col gap-5 items-center">
-            <h1 class="text-3xl text-white text-center font-bold">Tutorias do Site</h1>
+            <h1 class="text-3xl text-white text-center font-bold">Tutoriais do Site</h1>
             <button onclick="scrollToSection('info-site')" class="flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="size-8">
                 <path fill-rule="evenodd" d="M2.25 5.25a3 3 0 0 1 3-3h13.5a3 3 0 0 1 3 3V15a3 3 0 0 1-3 3h-3v.257c0 .597.237 1.17.659 1.591l.621.622a.75.75 0 0 1-.53 1.28h-9a.75.75 0 0 1-.53-1.28l.621-.622a2.25 2.25 0 0 0 .659-1.59V18h-3a3 3 0 0 1-3-3V5.25Zm1.5 0v7.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5v-7.5a1.5 1.5 0 0 0-1.5-1.5H5.25a1.5 1.5 0 0 0-1.5 1.5Z" clip-rule="evenodd" />
@@ -320,8 +320,7 @@
                 <span class="ml-2 font-bold text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">Solicite Suporte</span>
         </button>
 <script>
-    let menuOpen = false;
-
+    let menuOpen = false; 
     function toggleMenu() {
         const menu = document.getElementById('Menu');
         menuOpen = !menuOpen; 
