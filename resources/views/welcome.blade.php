@@ -3,12 +3,105 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
     <title>Tutoriais Boltech</title>
-    @vite(['resources/css/app.css'])
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="omeoakeosae">
-</head>
-<body class="bg-[url('/public/Images/fundo2.jpg')] bg-center bg-cover lg:bg-fixed">
-  
+    <style>
+        @theme {
+        --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+            'Segoe UI Symbol', 'Noto Color Emoji';
+        --color-grey-blue: #47415d;
+        --color-primary: #0693e3;
+        --scroll-bar:
+        }
 
+        html {
+        scroll-behavior: smooth;
+        }
+
+        .highlight {
+        outline: 2px solid #00c896;
+        transition: outline 0.3s ease;
+        }
+
+        .highlight-remove {
+        box-shadow: none;
+        transition: box-shadow 0.3s ease;
+        }
+
+        .scrollbar-nav {
+        overflow: auto;
+
+        /* Firefox */
+        scrollbar-width: thin;
+        scrollbar-color: #26201E transparent;
+
+        /* Internet Explorer 10+ */
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        }
+
+        /* WebKit (Chrome, Safari, Edge) */
+        .scrollbar-nav::-webkit-scrollbar {
+        width: 6px;
+        height: 3px;
+        }
+
+        .scrollbar-nav::-webkit-scrollbar-track {
+        background: transparent;
+        }
+
+        .scrollbar-nav::-webkit-scrollbar-thumb {
+        background-color: #00c896;
+        border-radius: 10px;
+        transition: background-color 0.3s ease;
+        }
+
+        .scrollbar-nav::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        @layer {
+        @keyframes animationzap {
+            0% {
+            box-shadow: 0 0 0 0 #fff
+            }
+
+            50% {
+            box-shadow: 0 0 20px 5px #fff
+            }
+
+            100% {
+            box-shadow: 0 0 0 0 #fff
+            }
+        }
+        
+        @keyframes animationnew {
+        0%, 100% { filter: drop-shadow(0 0 0px #82C34C); }
+        50% { filter: drop-shadow(0 0 24px #fff) drop-shadow(0 0 48px #fff); }
+        }
+        .animationnew {
+        animation: animationnew 2s infinite;
+        }
+        .animationzap{
+            animation: animationzap 2s infinite;
+        }
+        .group-hover\:no-zap:hover {
+            animation: none !important;
+        }
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+            extend: {
+                colors: {
+                primary: "#0693e3",
+                }
+            }
+            }
+        }
+    </script>
+</head>
+<body class="bg-[url('/Images/fundo2.jpg')] bg-center bg-cover lg:bg-fixed">
 
 <!-- Navbar/Menu -->
 <div class="bg-gradient-to-r from-[#7ed957]/0 to-[#007e50] w-56 px-1 h-screen fixed rounded-r-lg hidden lg:flex flex-col items-center justify-center">
@@ -124,7 +217,7 @@
 </div>
 
 <!-- Menu Mobile -->
-<div id="Menu"class="lg:hidden fixed top-0 left-0 h-full max-w-0 overflow-hidden w-1/2 bg-gradient-to-r from-[#7ed957]/0 to-[#007e50] z-1 rounded-r-lg flex flex-col items-center justify-center transition-all duration-300">
+<div id="Menu"class="lg:hidden fixed top-0 left-0 h-full max-w-0 overflow-hidden w-1/2 bg-gradient-to-r from-[#7ed957] to-[#007e50] z-20 rounded-r-lg flex flex-col items-center justify-center transition-all duration-300">
     <div class="overflow-y-scroll h-screen scrollbar-hide backdrop-blur-[5px] flex flex-col items-center justify-start  py-30 gap-10">
         <div class="flex flex-col gap-5 items-center">
             <h1 class="text-3xl text-white text-center left-1 font-bold">Tutoriais do Aplicativo</h1>
@@ -215,10 +308,10 @@
     </div>
 </div>
 
-<div class= "lg:hidden sticky top-0 bg-gradient-to-t from-[#7ed957]/0 to-[#007e50] z-1 left-4 flex flex-row">
+<div class= "lg:hidden sticky top-0 bg-gradient-to-t from-[#7ed957]/0 to-[#007e50] z-10 left-4 flex flex-row">
     
-    <button id="menuBtn" onclick="toggleMenu()">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-15 h-15">
+    <button id="menuBtn" onclick="toggleMenu()" class="z-20 h-10 w-10">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-15 h-15 z-50">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
     </button>
