@@ -6,7 +6,7 @@
     @vite(['resources/css/app.css'])
     <link rel="stylesheet" href="omeoakeosae">
 </head>
-<body class="bg-[url('/public/Images/fundo.png')] lg:bg-fixed">
+<body class="bg-[url('/public/Images/fundo2.jpg')] bg-center bg-cover lg:bg-fixed">
   
 <script src="https://unpkg.com/@heroicons/vue@2.0.16/24/solid/star.js"></script>
 
@@ -42,13 +42,6 @@
                 <span class="m-auto">Inicio</span>
             </button>
             
-            <button onclick="scrollToSection('fun-completo')" class="cursor-pointer flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="size-10">
-                <path d="M21.721 12.752a9.711 9.711 0 0 0-.945-5.003 12.754 12.754 0 0 1-4.339 2.708 18.991 18.991 0 0 1-.214 4.772 17.165 17.165 0 0 0 5.498-2.477ZM14.634 15.55a17.324 17.324 0 0 0 .332-4.647c-.952.227-1.945.347-2.966.347-1.021 0-2.014-.12-2.966-.347a17.515 17.515 0 0 0 .332 4.647 17.385 17.385 0 0 0 5.268 0ZM9.772 17.119a18.963 18.963 0 0 0 4.456 0A17.182 17.182 0 0 1 12 21.724a17.18 17.18 0 0 1-2.228-4.605ZM7.777 15.23a18.87 18.87 0 0 1-.214-4.774 12.753 12.753 0 0 1-4.34-2.708 9.711 9.711 0 0 0-.944 5.004 17.165 17.165 0 0 0 5.498 2.477ZM21.356 14.752a9.765 9.765 0 0 1-7.478 6.817 18.64 18.64 0 0 0 1.988-4.718 18.627 18.627 0 0 0 5.49-2.098ZM2.644 14.752c1.682.971 3.53 1.688 5.49 2.099a18.64 18.64 0 0 0 1.988 4.718 9.765 9.765 0 0 1-7.478-6.816ZM13.878 2.43a9.755 9.755 0 0 1 6.116 3.986 11.267 11.267 0 0 1-3.746 2.504 18.63 18.63 0 0 0-2.37-6.49ZM12 2.276a17.152 17.152 0 0 1 2.805 7.121c-.897.23-1.837.353-2.805.353-.968 0-1.908-.122-2.805-.353A17.151 17.151 0 0 1 12 2.276ZM10.122 2.43a18.629 18.629 0 0 0-2.37 6.49 11.266 11.266 0 0 1-3.746-2.504 9.754 9.754 0 0 1 6.116-3.985Z" />
-                </svg>
-                <span class="m-auto">Funcionamento Completo</span>
-            </button>
-            
             <button onclick="scrollToSection('ult-loc')" class="cursor-pointer flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="size-8">
                 <path fill-rule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd" />
@@ -71,13 +64,14 @@
                 <span class="m-auto">Relátorios e Trajetos</span>
             </button>
         </div>
+
         <div class="flex flex-col gap-5 items-center mb-3">
             <h1 class="text-3xl text-white text-center font-bold">Tutoriais do Site</h1>
-            <button onclick="scrollToSection('info-site')" class="cursor-pointer flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="size-8">
-                <path fill-rule="evenodd" d="M2.25 5.25a3 3 0 0 1 3-3h13.5a3 3 0 0 1 3 3V15a3 3 0 0 1-3 3h-3v.257c0 .597.237 1.17.659 1.591l.621.622a.75.75 0 0 1-.53 1.28h-9a.75.75 0 0 1-.53-1.28l.621-.622a2.25 2.25 0 0 0 .659-1.59V18h-3a3 3 0 0 1-3-3V5.25Zm1.5 0v7.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5v-7.5a1.5 1.5 0 0 0-1.5-1.5H5.25a1.5 1.5 0 0 0-1.5 1.5Z" clip-rule="evenodd" />
+            <button onclick="scrollToSection('rotas')" class="cursor-pointer flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
+                <svg class="size-9 animationnew" fill="#82C34C" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M44,14H4a2,2,0,0,0-2,2V32a2,2,0,0,0,2,2H44a2,2,0,0,0,2-2V16A2,2,0,0,0,44,14ZM17.3,29H14.8l-3-5-.7-1.3h0V29H8.7V19h2.5l3,5,.6,1.3h.1s-.1-1.2-.1-1.6V19h2.5Zm9.1,0H18.7V19h7.6v2H21.2v1.8h4.4v2H21.2v2.1h5.2Zm10.9,0H34.8l-1-4.8c-.2-.8-.4-1.9-.4-1.9h0s-.2,1.1-.3,1.9L32,29H29.6L26.8,19h2.5l1,4.2a20.1,20.1,0,0,1,.5,2.5h0l.5-2.4,1-4.3h2.3l.9,4.3.5,2.4h0l.5-2.5,1-4.2H40Z"/>
                 </svg>
-                <span class="m-auto">Informações Gerais</span>
+                <span class="m-auto">(NEW) Rotas</span>
             </button>
             <button onclick="scrollToSection('trajeto-site')" class="cursor-pointer flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
                 <svg version="1.0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="size-8 fill-none stroke-[#82C34C]" stroke="currentColor" stroke-width="2" stroke-linecap="round">
@@ -140,13 +134,6 @@
                 <span class="m-auto">Inicio</span>
             </button>                                           
             
-            <button onclick="scrollToSection('fun-completo')" class="flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="size-10">
-                <path d="M21.721 12.752a9.711 9.711 0 0 0-.945-5.003 12.754 12.754 0 0 1-4.339 2.708 18.991 18.991 0 0 1-.214 4.772 17.165 17.165 0 0 0 5.498-2.477ZM14.634 15.55a17.324 17.324 0 0 0 .332-4.647c-.952.227-1.945.347-2.966.347-1.021 0-2.014-.12-2.966-.347a17.515 17.515 0 0 0 .332 4.647 17.385 17.385 0 0 0 5.268 0ZM9.772 17.119a18.963 18.963 0 0 0 4.456 0A17.182 17.182 0 0 1 12 21.724a17.18 17.18 0 0 1-2.228-4.605ZM7.777 15.23a18.87 18.87 0 0 1-.214-4.774 12.753 12.753 0 0 1-4.34-2.708 9.711 9.711 0 0 0-.944 5.004 17.165 17.165 0 0 0 5.498 2.477ZM21.356 14.752a9.765 9.765 0 0 1-7.478 6.817 18.64 18.64 0 0 0 1.988-4.718 18.627 18.627 0 0 0 5.49-2.098ZM2.644 14.752c1.682.971 3.53 1.688 5.49 2.099a18.64 18.64 0 0 0 1.988 4.718 9.765 9.765 0 0 1-7.478-6.816ZM13.878 2.43a9.755 9.755 0 0 1 6.116 3.986 11.267 11.267 0 0 1-3.746 2.504 18.63 18.63 0 0 0-2.37-6.49ZM12 2.276a17.152 17.152 0 0 1 2.805 7.121c-.897.23-1.837.353-2.805.353-.968 0-1.908-.122-2.805-.353A17.151 17.151 0 0 1 12 2.276ZM10.122 2.43a18.629 18.629 0 0 0-2.37 6.49 11.266 11.266 0 0 1-3.746-2.504 9.754 9.754 0 0 1 6.116-3.985Z" />
-                </svg>
-                <span class="m-auto">Funcionamento Completo</span>
-            </button>    
-            
             <button onclick="scrollToSection('ult-loc')" class="flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="size-8">
                 <path fill-rule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd" />
@@ -169,13 +156,14 @@
                 <span class="m-auto">Relátorios e Trajetos</span>
             </button>
         </div>
+
         <div class="flex flex-col gap-5 items-center">
             <h1 class="text-3xl text-white text-center font-bold">Tutoriais do Site</h1>
-            <button onclick="scrollToSection('info-site')" class="flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="size-8">
-                <path fill-rule="evenodd" d="M2.25 5.25a3 3 0 0 1 3-3h13.5a3 3 0 0 1 3 3V15a3 3 0 0 1-3 3h-3v.257c0 .597.237 1.17.659 1.591l.621.622a.75.75 0 0 1-.53 1.28h-9a.75.75 0 0 1-.53-1.28l.621-.622a2.25 2.25 0 0 0 .659-1.59V18h-3a3 3 0 0 1-3-3V5.25Zm1.5 0v7.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5v-7.5a1.5 1.5 0 0 0-1.5-1.5H5.25a1.5 1.5 0 0 0-1.5 1.5Z" clip-rule="evenodd" />
+            <button onclick="scrollToSection('rotas')" class="flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
+                <svg class="size-9 animationnew" fill="#82C34C" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M44,14H4a2,2,0,0,0-2,2V32a2,2,0,0,0,2,2H44a2,2,0,0,0,2-2V16A2,2,0,0,0,44,14ZM17.3,29H14.8l-3-5-.7-1.3h0V29H8.7V19h2.5l3,5,.6,1.3h.1s-.1-1.2-.1-1.6V19h2.5Zm9.1,0H18.7V19h7.6v2H21.2v1.8h4.4v2H21.2v2.1h5.2Zm10.9,0H34.8l-1-4.8c-.2-.8-.4-1.9-.4-1.9h0s-.2,1.1-.3,1.9L32,29H29.6L26.8,19h2.5l1,4.2a20.1,20.1,0,0,1,.5,2.5h0l.5-2.4,1-4.3h2.3l.9,4.3.5,2.4h0l.5-2.5,1-4.2H40Z"/>
                 </svg>
-                <span class="m-auto">Informações Gerais</span>
+                <span class="m-auto">(NEW) Rotas</span>
             </button>
             <button onclick="scrollToSection('trajeto-site')" class="flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
                 <svg version="1.0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="size-8 fill-none stroke-[#82C34C]" stroke="currentColor" stroke-width="2" stroke-linecap="round">
@@ -225,6 +213,7 @@
 </div>
 
 <div class= "lg:hidden sticky top-0 bg-gradient-to-t from-[#7ed957]/0 to-[#007e50] z-1 left-4 flex flex-row">
+    
     <button id="menuBtn" onclick="toggleMenu()">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-15 h-15">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -271,47 +260,124 @@
         </div>
 
         </div>
-
-        <div id="fun-completo" class="bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg flex flex-col items-center gap-y-6 my-8 p-5 ">
-                <div class="text-white max-w-2xl">
-                    <h1 class="text-center text-shadow-lg/80 text-3xl font-bold mb-4">Funcionamento Completo</h1>
-                    <p class="text-xl font-sans-serif">Este tutorial foi criado para te guiar passo a passo pelas principais funcionalidades do nosso aplicativo. Com ele, você terá controle total sobre seus veículos, podendo acompanhar em tempo real localização, status de ignição, bloqueio e muito mais.</p>
-
-                </div>
-                
-                <iframe class="aspect-video drop-shadow-xl/80 w-full max-w-3xl rounded-lg" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen>
-                </iframe>
-        </div>
         <div id="ult-loc" class="bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg flex flex-col items-center gap-y-6 my-8 p-5 ">
                 <div class="text-white max-w-2xl">
-                    <h1 class="text-center text-shadow-lg/80 text-3xl font-bold mb-4">Como Descbrir Sua Última Localização?</h1>
-                    <p class="text-xl">Este tutorial foi criado para te guiar passo a passo pelas principais funcionalidades do nosso aplicativo. Com ele, você terá controle total sobre seus veículos, podendo acompanhar em tempo real localização, status de ignição, bloqueio e muito mais.</p>
-
+                    <h1 class="text-center text-shadow-lg/80 text-3xl font-bold mb-2">Como Descbrir Sua Última Localização?</h1>
                 </div>
                 
-                <iframe class="aspect-video drop-shadow-xl/80 w-full max-w-3xl rounded-lg" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen>
-                </iframe>
+                <div class="w-[360px] h-[640px] max-w-full rounded-xl overflow-hidden drop-shadow-xl/80">
+                    <iframe
+                        class="w-full h-full"
+                        src="https://youtube.com/embed/f4Nj-831WSA"
+                        frameborder="0"
+                        allowfullscreen>
+                    </iframe>
+                </div>
         </div>
+
         <div id="bloq" class="bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg flex flex-col items-center gap-y-6 my-8 p-5 ">
                 <div class="text-white max-w-2xl">
                     <h1 class="text-center text-shadow-lg/80 text-3xl font-bold mb-4">Como Funciona o Bloqueio?</h1>
-                    <p class="text-xl">Este tutorial foi criado para te guiar passo a passo pelas principais funcionalidades do nosso aplicativo. Com ele, você terá controle total sobre seus veículos, podendo acompanhar em tempo real localização, status de ignição, bloqueio e muito mais.</p>
-
                 </div>
                 
-                <iframe class="aspect-video drop-shadow-xl/80 w-full max-w-3xl rounded-lg" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen>
-                </iframe>
+                <div class="w-[360px] h-[640px] max-w-full rounded-xl overflow-hidden drop-shadow-xl/80">
+                    <iframe
+                        class="w-full h-full"
+                        src="https://youtube.com/embed/91yPx5y_cdU"
+                        frameborder="0"
+                        allowfullscreen>
+                    </iframe>
+                </div>
         </div>
+
         <div id="rela-traj" class="bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg flex flex-col items-center gap-y-6 my-8 p-5 ">
                 <div class="text-white max-w-2xl">
                     <h1 class="text-center text-shadow-lg/80 text-3xl font-bold mb-4">Como Ver Relátorios e Trajetos?</h1>
-                    <p class="text-xl">Este tutorial foi criado para te guiar passo a passo pelas principais funcionalidades do nosso aplicativo. Com ele, você terá controle total sobre seus veículos, podendo acompanhar em tempo real localização, status de ignição, bloqueio e muito mais.</p>
+                </div>
+                
+                  <div class="w-[360px] h-[640px] max-w-full rounded-xl overflow-hidden drop-shadow-xl/80">
+                    <iframe
+                        class="w-full h-full"
+                        src="https://youtube.com/embed/-tOuNVb796o?feature=share"
+                        frameborder="0"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+        </div>
+        
+        <div id="rotas" class="bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg flex flex-col items-center gap-y-6 my-8 p-5 ">
+                <div class="text-white max-w-2xl">
+                    <h1 class="text-center text-shadow-lg/80 text-3xl font-bold mb-4">Como Ver as Rotas do seu Veículo nas Últimas 24 horas!</h1>
+                </div>
+                
+                <iframe class="aspect-video drop-shadow-xl/80 w-full max-w-3xl rounded-lg" 
+                    src="https://www.youtube.com/embed/9QYpimkkZdo" allowfullscreen>
+                </iframe>
+        </div>
+
+        <div id="trajeto-site" class="bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg flex flex-col items-center gap-y-6 my-8 p-5 ">
+                <div class="text-white max-w-2xl">
+                    <h1 class="text-center text-shadow-lg/80 text-3xl font-bold mb-4">Como ver seu Trajeto no Site</h1>
+                </div>
+                
+                <iframe class="aspect-video drop-shadow-xl/80 w-full max-w-3xl rounded-lg" 
+                    src="https://www.youtube.com/embed/AqKxVdtIwxM" allowfullscreen>
+                </iframe>
+        </div>
+
+        <div id="cerca" class="bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg flex flex-col items-center gap-y-6 my-8 p-5 ">
+                <div class="text-white max-w-2xl">
+                    <h1 class="text-center text-shadow-lg/80 text-3xl font-bold mb-4">Como Funciona a Cerca no Site da Boltech</h1>
 
                 </div>
                 
-                <iframe class="aspect-video drop-shadow-xl/80 w-full max-w-3xl rounded-lg" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen>
+                <iframe class="aspect-video drop-shadow-xl/80 w-full max-w-3xl rounded-lg" 
+                    src="https://www.youtube.com/embed/n5ELukmUB14" allowfullscreen>
                 </iframe>
         </div>
+
+        <div id="comandos" class="bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg flex flex-col items-center gap-y-6 my-8 p-5 ">
+                <div class="text-white max-w-2xl">
+                    <h1 class="text-center text-shadow-lg/80 text-3xl font-bold mb-4">Como Funciona a Cerca no Site da Boltech</h1>
+                </div>
+                
+                <iframe class="aspect-video drop-shadow-xl/80 w-full max-w-3xl rounded-lg" 
+                    src="https://www.youtube.com/embed/inwnAz3WPWk" allowfullscreen>
+                </iframe>
+        </div>
+
+        <div id="his-velo" class="bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg flex flex-col items-center gap-y-6 my-8 p-5 ">
+                <div class="text-white max-w-2xl">
+                    <h1 class="text-center text-shadow-lg/80 text-3xl font-bold mb-4">Como Ver o Historico do Odometro</h1>
+
+                </div>
+                
+                <iframe class="aspect-video drop-shadow-xl/80 w-full max-w-3xl rounded-lg" 
+                    src="https://www.youtube.com/embed/QilouF2asJU" allowfullscreen>
+                </iframe>
+        </div>
+        
+        <div id="odometro" class="bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg flex flex-col items-center gap-y-6 my-8 p-5 ">
+                <div class="text-white max-w-2xl">
+                    <h1 class="text-center text-shadow-lg/80 text-3xl font-bold mb-4">Como Ver o Historico de Velocidade?</h1>
+                </div>
+                
+                <iframe class="aspect-video drop-shadow-xl/80 w-full max-w-3xl rounded-lg" 
+                    src="https://www.youtube.com/embed/UomszKHWIzM" allowfullscreen>
+                </iframe>
+        </div>
+
+        <div id="link-compar" class="bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg flex flex-col items-center gap-y-6 my-8 p-5 ">
+                <div class="text-white max-w-2xl">
+                    <h1 class="text-center text-shadow-lg/80 text-3xl font-bold mb-4">Como Criar um Link de Compartilhamento do Site da Boltech</h1>
+                    
+                </div>
+                
+                <iframe class="aspect-video drop-shadow-xl/80 w-full max-w-3xl rounded-lg" 
+                    src="https://www.youtube.com/embed/TVKzYrLIQUk" allowfullscreen>
+                </iframe>
+        </div>
+        
         <button id="whatsapp" onclick="openWhatsApp()" class="cursor-pointer group fixed flex items-center gap-2 right-5 bottom-5 bg-green-500 border-4 border-white rounded-full overflow-hidden transition-all duration-300 ease-in-out w-14 h-14 hover:w-48 animationzap group-hover:no-zap shadow-lg">
             <div class="h-12 w-12 flex justify-center items-center transition-all duration-300 transform group-hover:translate-x-2 ">
                 <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="48px" height="48px" fill-rule="evenodd" clip-rule="evenodd"><path fill="#fff" d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z"/><path fill="#fff" d="M4.868,43.803c-0.132,0-0.26-0.052-0.355-0.148c-0.125-0.127-0.174-0.312-0.127-0.483l2.639-9.636c-1.636-2.906-2.499-6.206-2.497-9.556C4.532,13.238,13.273,4.5,24.014,4.5c5.21,0.002,10.105,2.031,13.784,5.713c3.679,3.683,5.704,8.577,5.702,13.781c-0.004,10.741-8.746,19.48-19.486,19.48c-3.189-0.001-6.344-0.788-9.144-2.277l-9.875,2.589C4.953,43.798,4.911,43.803,4.868,43.803z"/><path fill="#cfd8dc" d="M24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,4C24.014,4,24.014,4,24.014,4C12.998,4,4.032,12.962,4.027,23.979c-0.001,3.367,0.849,6.685,2.461,9.622l-2.585,9.439c-0.094,0.345,0.002,0.713,0.254,0.967c0.19,0.192,0.447,0.297,0.711,0.297c0.085,0,0.17-0.011,0.254-0.033l9.687-2.54c2.828,1.468,5.998,2.243,9.197,2.244c11.024,0,19.99-8.963,19.995-19.98c0.002-5.339-2.075-10.359-5.848-14.135C34.378,6.083,29.357,4.002,24.014,4L24.014,4z"/><path fill="#40c351" d="M35.176,12.832c-2.98-2.982-6.941-4.625-11.157-4.626c-8.704,0-15.783,7.076-15.787,15.774c-0.001,2.981,0.833,5.883,2.413,8.396l0.376,0.597l-1.595,5.821l5.973-1.566l0.577,0.342c2.422,1.438,5.2,2.198,8.032,2.199h0.006c8.698,0,15.777-7.077,15.78-15.776C39.795,19.778,38.156,15.814,35.176,12.832z"/><path fill="#fff" fill-rule="evenodd" d="M19.268,16.045c-0.355-0.79-0.729-0.806-1.068-0.82c-0.277-0.012-0.593-0.011-0.909-0.011c-0.316,0-0.83,0.119-1.265,0.594c-0.435,0.475-1.661,1.622-1.661,3.956c0,2.334,1.7,4.59,1.937,4.906c0.237,0.316,3.282,5.259,8.104,7.161c4.007,1.58,4.823,1.266,5.693,1.187c0.87-0.079,2.807-1.147,3.202-2.255c0.395-1.108,0.395-2.057,0.277-2.255c-0.119-0.198-0.435-0.316-0.909-0.554s-2.807-1.385-3.242-1.543c-0.435-0.158-0.751-0.237-1.068,0.238c-0.316,0.474-1.225,1.543-1.502,1.859c-0.277,0.317-0.554,0.357-1.028,0.119c-0.474-0.238-2.002-0.738-3.815-2.354c-1.41-1.257-2.362-2.81-2.639-3.285c-0.277-0.474-0.03-0.731,0.208-0.968c0.213-0.213,0.474-0.554,0.712-0.831c0.237-0.277,0.316-0.475,0.474-0.791c0.158-0.317,0.079-0.594-0.04-0.831C20.612,19.329,19.69,16.983,19.268,16.045z" clip-rule="evenodd"/>
@@ -319,6 +385,7 @@
             </div>
                 <span class="ml-2 font-bold text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">Solicite Suporte</span>
         </button>
+
 <script>
     let menuOpen = false; 
     function toggleMenu() {
