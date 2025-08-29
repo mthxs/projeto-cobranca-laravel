@@ -8,7 +8,7 @@
 </head>
 <body class="bg-[url('/public/Images/fundo2.jpg')] bg-center bg-cover lg:bg-fixed">
   
-<script src="https://unpkg.com/@heroicons/vue@2.0.16/24/solid/star.js"></script>
+
 
 <!-- Navbar/Menu -->
 <div class="bg-gradient-to-r from-[#7ed957]/0 to-[#007e50] w-56 px-1 h-screen fixed rounded-r-lg hidden lg:flex flex-col items-center justify-center">
@@ -28,20 +28,23 @@
         <path id="Preencher com Cor Sólida 2" fill-rule="evenodd" class="s3" d="m470.8 57.6c0.2 5.4 0.5 6.4 1.9 6.4 1 0.1 3.5 1.1 5.6 2.3 2 1.2 4.4 3.5 5.1 5.2 0.8 1.7 1.7 3.8 2 4.7 0.5 1.5 1.8 1.8 6.8 1.8h6.3c-1.2-6.2-2.2-9.5-3.1-11.3-0.9-1.7-3-4.7-4.8-6.5-1.7-1.9-4.8-4.2-6.9-5.3-2-1-5.8-2.3-8.4-2.8l-4.6-0.8zm-121.9 45.3h49v114h29v-114h49v-30h-127z"/>
         <path id="Preencher com Cor Sólida 1" fill-rule="evenodd" class="s4" d="m332.8 74.1c0.9-0.1 1.2 14.8 1.2 142.9h-30l-0.4-133.6 13.9-4.6c7.7-2.5 14.6-4.7 15.2-4.7zm430.1 0c0.9-0.1 1.2 5.6 1.2 25.4 0 14 0.2 25.5 0.5 25.5 0.3 0 2.6-1.6 5.2-3.6 2.7-2 6.8-4.6 9.3-5.6 3.4-1.5 7.6-2.1 17-2.5 6.9-0.3 15.9 0 20 0.6 4.3 0.6 9.9 2.2 13 3.8 3 1.5 7.6 4.9 10.2 7.5 2.7 2.7 6.3 7.8 11.3 18.3l0.5 73.5h-30v-67l-2.8-2.9c-1.9-2-4.1-3.1-7.7-3.6-2.8-0.4-12.2-0.6-21-0.3-10.9 0.3-16.9 0.9-18.9 1.9-1.5 0.8-3.6 2.8-4.5 4.4-1.4 2.6-1.6 7.7-2.1 67.5h-29l-0.4-133.8 13.4-4.5c7.4-2.5 14.1-4.6 14.7-4.6zm-705.8 8.9c30.8 0 58.9 0.5 63.1 1.1 4.1 0.5 9.7 2 12.5 3.3 2.7 1.3 7 4.1 9.4 6.2 2.5 2.3 5.6 6.5 7.5 10.4 2.8 5.9 3.1 7.3 3.1 16 0 8.2-0.4 10.2-2.7 15-1.5 3.2-4.6 7.3-7.5 9.8-2.6 2.3-4.2 4.3-3.6 4.2 0.7 0 3.2 1.7 5.4 3.8 2.3 2 5.3 6 6.8 8.7 2.3 4.5 2.6 6.1 2.6 15.5 0 9.4-0.3 11.1-2.8 16.3-1.5 3.1-4.9 8.1-7.6 11-2.7 2.8-7.3 6.4-10.2 7.9-3 1.5-7.9 3.2-10.9 3.8-3.4 0.6-28.1 1-122 1l-0.2-66.3c-0.1-36.5 0.2-66.7 0.7-67 0.5-0.4 25.8-0.7 56.4-0.7zm170.6 30.1c11 0 22.7 0.3 26 0.8 3.3 0.4 8.6 2 11.7 3.5 3.4 1.5 8.1 4.9 11.3 8.1 3 3 6.7 8.1 8.2 11.3 2.8 5.7 2.8 5.7 2.8 28.2 0 22.1 0 22.6-2.6 28-1.4 3-4.6 7.8-7.1 10.5-2.5 2.8-7.1 6.4-10.4 8.2-3.3 1.8-8.7 3.6-12.4 4.2-3.6 0.6-15.5 1.1-26.5 1.1-11 0-22.9-0.5-26.5-1.1-3.7-0.6-9-2.4-12.4-4.2-3.2-1.8-7.8-5.3-10.2-7.9-2.4-2.7-5.6-7.4-7.1-10.5-1.4-3.2-3-8.7-3.4-12.3-0.5-3.6-0.8-10.8-0.8-16 0-5.2 0.3-12.4 0.8-16 0.4-3.6 1.9-9 3.3-12 1.4-3 4.7-7.9 7.4-10.9 3-3.2 7.3-6.5 10.9-8.3 3.3-1.6 8.5-3.3 11.5-3.7 3-0.5 14.5-0.9 25.5-1zm306 0c11 0 22.7 0.3 26 0.8 3.3 0.4 8.6 2 11.7 3.5 3.2 1.4 8.1 4.7 10.9 7.4 2.9 2.7 6.3 7.3 8 10.7 1.7 3.4 3.4 9.1 4 13 0.5 3.9 0.8 11.1 0.4 25l-89.5 0.5v3.5c0 2.6 0.8 4.3 6 9.5h39.7c21.9 0 40 0.2 40.3 0.4 0.3 0.3-0.3 6.7-1.2 14.3-1 7.6-1.7 14.1-1.8 14.6 0 0.4-16.5 0.7-36.8 0.7-20.2 0-39.5-0.5-43-1-3.4-0.6-8.5-2.1-11.2-3.5-2.8-1.4-6.7-4-8.8-5.9-2-1.8-5.1-5.3-6.7-7.7-1.7-2.4-3.8-6.8-4.8-9.9-1.4-4.4-1.7-9-1.7-24 0-13.9 0.4-19.8 1.6-23.5 0.8-2.7 3-7.2 4.9-10 1.8-2.7 5.3-6.6 7.6-8.7 2.4-2 6.6-4.6 9.4-5.9 2.7-1.2 7.2-2.5 10-2.9 2.7-0.4 14-0.8 25-0.9zm134.5 0c11.3 0 23.2 0.3 26.5 0.8 3.3 0.5 8.7 2.1 12 3.7 3.3 1.5 8.5 5.2 17 13.3l-7 6.4c-3.9 3.5-8.9 8-15.5 13.7l-3.3-3.4c-2.3-2.5-4.4-3.6-7.7-4.1-2.5-0.3-13.5-0.5-24.5-0.3-15.7 0.2-20.5 0.6-22.2 1.8-1.3 0.8-2.8 2.6-3.5 3.9-0.9 1.6-1.3 6.9-1.3 16.1 0 9.2 0.4 14.5 1.3 16.1 0.7 1.3 2.2 3.1 3.5 3.9 1.7 1.2 6.6 1.6 23.2 1.8 11.5 0.2 22.6 0 24.5-0.3 2.2-0.5 4.7-2.1 10.1-8l4.2 4c2.3 2.2 7.2 6.9 17.7 16.5l-4.8 5.1c-2.7 2.9-7.2 6.3-10.7 8-3.3 1.6-8.5 3.3-11.5 3.9-3 0.6-15 1-26.5 1-11.6 0-23.9-0.5-27.5-1.1-3.6-0.5-8.9-2.2-11.9-3.7-2.9-1.5-7.9-5.4-11-8.7-3.7-3.9-6.6-8.1-8.1-12-2.3-5.7-2.5-7.1-2.5-26.5 0-19.4 0.2-20.8 2.5-26.5 1.5-3.8 4.4-8.1 8-11.8 3.3-3.6 7.9-7 11.5-8.8 3.3-1.7 8.5-3.4 11.5-3.8 3-0.5 14.7-0.9 26-1zm-638 20.9h88.2c5-5.2 5.8-7 5.8-9.5 0-1.9-0.5-4.5-1.2-5.7-0.6-1.3-1.8-2.8-2.7-3.5-1.2-0.9-12.6-1.2-45.9-1.3h-44.2zm478 10.9c-2.2 2.3-2.9 3.9-2.9 7.5l-0.1 4.6 59.5-0.5c-0.4-8.1-1-9.5-3.5-11.7l-3-2.8h-47.2zm-301.3-1.3c-1.5 0.3-3.9 1.7-5.2 3.2-2.5 2.6-2.5 3-2.5 17.9 0 12.9 0.3 15.7 1.8 17.8 1 1.4 3.1 3 4.7 3.5 1.7 0.6 12 1 23 1 11 0 21.4-0.4 23-1 1.7-0.5 3.8-2.1 4.8-3.5 1.5-2.1 1.7-4.9 1.8-17.8v-15.2l-6.2-6c-32.8-0.2-43.6-0.1-45.2 0.1zm-176.7 43.4c68.2 0 85.8-0.4 87.8-1 2-0.6 3.8-2.2 4.7-4 0.9-1.7 1.5-4.6 1.5-6.5 0-1.9-0.4-4.5-1-5.8-0.6-1.2-2-2.9-3.2-3.7-1.9-1.3-9.1-1.6-46-1.8l-43.7-0.3z"/>
         </svg>
+        
     </div>
-    <div class="overflow-y-scroll mt-[120px] h-screen scrollbar-nav flex flex-col items-center justify-start  gap-10">
+    <div class="overflow-y-scroll mt-[120px] h-screen scrollbar-nav flex flex-col items-center justify-start  gap-8">
+        <div>        
+            <button onclick="scrollToSection('info-geral')" class="cursor-pointer flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary focus:bg-primary/100 w-48 h-15 drop-shadow-xl/70 text-white text-base px-5 py-2 rounded-full font-sans-serif">                
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="size-7">
+                <path d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
+                <path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
+                </svg>
+
+                <span class="m-auto text-lg">Inicio</span>
+            </button>
+        </div>
         <div class="flex flex-col gap-5 items-center">
             <h1 class="text-3xl text-white text-center font-bold">Tutoriais do Aplicativo</h1>
             <!-- Botões de navegação -->
-            <button onclick="scrollToSection('info-geral')" class="cursor-pointer flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2  focus:ontline-primary focus:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="size-7">
-                <path d="M10.5 18.75a.75.75 0 0 0 0 1.5h3a.75.75 0 0 0 0-1.5h-3Z" />
-                <path fill-rule="evenodd" d="M8.625.75A3.375 3.375 0 0 0 5.25 4.125v15.75a3.375 3.375 0 0 0 3.375 3.375h6.75a3.375 3.375 0 0 0 3.375-3.375V4.125A3.375 3.375 0 0 0 15.375.75h-6.75ZM7.5 4.125C7.5 3.504 8.004 3 8.625 3H9.75v.375c0 .621.504 1.125 1.125 1.125h2.25c.621 0 1.125-.504 1.125-1.125V3h1.125c.621 0 1.125.504 1.125 1.125v15.75c0 .621-.504 1.125-1.125 1.125h-6.75A1.125 1.125 0 0 1 7.5 19.875V4.125Z" clip-rule="evenodd" />
-                </svg>
-
-                <span class="m-auto">Inicio</span>
-            </button>
-            
+          
             <button onclick="scrollToSection('ult-loc')" class="cursor-pointer flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="size-8">
                 <path fill-rule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd" />
@@ -244,10 +247,10 @@
         <div class="row-span-3 justify-between text-white">
             <div>
             <h1 class="text-center text-shadow-lg/80 text-3xl font-bold mb-4">
-                Como Funciona o Aplicativo da Boltech?
+                Controle Total com o App e Site da Boltech
             </h1>
             <p class="text-xl font-sans-serif">
-                Este tutorial foi criado para te guiar passo a passo pelas principais funcionalidades do nosso aplicativo. Com ele, você terá controle total sobre seus veículos, podendo acompanhar em tempo real localização, status de ignição, bloqueio e muito mais.
+            Descubra como aproveitar ao máximo as funcionalidades da Boltech! Este guia foi criado para te acompanhar passo a passo na utilização do nosso aplicativo e site. Com eles, você tem acesso completo à gestão dos seus veículos: acompanhe a localização em tempo real, verifique o status da ignição, ative o bloqueio remoto e muito mais — tudo de forma simples, rápida e segura.            
             </p>
             </div>
 
@@ -263,7 +266,11 @@
         <div id="ult-loc" class="bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg flex flex-col items-center gap-y-6 my-8 p-5 ">
                 <div class="text-white max-w-2xl">
                     <h1 class="text-center text-shadow-lg/80 text-3xl font-bold mb-2">Como Descbrir Sua Última Localização?</h1>
+                    <p class="text-lg font-sans-serif">
+                        Veja como localizar seu veículo em tempo real com o sistema Boltech. Neste vídeo, você aprende a identificar a região, o modelo do carro, a velocidade e o horário da última atualização — tudo direto na plataforma.
+                    </p>
                 </div>
+
                 
                 <div class="w-[360px] h-[640px] max-w-full rounded-xl overflow-hidden drop-shadow-xl/80">
                     <iframe
