@@ -30,19 +30,19 @@
 
         .scrollbar-nav {
         overflow: auto;
-
+        scrollbar-gutter: stable;
         /* Firefox */
         scrollbar-width: thin;
         scrollbar-color: #26201E transparent;
 
-        /* Internet Explorer 10+ */
-        -ms-overflow-style: -ms-autohiding-scrollbar;
-        }
-
+}
         /* WebKit (Chrome, Safari, Edge) */
         .scrollbar-nav::-webkit-scrollbar {
         width: 6px;
         height: 3px;
+        }
+        .scrollbar-nav {
+        -ms-overflow-style: -ms-autohiding-scrollbar;
         }
 
         .scrollbar-nav::-webkit-scrollbar-track {
@@ -87,7 +87,19 @@
         .group-hover\:no-zap:hover {
             animation: none !important;
         }
+        .px-10{
+            padding-left:10px;
         }
+        .paddingy-60{
+            padding-top: 60px;
+        }
+        .h-15{
+            height: 60px;
+        }
+        .m-auto{
+            margin:auto;
+        }
+    }
     </style>
     <script>
         tailwind.config = {
@@ -105,7 +117,7 @@
 
 <!-- Navbar/Menu -->
 <div class="bg-gradient-to-r from-[#7ed957]/0 to-[#007e50] w-56 px-1 h-screen fixed rounded-r-lg hidden lg:flex flex-col items-center justify-center">
-    <div class="fixed top-0 items-start z-1 bg-007e50-500">
+    <div class="fixed top-0 items-start z-10 bg-007e50-500">
         <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 852 160" width="180" height="100">
         <title>logotipo-boltech-2</title>
         <style>
@@ -217,8 +229,8 @@
 </div>
 
 <!-- Menu Mobile -->
-<div id="Menu"class="lg:hidden fixed top-0 left-0 h-full max-w-0 overflow-hidden w-1/2 bg-gradient-to-r from-[#7ed957] to-[#007e50] z-20 rounded-r-lg flex flex-col items-center justify-center transition-all duration-300">
-    <div class="overflow-y-scroll h-screen scrollbar-hide backdrop-blur-[5px] flex flex-col items-center justify-start  py-30 gap-10">
+<div id="Menu"class="lg:hidden fixed top-0 left-0 h-full max-w-0 overflow-hidden w-1/2 bg-gradient-to-t from-[#7ed957]/50 to-[#007e50] z-10 rounded-r-lg flex flex-col items-center justify-center transition-all duration-300">
+    <div class="overflow-y-scroll h-screen scrollbar-hide scrollbar-nav backdrop-blur-[5px] flex flex-col items-center justify-start  top-20 px-10 paddingy-60 gap-10">
         <div class="flex flex-col gap-5 items-center">
             <h1 class="text-3xl text-white text-center left-1 font-bold">Tutoriais do Aplicativo</h1>
             <!-- Botões de navegação Mobile-->
@@ -333,9 +345,9 @@
 </div>
 
 <!-- Conteúdo Principal/Containers -->
-<div class="lg:ml-56 h-auto overflow-y-auto flex flex-col justify-center items-center px-4 py-0 lg:py-20">
+<div class="lg:ml-56 h-auto overflow-y-auto flex flex-col justify-center items-center m-auto py-0 lg:py-20">
     <div class="flex flex-col justify-center gap-18">
-        <div id="info-geral" class="grid grid-flow-col grid-rows-3 grid-cols-1 sm:grid-cols-[2fr_1fr] bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg my-8 p-5 max-w-250">
+        <div id="info-geral" class="grid grid-flow-col grid-rows-3 grid-cols-1 sm:grid-cols-[2fr_1fr] bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg my-5 p-5 max-w-[1200px]">
 
         <div class="row-span-3 justify-between text-white">
             <div>
