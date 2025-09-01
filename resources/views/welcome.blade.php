@@ -347,7 +347,7 @@
 <!-- Conteúdo Principal/Containers -->
 <div class="lg:ml-56 h-auto overflow-y-auto flex flex-col justify-center items-center m-auto py-0 lg:py-20">
     <div class="flex flex-col justify-center gap-18">
-        <div id="info-geral" class="grid grid-flow-col grid-rows-3 grid-cols-1 sm:grid-cols-[2fr_1fr] bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg my-5 p-5 max-w-[1200px]">
+        <div id="info-geral" class="grid grid-flow-col grid-rows-3 grid-cols-1 sm:grid-cols-[2fr_1fr] bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg my-5 p-5 max-w-[1000px]">
 
         <div class="row-span-3 justify-between text-white">
             <div>
@@ -377,7 +377,7 @@
                 </div>
 
                 
-                <div class="w-[360px] h-[640px] max-w-full rounded-xl overflow-hidden drop-shadow-xl/80">
+                <div class="w-[300px] h-[533px] max-w-full rounded-xl overflow-hidden drop-shadow-xl/80">
                     <iframe
                         class="w-full h-full"
                         src="https://youtube.com/embed/f4Nj-831WSA"
@@ -390,9 +390,12 @@
         <div id="bloq" class="bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg flex flex-col items-center gap-y-6 my-8 p-5 ">
                 <div class="text-white max-w-2xl">
                     <h1 class="text-center text-shadow-lg/80 text-3xl font-bold mb-4">Como Funciona o Bloqueio?</h1>
+                    <p class="text-lg font-sans-serif">
+                        Aprenda a usar o bloqueio remoto do sistema Boltech para garantir a segurança do seu veículo. Neste vídeo, mostramos como ativar e desativar o bloqueio, além de explicar as funcionalidades disponíveis para você ter controle total sobre o seu carro.
+                    </p>
                 </div>
                 
-                <div class="w-[360px] h-[640px] max-w-full rounded-xl overflow-hidden drop-shadow-xl/80">
+                <div class="w-[300px] h-[533px] max-w-full rounded-xl overflow-hidden drop-shadow-xl/80">
                     <iframe
                         class="w-full h-full"
                         src="https://youtube.com/embed/91yPx5y_cdU"
@@ -405,9 +408,12 @@
         <div id="rela-traj" class="bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg flex flex-col items-center gap-y-6 my-8 p-5 ">
                 <div class="text-white max-w-2xl">
                     <h1 class="text-center text-shadow-lg/80 text-3xl font-bold mb-4">Como Ver Relátorios e Trajetos?</h1>
+                <p class="text-lg font-sans-serif">
+                    Descubra como acessar relatórios detalhados e trajetos do seu veículo com o sistema Boltech. Este vídeo tutorial mostra passo a passo como visualizar informações essenciais, como local onde veículo esteve em certo horário, a velocidade que estava, entre outras opções, para que você possa gerenciar melhor o uso do seu carro.
+                </p>
                 </div>
                 
-                  <div class="w-[360px] h-[640px] max-w-full rounded-xl overflow-hidden drop-shadow-xl/80">
+                  <div class="w-[300px] h-[533px] max-w-full rounded-xl overflow-hidden drop-shadow-xl/80">
                     <iframe
                         class="w-full h-full"
                         src="https://youtube.com/embed/-tOuNVb796o?feature=share"
@@ -420,6 +426,9 @@
         <div id="rotas" class="bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg flex flex-col items-center gap-y-6 my-8 p-5 ">
                 <div class="text-white max-w-2xl">
                     <h1 class="text-center text-shadow-lg/80 text-3xl font-bold mb-4">Como Ver as Rotas do seu Veículo nas Últimas 24 horas!</h1>
+                    <p class="text-lg font-sans-serif">
+                        Aprenda a visualizar as rotas percorridas pelo seu veículo nas últimas 24 horas com o sistema Boltech. Este vídeo tutorial mostra como acessar o histórico de trajetos, permitindo que você monitore os deslocamentos do seu carro de forma fácil e eficiente.
+                    </p>
                 </div>
                 
                 <iframe class="aspect-video drop-shadow-xl/80 w-full max-w-3xl rounded-lg" 
@@ -430,6 +439,9 @@
         <div id="trajeto-site" class="bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg flex flex-col items-center gap-y-6 my-8 p-5 ">
                 <div class="text-white max-w-2xl">
                     <h1 class="text-center text-shadow-lg/80 text-3xl font-bold mb-4">Como ver seu Trajeto no Site</h1>
+                    <p class="text-lg font-sans-serif">
+                        Descubra como visualizar os trajetos do seu veículo diretamente no site da Boltech. Este vídeo tutorial guia você passo a passo para acessar o histórico de deslocamentos, permitindo que você monitore facilmente onde seu carro esteve e em quais horários.
+                    </p>
                 </div>
                 
                 <iframe class="aspect-video drop-shadow-xl/80 w-full max-w-3xl rounded-lg" 
@@ -440,7 +452,9 @@
         <div id="cerca" class="bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg flex flex-col items-center gap-y-6 my-8 p-5 ">
                 <div class="text-white max-w-2xl">
                     <h1 class="text-center text-shadow-lg/80 text-3xl font-bold mb-4">Como Funciona a Cerca no Site da Boltech</h1>
-
+                    <p class="text-lg font-sans-serif">
+                        Aprenda a configurar e utilizar a função de cerca no site da Boltech. Este vídeo tutorial mostra como definir áreas seguras para o seu veículo, receber notificações em caso de movimentação fora dessas zonas e garantir a segurança do seu carro de forma prática e eficiente.
+                    </p>
                 </div>
                 
                 <iframe class="aspect-video drop-shadow-xl/80 w-full max-w-3xl rounded-lg" 
@@ -451,6 +465,9 @@
         <div id="comandos" class="bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg flex flex-col items-center gap-y-6 my-8 p-5 ">
                 <div class="text-white max-w-2xl">
                     <h1 class="text-center text-shadow-lg/80 text-3xl font-bold mb-4">Como Funciona a Cerca no Site da Boltech</h1>
+                    <p class="text-lg font-sans-serif">
+                        Descubra como enviar comandos remotos para o seu veículo através do site da Boltech. Este vídeo tutorial ensina você a utilizar funcionalidades como bloqueio e desbloqueio, proporcionando controle total sobre o seu carro de maneira simples e segura.
+                    </p>
                 </div>
                 
                 <iframe class="aspect-video drop-shadow-xl/80 w-full max-w-3xl rounded-lg" 
@@ -460,8 +477,10 @@
 
         <div id="his-velo" class="bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg flex flex-col items-center gap-y-6 my-8 p-5 ">
                 <div class="text-white max-w-2xl">
-                    <h1 class="text-center text-shadow-lg/80 text-3xl font-bold mb-4">Como Ver o Historico do Odometro</h1>
-
+                    <h1 class="text-center text-shadow-lg/80 text-3xl font-bold mb-4">Como Ver o Historico de Velocidade</h1>
+                    <p class="text-lg font-sans-serif">
+                        Aprenda a acessar o histórico de velocidade do seu veículo utilizando o sistema Boltech. Este vídeo tutorial mostra como visualizar registros detalhados das velocidades atingidas, ajudando você a monitorar o historico do seu carro e garantir uma condução segura.
+                    </p>
                 </div>
                 
                 <iframe class="aspect-video drop-shadow-xl/80 w-full max-w-3xl rounded-lg" 
@@ -471,7 +490,10 @@
         
         <div id="odometro" class="bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg flex flex-col items-center gap-y-6 my-8 p-5 ">
                 <div class="text-white max-w-2xl">
-                    <h1 class="text-center text-shadow-lg/80 text-3xl font-bold mb-4">Como Ver o Historico de Velocidade?</h1>
+                    <h1 class="text-center text-shadow-lg/80 text-3xl font-bold mb-4">Como Ver o Historico do Odometro</h1>
+                    <p class="text-lg font-sans-serif">
+                        Descubra como consultar o histórico do odômetro do seu veículo com o sistema Boltech. Este vídeo tutorial ensina você a acessar informações detalhadas sobre a quilometragem percorrida, ajudando no monitoramento e manutenção do seu carro.
+                    </p>
                 </div>
                 
                 <iframe class="aspect-video drop-shadow-xl/80 w-full max-w-3xl rounded-lg" 
@@ -482,7 +504,9 @@
         <div id="link-compar" class="bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg flex flex-col items-center gap-y-6 my-8 p-5 ">
                 <div class="text-white max-w-2xl">
                     <h1 class="text-center text-shadow-lg/80 text-3xl font-bold mb-4">Como Criar um Link de Compartilhamento do Site da Boltech</h1>
-                    
+                    <p class="text-lg font-sans-serif">
+                        Aprenda a criar um link de compartilhamento no site da Boltech para facilitar o acesso às informações do seu veículo. Este vídeo tutorial mostra como gerar e compartilhar links de forma rápida e segura, permitindo que você compartilhe o rastreio com quem desejar.
+                    </p>
                 </div>
                 
                 <iframe class="aspect-video drop-shadow-xl/80 w-full max-w-3xl rounded-lg" 
