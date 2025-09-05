@@ -3,19 +3,14 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
     <title>Tutoriais Boltech</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="omeoakeosae">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <style>
-        @theme {
-        --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-            'Segoe UI Symbol', 'Noto Color Emoji';
-        --color-grey-blue: #47415d;
-        --color-primary: #0693e3;
-        --scroll-bar:
-        }
-
         html {
         scroll-behavior: smooth;
+        }
+        html, body {
+        height: 100%;
+        min-height: 100%;
         }
 
         .highlight {
@@ -29,13 +24,15 @@
         }
 
         .scrollbar-nav {
-        overflow: auto;
+        gap: 8px;
+        height: auto;
+        overflow-y:scroll;
+        overflow-x:hidden;
         scrollbar-gutter: stable;
         /* Firefox */
         scrollbar-width: thin;
         scrollbar-color: #26201E transparent;
-
-}
+        }
         /* WebKit (Chrome, Safari, Edge) */
         .scrollbar-nav::-webkit-scrollbar {
         width: 6px;
@@ -84,8 +81,8 @@
         .animationzap{
             animation: animationzap 2s infinite;
         }
-        .group-hover\:no-zap:hover {
-            animation: none !important;
+        .animationzap:hover{
+            animation: none;
         }
         .px-10{
             padding-left:10px;
@@ -100,461 +97,946 @@
             margin:auto;
         }
     }
-    </style>
-    <script>
-        tailwind.config = {
-            theme: {
-            extend: {
-                colors: {
-                primary: "#0693e3",
-                }
-            }
-            }
+     /* Para telas grandes (equivalente ao lg:bg-fixed do Tailwind) */
+    @media (min-width: 1025px) {
+    .fundo-personalizado {
+        background-attachment: fixed;    
+    }
+    .menu-desktop {
+        display: flex;
+    }
+    .highlight{
+        display: none;
+    }
+    .navbar-mobile{
+        display: none !important;
+    }
+    .menu-mobile{
+        visibility: hidden !important;
+    }
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+    
+    }
+    @media (max-width: 1194px){
+    .imagem-app{
+        display: none;
+    }
+    .imagem-site{
+        display: none;
+    }
+    }
+    
+    
+    /* Oculta em telas até 1024px (mobile e tablet) */
+    @media (max-width: 1024px) {
+    .menu-desktop {
+        display: none !important;
+    }
+    .menu-btn{
+        display: flex !important;
+    }
+    .containers{
+        margin: auto !important;
+    }
+    }
+    
+   
+    /* Mobile: até 767px */
+    @media (max-width: 767px) {
+    .header-bar {
+        display: none; /* Oculta em telas pequenas */
+    }.menu-desktop {
+    display: none;
+    }
+    .content-menu {
+        display: none;
+    }
+    .imagem-app{
+        display: none;
+    }
+    .imagem-site{
+        display: none;
+    }
+    .container{
+        max-width: 1200px;
+    }
+    }
+    /* CSS */
+
+    .buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px; /* Espaçamento entre os botões */
+    margin-bottom: 0;
+    }
+
+
+    .buttons-menu {
+        background-color: rgba(6, 147, 227, 0.65);
+        width: 192px;
+        height: 60px;
+        color: white;
+        border: none;
+        margin-top: 20px;
+        padding: 12px 12px;
+        justify-content: center;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        font-size: 14px;
+        cursor: pointer;
+        border-radius: 32px;
+
+    }
+    .buttons-menu:hover {
+        background-color: #0693e3;
+        color: white;
+        text-decoration: none;
+    }
+    .buttons-menu:focus {
+        background-color: #0693e3;
+        color: white;
+        text-decoration: none;
+    }
+    
+    .header-bar {
+        position: sticky;
+        top: 0px;
+        left: 0px;
+        width: 230px;
+        height: 120px;
+        padding: 0px 0px 15px 0px;
+        z-index: 50;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        border-bottom-right-radius: 8px; /* Tailwind rounded-br-lg */
+    }
+    /*-- SVG DO SITE --*/
+    .svg {
+        margin: auto 0px auto 0px;
+        width: 28px;
+        height: 28px;
+    }
+    .svg-boltech {
+        max-width: 200px;
+        height: 100px;
+    }
+    .svg-mobile-boltech {
+    position: fixed;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    }
+
+    .svg-container {
+        display: flex;
+        justify-content: center;
+        padding: 10px 10px;
+    }
+    .svgbtn-menu{
+        width: 60px;
+        height: 60px;
+        z-index: 50; 
+    }
+    /*---------------- */
+
+    .fundo-personalizado {
+        background-image: url('/images/tutoriais/fundo2.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: #182b1d;
+        background-attachment: fixed !important;
+        width: 100%;
+        min-height: 100vh;
+    }
+    .texto-titulo-menu {
+        font-family: 'Instrument Sans', sans-serif;
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+        text-shadow: 0 2px 6px rgba(0, 0, 0, 1.0);
+    }
+    .menu-desktop {
+        background-image: linear-gradient(to right, rgba(126, 217, 87, 0), #294d33);
+        width: 235px;            /* Tailwind w-56 */
+        min-height: 100vh;           /* Tailwind h-screen */
+        position: fixed;
+        border-top-right-radius: 8px;   /* Tailwind rounded-r-lg */
+        border-bottom-right-radius: 8px;
+        display: flex;           /* Tailwind lg:flex (ativado via media query) */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         }
-    </script>
-</head>
-<body class="bg-[url('/Images/fundo2.jpg')] bg-center bg-cover lg:bg-fixed">
+    
+    .menu-mobile {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        max-width: 0;
+        overflow: hidden;
+        background: linear-gradient(to top, rgba(126,217,87,0.5), #294d33);
+        z-index: 10;
+        border-radius: 0 16px 16px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: max-width 0.3s, width 0.3s;
+    }
+    .menu-fechado {
+        max-width: 0;
+        overflow: hidden;
+        transition: max-width 0.3s ease;
+        }
 
-<!-- Navbar/Menu -->
-<div class="bg-gradient-to-r from-[#7ed957]/0 to-[#007e50] w-56 px-1 h-screen fixed rounded-r-lg hidden lg:flex flex-col items-center justify-center">
-    <div class="fixed top-0 items-start z-10 bg-007e50-500">
-        <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 852 160" width="180" height="100">
-        <title>logotipo-boltech-2</title>
-        <style>
-            .s0 { fill: #54ae7b } 
-            .s1 { fill: #26a8ab } 
-            .s2 { fill: #1a93d0 } 
-            .s3 { fill: #81c34d } 
-            .s4 { fill: #fefefe } 
-        </style>
-        <path id="Preencher com Cor Sólida 5" class="s0" d="m471 37.8v4.7c7.4 0.8 12 2.3 15 3.7 3 1.5 7.5 4.6 9.9 7 2.4 2.4 5.4 6.4 6.7 9.1 1.3 2.6 3 7.2 3.6 10.2l1.3 5.5h9.5c-0.9-6.6-1.6-10.1-2.2-12-0.6-1.9-2.3-6-3.9-9-1.6-3-5-7.7-7.6-10.3-2.7-2.7-7.1-6.1-9.8-7.7-2.8-1.6-7.9-3.6-11.5-4.4-3.6-0.9-7.5-1.6-8.8-1.6-2 0-2.2 0.5-2.2 4.8z"/>
-        <path id="Preencher com Cor Sólida 4" class="s1" d="m471 20c0 3.8 0.1 4 3.3 4 1.7 0 6.1 0.7 9.7 1.6 3.6 0.8 9.2 2.9 12.5 4.7 3.3 1.7 9.2 6.3 13.1 10.2 4.6 4.6 8.2 9.2 10.3 13.5 1.7 3.6 3.9 10.4 4.9 15.3l1.7 8.7c6.4 0 6.5-0.1 6.5-4.3 0-2.3-0.7-6.9-1.5-10.2-0.8-3.3-3.2-9.4-5.2-13.5-2.7-5.4-5.8-9.6-11.2-15.1-5.9-5.9-9.5-8.5-16.1-11.8-4.7-2.3-11.6-4.8-15.5-5.6-3.9-0.8-8.2-1.5-9.7-1.5-2.6 0-2.8 0.3-2.8 4z"/>
-        <path id="Preencher com Cor Sólida 3" fill-rule="evenodd" class="s2" d="m470.8 1.1l5.9 0.6c3.2 0.3 8.7 1.2 12.3 2 3.6 0.8 9.9 3 14 4.9 4.1 2 10.2 5.5 13.5 7.8 3.3 2.4 8.5 7 11.5 10.4 3 3.3 7 8.4 8.7 11.4 1.8 2.9 4.5 8.2 5.9 11.8 1.5 3.6 3.3 9.4 4 13 0.8 3.6 1.4 8.4 1.4 10.7 0 4.1-0.1 4.3-3 4.3-2.8 0-3-0.3-3-3.8 0-2-0.7-6.6-1.4-10.2-0.8-3.6-2.6-9.4-4.1-13-1.5-3.6-4.4-9-6.5-12-2.1-3-6.2-7.9-9.1-10.8-3-3-7.9-7-10.9-9-3-2-8.4-4.8-12-6.3-3.6-1.5-9.6-3.3-13.5-3.9-3.9-0.6-8.5-1.3-10.3-1.6-2.8-0.3-3.2-0.8-3.3-3.3zm223.2 232.8h9v52h-4.5c-3.9 0-4.5-0.3-4.5-2 0-1.9-0.2-1.9-3.8 0.6-2.6 1.8-5 2.5-8.2 2.4-2.6 0-6.4-1-9-2.2-2.4-1.3-5.5-3.8-7-5.7-1.6-2.2-2.7-5.2-2.9-8-0.2-2.5-0.1-5.8 0.2-7.3 0.4-1.5 2.1-4.4 3.9-6.3 1.8-2 5.1-4.3 7.3-5.1 2.4-0.9 6.1-1.4 9.1-1.2 3.8 0.2 5.9 1 10.4 5.3zm-296 3h10c5.5 0 12.1 0.6 14.7 1.3 2.8 0.7 5.7 2.4 7.3 4.2 1.5 1.7 3 4.8 3.5 7 0.6 3.1 0.3 5-1.1 8-1 2.2-3.3 4.9-5.1 6-1.7 1.1-3.2 2.5-3.2 3 0 0.6 2.4 4.9 5.4 9.5 3 4.7 5.5 8.9 5.5 9.3 0 0.4-2.1 0.7-9.5 0.7l-5.7-9.5c-5.5-9.1-5.9-9.5-12.8-9.5v19h-9zm128.1 3h8.1l0.3 11.5 3.8 0.3c3.6 0.2 3.7 0.4 3.7 3.7 0 3.4-0.1 3.5-7.5 4l-0.5 26.5h-8l-0.5-26.5-2.7-0.2c-2.4-0.2-2.8-0.7-2.8-3.8 0-3.1 0.4-3.5 2.8-3.7 2.6-0.3 2.7-0.6 3-6zm-119.1 19c7.4 0 11-0.4 12.8-1 1.8-0.6 3.7-1.9 4.2-3 0.6-1.1 1-2.9 1-4 0-1.1-1.1-3.1-2.5-4.5-2.1-2.2-3.4-2.5-9-2.5h-6.5zm96-8.3c2 0.3 4.7 1.1 6 1.8 1.4 0.7 3.1 2 3.8 2.9 1 1.3 0.8 1.8-1.8 3.1-2.6 1.3-3.2 1.3-5.2 0-1.3-0.9-3.7-1.5-5.5-1.5-2.3 0-3.7 0.7-4.8 2.2-1.2 1.8-1.2 2.5-0.2 3.4 0.7 0.6 3.7 1.9 6.7 2.9 3.1 0.9 7 2.8 8.8 4.1 2.7 2 3.2 3 3.2 6.4 0 3.2-0.6 4.6-3.2 7-2.3 2.1-4.7 3.2-7.8 3.6-2.4 0.4-6.2 0.1-8.2-0.5-2.1-0.6-5-2.2-9.3-6l3.5-1.5c3.1-1.3 3.8-1.3 5.8-0.1 1.2 0.8 3.6 1.5 5.2 1.5 1.7 0 3.7-0.2 4.5-0.5 0.9-0.3 1.5-1.6 1.5-3 0-2.2-0.7-2.7-5.7-4.1-3.2-0.9-7-2.3-8.5-3-1.5-0.8-3.4-2.8-4.3-4.4-1.1-2.3-1.2-3.8-0.5-6.5 0.6-2 2.2-4.3 3.8-5.2 1.5-1 4.1-2.1 5.7-2.4 1.7-0.4 4.6-0.5 6.5-0.2zm336 0c2 0.3 5.1 1.2 6.9 2.1 1.9 0.9 3.6 2.2 3.8 2.9 0.2 0.7-1 2-2.7 2.8-2.6 1.3-3.2 1.3-5.2 0-1.3-0.9-3.4-1.5-4.8-1.5-1.3-0.1-3.3 0.5-4.3 1.2-1 0.7-1.7 2.1-1.5 3.2 0.2 1.3 2.3 2.5 7.3 4.1 5.1 1.7 7.8 3.2 9.9 5.6 2.3 2.7 2.8 4 2.2 6.4-0.4 1.6-1.4 3.8-2.4 4.9-0.9 1-3.1 2.5-4.9 3.2-1.8 0.8-5 1.4-7 1.4-2.1-0.1-5.6-0.9-7.8-1.9-2.2-1-4.5-2.6-5.2-3.5-1.1-1.4-0.8-1.8 2.2-3.1 3.1-1.4 3.8-1.4 5.8 0 1.2 0.8 3.8 1.5 5.7 1.5 2 0.1 4.1-0.6 4.8-1.5 0.7-0.8 1-2.2 0.7-3-0.2-0.8-1-1.7-1.7-2-0.7-0.2-3.7-1.1-6.8-1.9-3-0.8-6.7-2.6-8.2-4.1-2.1-1.9-2.8-3.5-2.8-6.3 0-2.8 0.7-4.4 2.8-6.5 1.5-1.5 4.3-3.2 6.2-3.6 2-0.5 5.1-0.7 7-0.4zm-380.5 0.3c3.8-0.1 5.9 0.5 8.8 2.4 3.6 2.5 3.7 2.5 3.7 0.6 0-1.7 0.7-2 9-2v34h-4.5c-3.8 0-4.5-0.3-4.5-2 0-1.9-0.2-1.9-3.7 0.6-3.3 2.3-4.4 2.5-9.8 2-4.3-0.4-7-1.3-9.9-3.3-2.1-1.6-4.7-4.4-5.8-6.3-1-1.9-1.9-5.5-1.9-8-0.1-2.5 0.6-5.9 1.4-7.5 0.9-1.7 2.8-4.2 4.4-5.7 1.6-1.5 4-3.2 5.3-3.7 1.4-0.5 4.8-1 7.5-1.1zm110.3 0c2.3 0 4.2 0.2 4.2 0.5 0 0.3-0.8 2.1-1.7 4-1.4 2.8-2.4 3.5-4.5 3.5-1.5 0-3.7 0.4-4.8 1-1.1 0.5-2.4 2.4-3 4.2-0.5 1.8-1 7.4-1 21.8h-8v-34h4c2.2 0 4.1 0.5 4.3 1.1 0.2 0.8 1.2 0.7 3.2-0.4 1.7-0.9 4.9-1.7 7.3-1.7zm25.3 0.2c5.3 0.2 7.3 0.8 10.3 3 2 1.5 4.5 4.6 5.6 6.8 1.1 2.2 2 5.3 2 10h-14c-11.7 0-14 0.2-14 1.5 0 0.8 1.3 2.6 2.8 4 1.8 1.7 3.9 2.5 6.2 2.5 2 0 4.6-0.8 6-1.9 2.3-1.8 3-1.9 11.2 0.4l-1.9 2.5c-1.1 1.4-3.9 3.5-6.3 4.7-2.5 1.2-6.3 2.3-8.5 2.3-2.2 0-5.5-0.6-7.5-1.4-1.9-0.8-4.9-3-6.7-5-1.8-2-3.7-5.5-4.3-7.9-0.6-2.3-0.8-5.6-0.4-7.2 0.3-1.7 1.6-4.5 2.8-6.4 1.2-1.9 3.9-4.5 6.1-5.8 3.4-2 5.1-2.4 10.6-2.1zm41.9-0.2c4.3 0 6.4 0.5 9.3 2.5 3.6 2.4 3.7 2.4 3.7 0.5 0-1.7 0.7-2 8-2v34h-4.5c-4 0-4.5-0.3-4.4-4.5l-2.3 2.3c-1.5 1.5-3.9 2.4-7.3 2.8q-5 0.6-9-1c-2.2-0.8-5.7-3.3-7.7-5.6-2.4-2.5-4-5.4-4.4-7.8-0.3-2-0.3-5.3 0-7.2 0.4-1.9 1.7-5 3-6.8 1.3-1.8 4.1-4.1 6.2-5.2 2.4-1.2 6.1-2 9.4-2zm93 0c4 0 6.6 0.7 9.5 2.3 2.2 1.3 5 3.9 6.2 5.8 1.3 1.8 2.6 5.4 2.9 7.9 0.6 3.6 0.3 5.4-1.7 9.4-1.5 3.2-3.8 5.9-6.3 7.5-2.5 1.6-5.8 2.7-9 3-3.9 0.3-6.2-0.2-10-2-2.9-1.4-5.9-3.9-7.3-5.9-1.3-1.9-2.6-5.5-2.9-8-0.4-3 0-5.9 1-8.5 0.9-2.2 2.6-5 3.8-6.2 1.3-1.1 3.7-2.8 5.3-3.7 1.7-0.8 5.5-1.6 8.5-1.6zm44.8 0c2.3 0 4.2 0.1 4.3 0.2 0 0.2-0.7 2-1.5 4-1.3 3.1-2.1 3.8-4.4 3.8-1.5 0-4 1-5.5 2.2-2.7 2.2-2.7 2.5-2.7 24.8h-9v-34h4.5c2.8 0 4.7 0.5 4.8 1.2 0.3 0.9 1 0.8 2.8-0.5 1.4-1 4.2-1.7 6.7-1.7zm24.5 0c2.6 0 6.2 0.6 8 1.4 1.8 0.7 4.4 2.6 5.9 4.2 1.5 1.6 3.2 4.1 3.8 5.6 0.6 1.5 1 4.1 1 8.8h-13.5c-9.8 0-13.6 0.3-14.1 1.2-0.4 0.8 0.6 2.4 2.5 4 2 1.8 4.3 2.8 6.4 2.8 1.8 0 4.4-0.8 5.7-1.9 2.3-1.8 3-1.9 11.2 0.4l-2.1 2.7c-1.1 1.5-3.9 3.7-6.1 4.8-2.2 1.1-5.9 2-8.2 2-2.4 0-5.8-0.6-7.8-1.4-1.9-0.8-4.6-2.7-6.1-4.3-1.4-1.5-3.2-3.9-3.9-5.3-0.7-1.4-1.3-4.5-1.3-7q0-4.5 2.5-9c1.8-3.1 3.9-5.2 6.9-6.8 2.8-1.4 6.2-2.2 9.2-2.2zm-209 7.5c-1.8 0.8-3.7 2.4-4.3 3.5-0.5 1.1-1 2.4-1 3 0 0.6 3.9 1 9.5 1 7 0 9.5-0.4 9.6-1.3 0-0.7-1.3-2.4-2.8-3.8-1.5-1.5-3.9-2.9-5.3-3.2-1.3-0.3-3.9 0.1-5.7 0.8zm205 0c-1.8 0.8-3.7 2.4-4.3 3.5-0.5 1.1-1 2.4-1 3 0 0.6 3.9 1 9.5 1 5.7 0 9.5-0.4 9.5-1 0-0.6-0.4-1.9-1-3-0.5-1.1-2.5-2.7-4.5-3.5-1.9-0.8-3.8-1.5-4.2-1.5-0.4 0-2.2 0.7-4 1.5zm-338.9 0.3c-1.2 0.5-3.1 2-4.3 3.3-1.2 1.4-2.2 4-2.4 6.1-0.1 2.4 0.5 4.6 1.9 6.5 1.2 1.5 3.8 3.3 5.8 4 3 1.1 4.3 1 7.3-0.1 2.1-0.8 4.3-2.5 5-3.8 0.8-1.3 1.3-4 1.3-6.1 0-2.7-0.8-4.6-2.7-6.8-1.8-1.9-4-3.2-6.3-3.4-1.9-0.3-4.4-0.1-5.6 0.3zm175.9 1.1c-1.8 1.2-3.7 3-4.3 4.1-0.5 1.1-1 3.4-1 5.2 0 1.8 0.9 4.5 2 6 1.1 1.5 3.5 3.2 5.3 3.7 1.8 0.4 4.4 0.7 5.7 0.5 1.4-0.3 3.8-1.7 5.3-3.2 1.5-1.5 2.9-3.8 3.1-5.2 0.2-1.4 0-4-0.5-5.8-0.5-1.8-1.9-3.9-3.1-4.7-1.3-0.8-3.8-1.8-5.8-2.1-2.5-0.4-4.4 0.1-6.7 1.5zm46.8-0.7c-1.3 0.7-3.3 2.5-4.5 4.1-1.1 1.6-2.1 4.1-2.1 5.7 0 1.5 1 4.1 2.1 5.7 1.2 1.5 3.8 3.3 5.8 4 3 1.1 4.3 1 7.3-0.1 2.1-0.8 4.3-2.5 5-3.8 0.8-1.3 1.3-4 1.3-6.1 0-2.7-0.8-4.6-2.7-6.8-1.7-1.9-4.1-3.2-6.3-3.5-1.9-0.3-4.5 0.1-5.9 0.8zm43.9 2.7c-2.1 2.2-2.8 3.9-2.9 7-0.1 3.3 0.5 4.7 2.9 7.1 2.4 2.3 3.9 3 7.1 3 3.2 0 4.7-0.7 7-3 2.3-2.3 2.9-4 2.9-7 0-3.1-0.6-4.7-3-7-2.3-2.4-3.8-3-7-3-3.2 0-4.7 0.6-7 2.9z"/>
-        <path id="Preencher com Cor Sólida 2" fill-rule="evenodd" class="s3" d="m470.8 57.6c0.2 5.4 0.5 6.4 1.9 6.4 1 0.1 3.5 1.1 5.6 2.3 2 1.2 4.4 3.5 5.1 5.2 0.8 1.7 1.7 3.8 2 4.7 0.5 1.5 1.8 1.8 6.8 1.8h6.3c-1.2-6.2-2.2-9.5-3.1-11.3-0.9-1.7-3-4.7-4.8-6.5-1.7-1.9-4.8-4.2-6.9-5.3-2-1-5.8-2.3-8.4-2.8l-4.6-0.8zm-121.9 45.3h49v114h29v-114h49v-30h-127z"/>
-        <path id="Preencher com Cor Sólida 1" fill-rule="evenodd" class="s4" d="m332.8 74.1c0.9-0.1 1.2 14.8 1.2 142.9h-30l-0.4-133.6 13.9-4.6c7.7-2.5 14.6-4.7 15.2-4.7zm430.1 0c0.9-0.1 1.2 5.6 1.2 25.4 0 14 0.2 25.5 0.5 25.5 0.3 0 2.6-1.6 5.2-3.6 2.7-2 6.8-4.6 9.3-5.6 3.4-1.5 7.6-2.1 17-2.5 6.9-0.3 15.9 0 20 0.6 4.3 0.6 9.9 2.2 13 3.8 3 1.5 7.6 4.9 10.2 7.5 2.7 2.7 6.3 7.8 11.3 18.3l0.5 73.5h-30v-67l-2.8-2.9c-1.9-2-4.1-3.1-7.7-3.6-2.8-0.4-12.2-0.6-21-0.3-10.9 0.3-16.9 0.9-18.9 1.9-1.5 0.8-3.6 2.8-4.5 4.4-1.4 2.6-1.6 7.7-2.1 67.5h-29l-0.4-133.8 13.4-4.5c7.4-2.5 14.1-4.6 14.7-4.6zm-705.8 8.9c30.8 0 58.9 0.5 63.1 1.1 4.1 0.5 9.7 2 12.5 3.3 2.7 1.3 7 4.1 9.4 6.2 2.5 2.3 5.6 6.5 7.5 10.4 2.8 5.9 3.1 7.3 3.1 16 0 8.2-0.4 10.2-2.7 15-1.5 3.2-4.6 7.3-7.5 9.8-2.6 2.3-4.2 4.3-3.6 4.2 0.7 0 3.2 1.7 5.4 3.8 2.3 2 5.3 6 6.8 8.7 2.3 4.5 2.6 6.1 2.6 15.5 0 9.4-0.3 11.1-2.8 16.3-1.5 3.1-4.9 8.1-7.6 11-2.7 2.8-7.3 6.4-10.2 7.9-3 1.5-7.9 3.2-10.9 3.8-3.4 0.6-28.1 1-122 1l-0.2-66.3c-0.1-36.5 0.2-66.7 0.7-67 0.5-0.4 25.8-0.7 56.4-0.7zm170.6 30.1c11 0 22.7 0.3 26 0.8 3.3 0.4 8.6 2 11.7 3.5 3.4 1.5 8.1 4.9 11.3 8.1 3 3 6.7 8.1 8.2 11.3 2.8 5.7 2.8 5.7 2.8 28.2 0 22.1 0 22.6-2.6 28-1.4 3-4.6 7.8-7.1 10.5-2.5 2.8-7.1 6.4-10.4 8.2-3.3 1.8-8.7 3.6-12.4 4.2-3.6 0.6-15.5 1.1-26.5 1.1-11 0-22.9-0.5-26.5-1.1-3.7-0.6-9-2.4-12.4-4.2-3.2-1.8-7.8-5.3-10.2-7.9-2.4-2.7-5.6-7.4-7.1-10.5-1.4-3.2-3-8.7-3.4-12.3-0.5-3.6-0.8-10.8-0.8-16 0-5.2 0.3-12.4 0.8-16 0.4-3.6 1.9-9 3.3-12 1.4-3 4.7-7.9 7.4-10.9 3-3.2 7.3-6.5 10.9-8.3 3.3-1.6 8.5-3.3 11.5-3.7 3-0.5 14.5-0.9 25.5-1zm306 0c11 0 22.7 0.3 26 0.8 3.3 0.4 8.6 2 11.7 3.5 3.2 1.4 8.1 4.7 10.9 7.4 2.9 2.7 6.3 7.3 8 10.7 1.7 3.4 3.4 9.1 4 13 0.5 3.9 0.8 11.1 0.4 25l-89.5 0.5v3.5c0 2.6 0.8 4.3 6 9.5h39.7c21.9 0 40 0.2 40.3 0.4 0.3 0.3-0.3 6.7-1.2 14.3-1 7.6-1.7 14.1-1.8 14.6 0 0.4-16.5 0.7-36.8 0.7-20.2 0-39.5-0.5-43-1-3.4-0.6-8.5-2.1-11.2-3.5-2.8-1.4-6.7-4-8.8-5.9-2-1.8-5.1-5.3-6.7-7.7-1.7-2.4-3.8-6.8-4.8-9.9-1.4-4.4-1.7-9-1.7-24 0-13.9 0.4-19.8 1.6-23.5 0.8-2.7 3-7.2 4.9-10 1.8-2.7 5.3-6.6 7.6-8.7 2.4-2 6.6-4.6 9.4-5.9 2.7-1.2 7.2-2.5 10-2.9 2.7-0.4 14-0.8 25-0.9zm134.5 0c11.3 0 23.2 0.3 26.5 0.8 3.3 0.5 8.7 2.1 12 3.7 3.3 1.5 8.5 5.2 17 13.3l-7 6.4c-3.9 3.5-8.9 8-15.5 13.7l-3.3-3.4c-2.3-2.5-4.4-3.6-7.7-4.1-2.5-0.3-13.5-0.5-24.5-0.3-15.7 0.2-20.5 0.6-22.2 1.8-1.3 0.8-2.8 2.6-3.5 3.9-0.9 1.6-1.3 6.9-1.3 16.1 0 9.2 0.4 14.5 1.3 16.1 0.7 1.3 2.2 3.1 3.5 3.9 1.7 1.2 6.6 1.6 23.2 1.8 11.5 0.2 22.6 0 24.5-0.3 2.2-0.5 4.7-2.1 10.1-8l4.2 4c2.3 2.2 7.2 6.9 17.7 16.5l-4.8 5.1c-2.7 2.9-7.2 6.3-10.7 8-3.3 1.6-8.5 3.3-11.5 3.9-3 0.6-15 1-26.5 1-11.6 0-23.9-0.5-27.5-1.1-3.6-0.5-8.9-2.2-11.9-3.7-2.9-1.5-7.9-5.4-11-8.7-3.7-3.9-6.6-8.1-8.1-12-2.3-5.7-2.5-7.1-2.5-26.5 0-19.4 0.2-20.8 2.5-26.5 1.5-3.8 4.4-8.1 8-11.8 3.3-3.6 7.9-7 11.5-8.8 3.3-1.7 8.5-3.4 11.5-3.8 3-0.5 14.7-0.9 26-1zm-638 20.9h88.2c5-5.2 5.8-7 5.8-9.5 0-1.9-0.5-4.5-1.2-5.7-0.6-1.3-1.8-2.8-2.7-3.5-1.2-0.9-12.6-1.2-45.9-1.3h-44.2zm478 10.9c-2.2 2.3-2.9 3.9-2.9 7.5l-0.1 4.6 59.5-0.5c-0.4-8.1-1-9.5-3.5-11.7l-3-2.8h-47.2zm-301.3-1.3c-1.5 0.3-3.9 1.7-5.2 3.2-2.5 2.6-2.5 3-2.5 17.9 0 12.9 0.3 15.7 1.8 17.8 1 1.4 3.1 3 4.7 3.5 1.7 0.6 12 1 23 1 11 0 21.4-0.4 23-1 1.7-0.5 3.8-2.1 4.8-3.5 1.5-2.1 1.7-4.9 1.8-17.8v-15.2l-6.2-6c-32.8-0.2-43.6-0.1-45.2 0.1zm-176.7 43.4c68.2 0 85.8-0.4 87.8-1 2-0.6 3.8-2.2 4.7-4 0.9-1.7 1.5-4.6 1.5-6.5 0-1.9-0.4-4.5-1-5.8-0.6-1.2-2-2.9-3.2-3.7-1.9-1.3-9.1-1.6-46-1.8l-43.7-0.3z"/>
-        </svg>
+        /* Menu aberto */
+    .menu-aberto {
+        max-width: 300px;
+        transition: max-width 0.3s ease;
+        }
+
+    .navbar-mobile {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        backdrop-filter: blur(20px);
+        background: linear-gradient(to bottom, rgba(126, 217, 87, 0.5), #182b1d);
+        display: flex;
+        align-items: center;
+        z-index: 10;
+    }
+    .menu-btn { 
+        width: 60px;
+        height: 60px;
+        background: transparent !important;
+        border: none;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        position: relative;
+        z-index: 20;
+    }
+    .content-menu {
+        position: relative;
+        overflow-y: scroll;
         
-    </div>
-    <div class="overflow-y-scroll mt-[120px] h-screen scrollbar-nav flex flex-col items-center justify-start  gap-8">
-        <div>        
-            <button onclick="scrollToSection('info-geral')" class="cursor-pointer flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary focus:bg-primary/100 w-48 h-15 drop-shadow-xl/70 text-white text-base px-5 py-2 rounded-full font-sans-serif">                
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="size-7">
-                <path d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
-                <path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
-                </svg>
+        height: 100vh;
+        max-width: 230px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left:0px;
+        gap: 32px; /* equivalente ao Tailwind gap-8 */
+    }
+    .content-menu-mobile {
+        position: relative;
+        overflow-y: scroll;
+        padding-bottom: 20px;
+        margin-top: 70px;
+        height: 100vh;
+        max-width: 400px;
+        z-index: 20;
+        backdrop-filter: blur(15px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left:0px;
+        gap: 32px; /* equivalente ao Tailwind gap-8 */
+    }
 
-                <span class="m-auto text-lg">Inicio</span>
-            </button>
-        </div>
-        <div class="flex flex-col gap-5 items-center">
-            <h1 class="text-3xl text-white text-center font-bold">Tutoriais do Aplicativo</h1>
-            <!-- Botões de navegação -->
-          
-            <button onclick="scrollToSection('ult-loc')" class="cursor-pointer flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="size-8">
-                <path fill-rule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd" />
-                </svg>
-                <span class="m-auto">Última Localização</span>
-            </button>
-            
-            <button onclick="scrollToSection('bloq')" class="cursor-pointer flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="size-7">
-                <path fill-rule="evenodd" d="M12 1.5a5.25 5.25 0 0 0-5.25 5.25v3a3 3 0 0 0-3 3v6.75a3 3 0 0 0 3 3h10.5a3 3 0 0 0 3-3v-6.75a3 3 0 0 0-3-3v-3c0-2.9-2.35-5.25-5.25-5.25Zm3.75 8.25v-3a3.75 3.75 0 1 0-7.5 0v3h7.5Z" clip-rule="evenodd" />
-                </svg>
-                <span class="m-auto">Bloqueio</span>
-            </button>
-            
-            <button onclick="scrollToSection('rela-traj')" class="cursor-pointer flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="size-9">
-                <path fill-rule="evenodd" d="M7.502 6h7.128A3.375 3.375 0 0 1 18 9.375v9.375a3 3 0 0 0 3-3V6.108c0-1.505-1.125-2.811-2.664-2.94a48.972 48.972 0 0 0-.673-.05A3 3 0 0 0 15 1.5h-1.5a3 3 0 0 0-2.663 1.618c-.225.015-.45.032-.673.05C8.662 3.295 7.554 4.542 7.502 6ZM13.5 3A1.5 1.5 0 0 0 12 4.5h4.5A1.5 1.5 0 0 0 15 3h-1.5Z" clip-rule="evenodd" />
-                <path fill-rule="evenodd" d="M3 9.375C3 8.339 3.84 7.5 4.875 7.5h9.75c1.036 0 1.875.84 1.875 1.875v11.25c0 1.035-.84 1.875-1.875 1.875h-9.75A1.875 1.875 0 0 1 3 20.625V9.375ZM6 12a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H6.75a.75.75 0 0 1-.75-.75V12Zm2.25 0a.75.75 0 0 1 .75-.75h3.75a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75ZM6 15a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H6.75a.75.75 0 0 1-.75-.75V15Zm2.25 0a.75.75 0 0 1 .75-.75h3.75a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75ZM6 18a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H6.75a.75.75 0 0 1-.75-.75V18Zm2.25 0a.75.75 0 0 1 .75-.75h3.75a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
-                </svg>
-                <span class="m-auto">Relátorios e Trajetos</span>
-            </button>
-        </div>
+    .containers {
+        height: auto;
+        overflow-y: auto;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        padding-top: 0;
+        margin-left: 235px;
+    }
 
-        <div class="flex flex-col gap-5 items-center mb-3">
-            <h1 class="text-3xl text-white text-center font-bold">Tutoriais do Site</h1>
-            <button onclick="scrollToSection('rotas')" class="cursor-pointer flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
-                <svg class="size-9 animationnew" fill="#82C34C" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" d="M44,14H4a2,2,0,0,0-2,2V32a2,2,0,0,0,2,2H44a2,2,0,0,0,2-2V16A2,2,0,0,0,44,14ZM17.3,29H14.8l-3-5-.7-1.3h0V29H8.7V19h2.5l3,5,.6,1.3h.1s-.1-1.2-.1-1.6V19h2.5Zm9.1,0H18.7V19h7.6v2H21.2v1.8h4.4v2H21.2v2.1h5.2Zm10.9,0H34.8l-1-4.8c-.2-.8-.4-1.9-.4-1.9h0s-.2,1.1-.3,1.9L32,29H29.6L26.8,19h2.5l1,4.2a20.1,20.1,0,0,1,.5,2.5h0l.5-2.4,1-4.3h2.3l.9,4.3.5,2.4h0l.5-2.5,1-4.2H40Z"/>
-                </svg>
-                <span class="m-auto">(NEW) Rotas</span>
-            </button>
-            <button onclick="scrollToSection('trajeto-site')" class="cursor-pointer flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
-                <svg version="1.0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="size-8 fill-none stroke-[#82C34C]" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                    <path d="M9.09557 20.7929L11.9274 14.6574C11.9505 14.6073 11.962 14.5822 11.978 14.5744C11.9919 14.5676 12.0081 14.5676 12.022 14.5744C12.038 14.5822 12.0495 14.6073 12.0726 14.6574L14.9044 20.7929C14.9337 20.8564 14.9484 20.8882 14.9425 20.9067C14.9374 20.9227 14.9247 20.9351 14.9085 20.9396C14.8899 20.9449 14.8586 20.9293 14.796 20.898L12.0358 19.5179C12.0227 19.5113 12.0161 19.508 12.0092 19.5068C12.0031 19.5056 11.9969 19.5056 11.9908 19.5068C11.9839 19.508 11.9773 19.5113 11.9642 19.5179L9.20399 20.898C9.14142 20.9293 9.11014 20.9449 9.09149 20.9396C9.07533 20.9351 9.06256 20.9227 9.05748 20.9067C9.0516 20.8882 9.06626 20.8564 9.09557 20.7929Z"/>
-                    <path d="M4 18L7 4"/>
-                    <path d="M20 18L17 4"/>
-                    <path d="M12 11L12 9"/>
-                    <path d="M12 6L12 4"/>
-                </svg>
-                <span class="m-auto">Trajeto do Site</span>
-            </button>
+    .container {
+        background: linear-gradient(to bottom, rgba(126, 217, 87, 0.7), #007e50);
+        backdrop-filter: blur(5px);
+        max-width: 1000px;
+        /* max-height:720px; */
+        max-height:auto;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px; /* equivalente ao gap-y-6 */
+        margin: 30px; /* equivalente ao my-8 */
+        padding: 10px; /* equivalente ao p-5 */
+        color: white;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        color: white;
+    }
 
-            <button onclick="scrollToSection('cerca')" class="cursor-pointer flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
-                <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 578" fill="#82C34C" class="size-8">
-                    <path fill-rule="evenodd" d="m70 0.3c36.6 0.2 37.6 0.3 42.3 2.5 2.6 1.2 6.8 4.2 9.5 6.6 2.6 2.4 5.8 6.6 7.2 9.2 2.1 4.2 2.5 6.5 3 27.4h486v-9.2c0-5.7 0.6-11.4 1.6-14.8 1.3-4.4 2.9-6.7 7.8-11.5 4.3-4.3 7.7-6.6 11.6-8 5.1-1.9 8.1-2 85.5-2l5.5 2.7c3 1.4 7.4 4.7 9.8 7.2 2.3 2.5 5 6.5 6.1 8.9 1 2.3 2.4 5.8 3 7.7 0.8 2.5 1.1 75.2 1 258 0 140-0.3 257.6-0.8 261.5-0.4 3.9-1.7 9-3 11.5-1.3 2.5-3.8 6.4-5.7 8.8-2.3 2.8-5.7 5.3-16.9 10.7l-37.5 0.3c-36 0.3-37.8 0.2-44.5-1.9-6-1.8-7.8-3-13-8.3-3.3-3.3-6.9-7.9-8-10.1-1.9-3.8-2-6.4-2.5-125.5h-486l-0.5 122.5-3 5.4c-1.7 3-5 7.1-7.5 9.3-2.5 2.1-7 4.9-10 6.1-5.3 2.1-6.6 2.2-85.5 2.2l-5.9-3c-3.2-1.7-7.9-5.3-10.5-8-3-3.4-5.3-7.1-6.6-11-2-5.9-2-9.4-2.3-265-0.2-192.5 0-260 0.9-263 0.6-2.2 2.1-6.2 3.3-8.9 1.1-2.6 4.2-6.8 6.9-9.2 2.6-2.4 6.4-5.1 8.5-6 2-0.9 5.7-2 8.2-2.4 2.5-0.5 21.4-0.8 42-0.7zm62 205.7h486v-91h-486zm0 157h486v-89h-486z"/>
-                </svg>
-                <span class="m-auto">Cerca</span>
-            </button>
-            
-            <button onclick="scrollToSection('comandos')" class="cursor-pointer flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="size-8">
-                    <path fill-rule="evenodd" d="M2.25 6a3 3 0 0 1 3-3h13.5a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V6Zm3.97.97a.75.75 0 0 1 1.06 0l2.25 2.25a.75.75 0 0 1 0 1.06l-2.25 2.25a.75.75 0 0 1-1.06-1.06l1.72-1.72-1.72-1.72a.75.75 0 0 1 0-1.06Zm4.28 4.28a.75.75 0 0 0 0 1.5h3a.75.75 0 0 0 0-1.5h-3Z" clip-rule="evenodd" />
-                </svg>
-                <span class="m-auto">Comandos</span>
-            </button>
-            
-            <button onclick="scrollToSection('his-velo')" class="cursor-pointer flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
-                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="#82C34C" class="size-10">
-                <path d="M425.7,118.25A240,240,0,0,0,76.32,447l.18.2c.33.35.64.71,1,1.05.74.84,1.58,1.79,2.57,2.78a41.17,41.17,0,0,0,60.36-.42,157.13,157.13,0,0,1,231.26,0,41.18,41.18,0,0,0,60.65.06l3.21-3.5.18-.2a239.93,239.93,0,0,0-10-328.76ZM240,128a16,16,0,0,1,32,0v32a16,16,0,0,1-32,0ZM128,304H96a16,16,0,0,1,0-32h32a16,16,0,0,1,0,32Zm48.8-95.2a16,16,0,0,1-22.62,0l-22.63-22.62a16,16,0,0,1,22.63-22.63l22.62,22.63A16,16,0,0,1,176.8,208.8Zm149.3,23.1-47.5,75.5a31,31,0,0,1-7,7,30.11,30.11,0,0,1-35-49l75.5-47.5a10.23,10.23,0,0,1,11.7,0A10.06,10.06,0,0,1,326.1,231.9Zm31.72-23.1a16,16,0,0,1-22.62-22.62l22.62-22.63a16,16,0,0,1,22.63,22.63ZM423.7,436.4h0ZM416,304H384a16,16,0,0,1,0-32h32a16,16,0,0,1,0,32Z"/>
-                </svg>
-            <span class="m-auto">Histórico de Velocidade</span>
-            
-            <button onclick="scrollToSection('odometro')" class="cursor-pointer flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
-                <svg fill="#82C34C" class="size-10" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12,2A10,10,0,1,0,22,12,10.011,10.011,0,0,0,12,2Zm7.411,13H12.659L9.919,8.606a1,1,0,1,0-1.838.788L10.484,15H4.589a8,8,0,1,1,14.822,0Z"/>
-                </svg>
-                <span class="m-auto"> Histórico Odômetro</span>
-            </button>
-            <button onclick="scrollToSection('link-compar')" class="cursor-pointer flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
-                <svg version="1.2" xmlns="http://www.w3.org/2000/svg" fill="#82C34C" class="size-8" viewBox="0 0 261 260">
-                    <path  d="m170 2.1c-4.1 1.1-11.1 3.8-15.5 6.1-7.3 3.8-10.3 6.5-34.5 30.7-20 20-27.5 28.2-30.3 33.1-2.1 3.6-4.9 10.1-6.3 14.5-1.7 5.4-2.8 11.3-3.1 18-0.4 7.2-0.1 12.3 1.1 18.5 1.1 5.2 3.4 12 6.1 17.5 3 6.2 6.3 11.1 10.7 15.8 4.4 4.8 7.6 7.3 10.8 8.4 3.1 1.1 6 1.4 9.5 1 3-0.4 6.6-1.8 9-3.5 2.2-1.5 5-4.6 6.2-6.7 1.6-2.9 2.3-5.7 2.3-9.8 0-3.1-0.5-6.9-1.1-8.5-0.6-1.5-2.8-4.7-4.9-7.2-2.2-2.5-4.8-6.5-5.9-9-1-2.5-2.3-6.5-2.6-9-0.6-3.3-0.2-6.4 1.5-12l2.2-7.5c41.3-41.5 47.4-47 51.3-48.7 3.7-1.7 7-2.2 12.5-2.3 6.1 0 8.5 0.5 13 2.7 3 1.4 7.3 4.6 9.4 7 2.2 2.3 4.9 6.3 6 8.8 1.4 3.1 2 6.7 2.1 11.5 0 4.5-0.7 8.8-1.9 12-1.5 4-5 8.2-17.6 21-8.7 8.8-16.5 17.5-17.4 19.3-0.9 1.7-1.6 5.3-1.7 8l-0.1 4.7c-2.1-7.8-4.5-13.6-6.7-18-2.5-5-6.3-10.5-10.3-14.8-4.5-4.9-7.6-7.3-10.8-8.4-3.1-1.1-6-1.4-9.5-1-3 0.4-6.6 1.8-9 3.5-2.2 1.5-5 4.6-6.2 6.7-1.6 2.9-2.3 5.7-2.3 9.8 0 3.1 0.5 6.9 1.1 8.5 0.6 1.5 2.8 4.7 4.9 7.2 2.2 2.5 4.9 6.8 6.1 9.5 1.5 3.3 2.3 7 2.3 11 0 3.3-0.8 8.5-1.8 11.5-1.7 5-4 7.6-25 28.8-18.1 18.2-24.2 23.7-28.1 25.4-3.7 1.7-7 2.2-12.5 2.2-5.4 0.1-8.7-0.5-12-2-2.5-1.1-6.5-3.8-8.8-6-2.4-2.1-5.6-6.4-7-9.4-2.1-4.4-2.7-7-2.7-12.5 0-4.5 0.7-8.8 1.9-12 1.5-3.9 4.8-8 14.6-18 7-7.2 13.5-14.5 14.4-16.3 0.9-1.9 1.6-5.6 1.6-9.2 0-3.3-0.6-7.2-1.4-8.7-0.8-1.6-2.9-4.2-4.8-5.9-1.8-1.8-4.4-3.7-5.8-4.4-1.4-0.8-5-1.3-8-1.4-3.1 0-7 0.7-9 1.7-1.9 0.9-10 8.3-18 16.4-12 12.2-15.3 16.2-18.7 22.8-2.3 4.4-5.1 11.6-6.3 16-1.4 5.6-2 11.2-2 18.5 0 7.3 0.6 12.9 2 18.5 1.2 4.4 3.6 10.9 5.5 14.5 1.9 3.6 5.6 9.2 8.3 12.5 2.6 3.3 7.5 8.1 10.7 10.8 3.3 2.6 8.9 6.3 12.5 8.2 3.6 1.9 10.1 4.3 14.5 5.5 5.6 1.4 11.2 2 18.5 2 7.3 0 12.9-0.6 18.5-2 4.4-1.2 11.6-4 16-6.2 7.3-3.8 10.3-6.5 34.5-30.7 20-20 27.5-28.2 30.3-33.1 2.1-3.6 4.9-10.1 6.4-14.5 2.2-6.8 2.6-9.8 2.7-20.5l0.1-12.6c4 6.3 6.4 9 8.1 10 1.6 1 5.2 2.3 7.9 2.9 3.6 0.7 6.3 0.6 9.5-0.2 3.9-1.1 6.9-3.6 23.1-19.9 16.1-16.3 19.1-19.7 22.7-26.7 2.2-4.4 5-11.6 6.2-16 1.4-5.6 2-11.2 2-18.5 0-7.3-0.6-12.9-2-18.5-1.2-4.4-3.6-10.9-5.5-14.5-1.9-3.6-5.5-9.1-8-12.3-2.5-3.1-7.3-8-10.7-10.8-3.5-2.9-9.4-6.7-13.3-8.7-3.8-1.9-10.4-4.3-14.5-5.3-5.2-1.3-10.8-1.9-18.5-1.9-7.6 0.1-13.3 0.7-18.5 2.1z"/>
-                </svg>
-                <span class="m-auto">Link Compartilhado</span>
-            </button>   
-        </div>
-    </div>
-</div>
+    .lista-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 40px;
+        gap: 72px;
+    }
+    .titulo-container {
+        text-align: center;
+        font-size: 1.875rem; /* text-3xl */
+        font-weight: bold;
+        color: #22d3ee; /* cyan-300 */
+        margin-bottom: 1rem;
+        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+    }
+    .texto-container p {
+        font-size: 1.25rem; /* text-xl */
+        font-family: sans-serif;
+        margin-top: 0.5rem;
+        line-height: 1.6;
+    }
+     
+    .imagem-site {
+        width: auto;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+    .imagem-app {
+        width: auto;
+        height: 400px;
+        object-fit: contain;
+    }
+    .bloco-imagens {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    .frame-9-16{
+        width: 300px;
+        height: 533px;
+        min-height: 533px;
+        
+        border-radius: 16px; /* rounded-xl */
+        overflow: hidden;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+    }
+    .frame-9-16 iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        display: block;
+    }
+    .frame-16-9 {
+        width: 100%;
+        max-width: 768px; /* equivalente a 48rem */
+        aspect-ratio: 16 / 9;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+        position: relative;
+    }
 
-<!-- Menu Mobile -->
-<div id="Menu"class="lg:hidden fixed top-0 left-0 h-full max-w-0 overflow-hidden w-1/2 bg-gradient-to-t from-[#7ed957]/50 to-[#007e50] z-10 rounded-r-lg flex flex-col items-center justify-center transition-all duration-300">
-    <div class="overflow-y-scroll h-screen mb-4 scrollbar-hide scrollbar-nav backdrop-blur-[5px] flex flex-col items-center justify-start  top-20 px-10 paddingy-60 gap-10 margin-bottom-10">
-        <div class="flex flex-col gap-5 items-center">
-            <!-- Botões de navegação Mobile-->
-            <button onclick="scrollToSection('info-geral')" class="flex items-center mt-0.5 backdrop-blur-[5px] gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="size-7">
-                <path d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
-                <path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
-                </svg>
-                <span class="m-auto">Inicio</span>
-            </button>  
-
-            <h1 class="text-3xl text-white text-center left-1 font-bold">Tutoriais do Aplicativo</h1>
-                                                     
-            <button onclick="scrollToSection('ult-loc')" class="flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="size-8">
-                <path fill-rule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd" />
-                </svg>
-                <span class="m-auto">Última Localização</span>
-            </button>
-            
-            <button onclick="scrollToSection('bloq')" class="flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="size-7">
-                <path fill-rule="evenodd" d="M12 1.5a5.25 5.25 0 0 0-5.25 5.25v3a3 3 0 0 0-3 3v6.75a3 3 0 0 0 3 3h10.5a3 3 0 0 0 3-3v-6.75a3 3 0 0 0-3-3v-3c0-2.9-2.35-5.25-5.25-5.25Zm3.75 8.25v-3a3.75 3.75 0 1 0-7.5 0v3h7.5Z" clip-rule="evenodd" />
-                </svg>
-                <span class="m-auto">Bloqueio</span>
-            </button>
-
-            <button onclick="scrollToSection('rela-traj')" class="flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="size-9">
-                <path fill-rule="evenodd" d="M7.502 6h7.128A3.375 3.375 0 0 1 18 9.375v9.375a3 3 0 0 0 3-3V6.108c0-1.505-1.125-2.811-2.664-2.94a48.972 48.972 0 0 0-.673-.05A3 3 0 0 0 15 1.5h-1.5a3 3 0 0 0-2.663 1.618c-.225.015-.45.032-.673.05C8.662 3.295 7.554 4.542 7.502 6ZM13.5 3A1.5 1.5 0 0 0 12 4.5h4.5A1.5 1.5 0 0 0 15 3h-1.5Z" clip-rule="evenodd" />
-                <path fill-rule="evenodd" d="M3 9.375C3 8.339 3.84 7.5 4.875 7.5h9.75c1.036 0 1.875.84 1.875 1.875v11.25c0 1.035-.84 1.875-1.875 1.875h-9.75A1.875 1.875 0 0 1 3 20.625V9.375ZM6 12a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H6.75a.75.75 0 0 1-.75-.75V12Zm2.25 0a.75.75 0 0 1 .75-.75h3.75a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75ZM6 15a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H6.75a.75.75 0 0 1-.75-.75V15Zm2.25 0a.75.75 0 0 1 .75-.75h3.75a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75ZM6 18a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H6.75a.75.75 0 0 1-.75-.75V18Zm2.25 0a.75.75 0 0 1 .75-.75h3.75a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
-                </svg>
-                <span class="m-auto">Relátorios e Trajetos</span>
-            </button>
-        </div>
-
-        <div class="flex flex-col gap-5 items-center">
-            <h1 class="text-3xl text-white text-center font-bold">Tutoriais do Site</h1>
-            <button onclick="scrollToSection('rotas')" class="flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
-                <svg class="size-9 animationnew" fill="#82C34C" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" d="M44,14H4a2,2,0,0,0-2,2V32a2,2,0,0,0,2,2H44a2,2,0,0,0,2-2V16A2,2,0,0,0,44,14ZM17.3,29H14.8l-3-5-.7-1.3h0V29H8.7V19h2.5l3,5,.6,1.3h.1s-.1-1.2-.1-1.6V19h2.5Zm9.1,0H18.7V19h7.6v2H21.2v1.8h4.4v2H21.2v2.1h5.2Zm10.9,0H34.8l-1-4.8c-.2-.8-.4-1.9-.4-1.9h0s-.2,1.1-.3,1.9L32,29H29.6L26.8,19h2.5l1,4.2a20.1,20.1,0,0,1,.5,2.5h0l.5-2.4,1-4.3h2.3l.9,4.3.5,2.4h0l.5-2.5,1-4.2H40Z"/>
-                </svg>
-                <span class="m-auto">(NEW) Rotas</span>
-            </button>
-            <button onclick="scrollToSection('trajeto-site')" class="flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
-                <svg version="1.0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="size-8 fill-none stroke-[#82C34C]" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                    <path d="M9.09557 20.7929L11.9274 14.6574C11.9505 14.6073 11.962 14.5822 11.978 14.5744C11.9919 14.5676 12.0081 14.5676 12.022 14.5744C12.038 14.5822 12.0495 14.6073 12.0726 14.6574L14.9044 20.7929C14.9337 20.8564 14.9484 20.8882 14.9425 20.9067C14.9374 20.9227 14.9247 20.9351 14.9085 20.9396C14.8899 20.9449 14.8586 20.9293 14.796 20.898L12.0358 19.5179C12.0227 19.5113 12.0161 19.508 12.0092 19.5068C12.0031 19.5056 11.9969 19.5056 11.9908 19.5068C11.9839 19.508 11.9773 19.5113 11.9642 19.5179L9.20399 20.898C9.14142 20.9293 9.11014 20.9449 9.09149 20.9396C9.07533 20.9351 9.06256 20.9227 9.05748 20.9067C9.0516 20.8882 9.06626 20.8564 9.09557 20.7929Z"/>
-                    <path d="M4 18L7 4"/>
-                    <path d="M20 18L17 4"/>
-                    <path d="M12 11L12 9"/>
-                    <path d="M12 6L12 4"/>
-                </svg>
-                <span class="m-auto">Trajeto do Site</span>
-            </button>
-
-            <button onclick="scrollToSection('cerca')" class="flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
-                <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 578" fill="#82C34C" class="size-8">
-                    <path fill-rule="evenodd" d="m70 0.3c36.6 0.2 37.6 0.3 42.3 2.5 2.6 1.2 6.8 4.2 9.5 6.6 2.6 2.4 5.8 6.6 7.2 9.2 2.1 4.2 2.5 6.5 3 27.4h486v-9.2c0-5.7 0.6-11.4 1.6-14.8 1.3-4.4 2.9-6.7 7.8-11.5 4.3-4.3 7.7-6.6 11.6-8 5.1-1.9 8.1-2 85.5-2l5.5 2.7c3 1.4 7.4 4.7 9.8 7.2 2.3 2.5 5 6.5 6.1 8.9 1 2.3 2.4 5.8 3 7.7 0.8 2.5 1.1 75.2 1 258 0 140-0.3 257.6-0.8 261.5-0.4 3.9-1.7 9-3 11.5-1.3 2.5-3.8 6.4-5.7 8.8-2.3 2.8-5.7 5.3-16.9 10.7l-37.5 0.3c-36 0.3-37.8 0.2-44.5-1.9-6-1.8-7.8-3-13-8.3-3.3-3.3-6.9-7.9-8-10.1-1.9-3.8-2-6.4-2.5-125.5h-486l-0.5 122.5-3 5.4c-1.7 3-5 7.1-7.5 9.3-2.5 2.1-7 4.9-10 6.1-5.3 2.1-6.6 2.2-85.5 2.2l-5.9-3c-3.2-1.7-7.9-5.3-10.5-8-3-3.4-5.3-7.1-6.6-11-2-5.9-2-9.4-2.3-265-0.2-192.5 0-260 0.9-263 0.6-2.2 2.1-6.2 3.3-8.9 1.1-2.6 4.2-6.8 6.9-9.2 2.6-2.4 6.4-5.1 8.5-6 2-0.9 5.7-2 8.2-2.4 2.5-0.5 21.4-0.8 42-0.7zm62 205.7h486v-91h-486zm0 157h486v-89h-486z"/>
-                </svg>
-                <span class="m-auto">Cerca</span>
-            </button>
-            
-            <button onclick="scrollToSection('comandos')" class="flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="size-8">
-                    <path fill-rule="evenodd" d="M2.25 6a3 3 0 0 1 3-3h13.5a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V6Zm3.97.97a.75.75 0 0 1 1.06 0l2.25 2.25a.75.75 0 0 1 0 1.06l-2.25 2.25a.75.75 0 0 1-1.06-1.06l1.72-1.72-1.72-1.72a.75.75 0 0 1 0-1.06Zm4.28 4.28a.75.75 0 0 0 0 1.5h3a.75.75 0 0 0 0-1.5h-3Z" clip-rule="evenodd" />
-                </svg>
-                <span class="m-auto">Comandos</span>
-            </button>
-            
-            <button onclick="scrollToSection('his-velo')" class="flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
-                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="#82C34C" class="size-10">
-                <path d="M425.7,118.25A240,240,0,0,0,76.32,447l.18.2c.33.35.64.71,1,1.05.74.84,1.58,1.79,2.57,2.78a41.17,41.17,0,0,0,60.36-.42,157.13,157.13,0,0,1,231.26,0,41.18,41.18,0,0,0,60.65.06l3.21-3.5.18-.2a239.93,239.93,0,0,0-10-328.76ZM240,128a16,16,0,0,1,32,0v32a16,16,0,0,1-32,0ZM128,304H96a16,16,0,0,1,0-32h32a16,16,0,0,1,0,32Zm48.8-95.2a16,16,0,0,1-22.62,0l-22.63-22.62a16,16,0,0,1,22.63-22.63l22.62,22.63A16,16,0,0,1,176.8,208.8Zm149.3,23.1-47.5,75.5a31,31,0,0,1-7,7,30.11,30.11,0,0,1-35-49l75.5-47.5a10.23,10.23,0,0,1,11.7,0A10.06,10.06,0,0,1,326.1,231.9Zm31.72-23.1a16,16,0,0,1-22.62-22.62l22.62-22.63a16,16,0,0,1,22.63,22.63ZM423.7,436.4h0ZM416,304H384a16,16,0,0,1,0-32h32a16,16,0,0,1,0,32Z"/>
-                </svg>
-                <span class="m-auto">Histórico de Velocidade</span>
-            
-            <button onclick="scrollToSection('odometro')" class="flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
-                <svg fill="#82C34C" class="size-10" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12,2A10,10,0,1,0,22,12,10.011,10.011,0,0,0,12,2Zm7.411,13H12.659L9.919,8.606a1,1,0,1,0-1.838.788L10.484,15H4.589a8,8,0,1,1,14.822,0Z"/>
-                </svg>
-                <span class="m-auto"> Histórico Odômetro</span>
-            </button>
-            <button onclick="scrollToSection('link-compar')" class="flex items-center gap-2 bg-primary/65 hover:bg-primary focus:outline-2 focus:outline-offset-2 focus:ontline-primary/100 focus:bg-primary/100 active:bg-primary/100 w-48 h-15 drop-shadow-xl/70  text-white text-base px-5 py-2 rounded-full font-sans-serif">
-                <svg version="1.2" xmlns="http://www.w3.org/2000/svg" fill="#82C34C" class="size-8" viewBox="0 0 261 260">
-                    <path  d="m170 2.1c-4.1 1.1-11.1 3.8-15.5 6.1-7.3 3.8-10.3 6.5-34.5 30.7-20 20-27.5 28.2-30.3 33.1-2.1 3.6-4.9 10.1-6.3 14.5-1.7 5.4-2.8 11.3-3.1 18-0.4 7.2-0.1 12.3 1.1 18.5 1.1 5.2 3.4 12 6.1 17.5 3 6.2 6.3 11.1 10.7 15.8 4.4 4.8 7.6 7.3 10.8 8.4 3.1 1.1 6 1.4 9.5 1 3-0.4 6.6-1.8 9-3.5 2.2-1.5 5-4.6 6.2-6.7 1.6-2.9 2.3-5.7 2.3-9.8 0-3.1-0.5-6.9-1.1-8.5-0.6-1.5-2.8-4.7-4.9-7.2-2.2-2.5-4.8-6.5-5.9-9-1-2.5-2.3-6.5-2.6-9-0.6-3.3-0.2-6.4 1.5-12l2.2-7.5c41.3-41.5 47.4-47 51.3-48.7 3.7-1.7 7-2.2 12.5-2.3 6.1 0 8.5 0.5 13 2.7 3 1.4 7.3 4.6 9.4 7 2.2 2.3 4.9 6.3 6 8.8 1.4 3.1 2 6.7 2.1 11.5 0 4.5-0.7 8.8-1.9 12-1.5 4-5 8.2-17.6 21-8.7 8.8-16.5 17.5-17.4 19.3-0.9 1.7-1.6 5.3-1.7 8l-0.1 4.7c-2.1-7.8-4.5-13.6-6.7-18-2.5-5-6.3-10.5-10.3-14.8-4.5-4.9-7.6-7.3-10.8-8.4-3.1-1.1-6-1.4-9.5-1-3 0.4-6.6 1.8-9 3.5-2.2 1.5-5 4.6-6.2 6.7-1.6 2.9-2.3 5.7-2.3 9.8 0 3.1 0.5 6.9 1.1 8.5 0.6 1.5 2.8 4.7 4.9 7.2 2.2 2.5 4.9 6.8 6.1 9.5 1.5 3.3 2.3 7 2.3 11 0 3.3-0.8 8.5-1.8 11.5-1.7 5-4 7.6-25 28.8-18.1 18.2-24.2 23.7-28.1 25.4-3.7 1.7-7 2.2-12.5 2.2-5.4 0.1-8.7-0.5-12-2-2.5-1.1-6.5-3.8-8.8-6-2.4-2.1-5.6-6.4-7-9.4-2.1-4.4-2.7-7-2.7-12.5 0-4.5 0.7-8.8 1.9-12 1.5-3.9 4.8-8 14.6-18 7-7.2 13.5-14.5 14.4-16.3 0.9-1.9 1.6-5.6 1.6-9.2 0-3.3-0.6-7.2-1.4-8.7-0.8-1.6-2.9-4.2-4.8-5.9-1.8-1.8-4.4-3.7-5.8-4.4-1.4-0.8-5-1.3-8-1.4-3.1 0-7 0.7-9 1.7-1.9 0.9-10 8.3-18 16.4-12 12.2-15.3 16.2-18.7 22.8-2.3 4.4-5.1 11.6-6.3 16-1.4 5.6-2 11.2-2 18.5 0 7.3 0.6 12.9 2 18.5 1.2 4.4 3.6 10.9 5.5 14.5 1.9 3.6 5.6 9.2 8.3 12.5 2.6 3.3 7.5 8.1 10.7 10.8 3.3 2.6 8.9 6.3 12.5 8.2 3.6 1.9 10.1 4.3 14.5 5.5 5.6 1.4 11.2 2 18.5 2 7.3 0 12.9-0.6 18.5-2 4.4-1.2 11.6-4 16-6.2 7.3-3.8 10.3-6.5 34.5-30.7 20-20 27.5-28.2 30.3-33.1 2.1-3.6 4.9-10.1 6.4-14.5 2.2-6.8 2.6-9.8 2.7-20.5l0.1-12.6c4 6.3 6.4 9 8.1 10 1.6 1 5.2 2.3 7.9 2.9 3.6 0.7 6.3 0.6 9.5-0.2 3.9-1.1 6.9-3.6 23.1-19.9 16.1-16.3 19.1-19.7 22.7-26.7 2.2-4.4 5-11.6 6.2-16 1.4-5.6 2-11.2 2-18.5 0-7.3-0.6-12.9-2-18.5-1.2-4.4-3.6-10.9-5.5-14.5-1.9-3.6-5.5-9.1-8-12.3-2.5-3.1-7.3-8-10.7-10.8-3.5-2.9-9.4-6.7-13.3-8.7-3.8-1.9-10.4-4.3-14.5-5.3-5.2-1.3-10.8-1.9-18.5-1.9-7.6 0.1-13.3 0.7-18.5 2.1z"/>
-                </svg>
-                <span class="m-auto">Link Compartilhado</span>
-            </button>   
-        </div>
-    </div>
-</div>
-
-<div class= "lg:hidden sticky top-0 bg-gradient-to-b backdrop-blur-3xl from-[#7ed957]/50 to-[#007e50] h-15 z-10 left-4 flex flex-row">
+    .frame-16-9 iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        display: block;
+    }
+    .botao-whatsapp {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        display: flex;
+        align-items: center;
+        padding:0;
+        gap: 8px;
+        width: 56px; /* w-14 */
+        height: 56px; /* h-14 */
+        background-color: #22c55e; /* bg-green-500 */
+        border: 4px solid white;
+        border-radius: 9999px; /* rounded-full */
+        overflow: hidden;
+        cursor: pointer;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease-in-out;
+    }
     
-    <button id="menuBtn" onclick="toggleMenu()" class="z-20 h-10 w-10">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-15 h-15 z-50 ">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-        </svg>
-    </button>
-    
-        <svg class="fixed items-start left-1/2 -translate-x-1/2 w-[110px] h-[50px]"version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 37.8 852 150" preserveAspectRatio="xMidYMid meet">
-        <title>logotipo-boltech-2</title>
-        <style>
-            .s0 { fill: #54ae7b } 
-            .s1 { fill: #26a8ab } 
-            .s2 { fill: #1a93d0 } 
-            .s3 { fill: #81c34d } 
-            .s4 { fill: #fefefe } 
-        </style>
-        <path id="Preencher com Cor Sólida 5" class="s0" d="m471 37.8v4.7c7.4 0.8 12 2.3 15 3.7 3 1.5 7.5 4.6 9.9 7 2.4 2.4 5.4 6.4 6.7 9.1 1.3 2.6 3 7.2 3.6 10.2l1.3 5.5h9.5c-0.9-6.6-1.6-10.1-2.2-12-0.6-1.9-2.3-6-3.9-9-1.6-3-5-7.7-7.6-10.3-2.7-2.7-7.1-6.1-9.8-7.7-2.8-1.6-7.9-3.6-11.5-4.4-3.6-0.9-7.5-1.6-8.8-1.6-2 0-2.2 0.5-2.2 4.8z"/>
-        <path id="Preencher com Cor Sólida 4" class="s1" d="m471 20c0 3.8 0.1 4 3.3 4 1.7 0 6.1 0.7 9.7 1.6 3.6 0.8 9.2 2.9 12.5 4.7 3.3 1.7 9.2 6.3 13.1 10.2 4.6 4.6 8.2 9.2 10.3 13.5 1.7 3.6 3.9 10.4 4.9 15.3l1.7 8.7c6.4 0 6.5-0.1 6.5-4.3 0-2.3-0.7-6.9-1.5-10.2-0.8-3.3-3.2-9.4-5.2-13.5-2.7-5.4-5.8-9.6-11.2-15.1-5.9-5.9-9.5-8.5-16.1-11.8-4.7-2.3-11.6-4.8-15.5-5.6-3.9-0.8-8.2-1.5-9.7-1.5-2.6 0-2.8 0.3-2.8 4z"/>
-        <path id="Preencher com Cor Sólida 3" fill-rule="evenodd" class="s2" d="m470.8 1.1l5.9 0.6c3.2 0.3 8.7 1.2 12.3 2 3.6 0.8 9.9 3 14 4.9 4.1 2 10.2 5.5 13.5 7.8 3.3 2.4 8.5 7 11.5 10.4 3 3.3 7 8.4 8.7 11.4 1.8 2.9 4.5 8.2 5.9 11.8 1.5 3.6 3.3 9.4 4 13 0.8 3.6 1.4 8.4 1.4 10.7 0 4.1-0.1 4.3-3 4.3-2.8 0-3-0.3-3-3.8 0-2-0.7-6.6-1.4-10.2-0.8-3.6-2.6-9.4-4.1-13-1.5-3.6-4.4-9-6.5-12-2.1-3-6.2-7.9-9.1-10.8-3-3-7.9-7-10.9-9-3-2-8.4-4.8-12-6.3-3.6-1.5-9.6-3.3-13.5-3.9-3.9-0.6-8.5-1.3-10.3-1.6-2.8-0.3-3.2-0.8-3.3-3.3zm223.2 232.8h9v52h-4.5c-3.9 0-4.5-0.3-4.5-2 0-1.9-0.2-1.9-3.8 0.6-2.6 1.8-5 2.5-8.2 2.4-2.6 0-6.4-1-9-2.2-2.4-1.3-5.5-3.8-7-5.7-1.6-2.2-2.7-5.2-2.9-8-0.2-2.5-0.1-5.8 0.2-7.3 0.4-1.5 2.1-4.4 3.9-6.3 1.8-2 5.1-4.3 7.3-5.1 2.4-0.9 6.1-1.4 9.1-1.2 3.8 0.2 5.9 1 10.4 5.3zm-296 3h10c5.5 0 12.1 0.6 14.7 1.3 2.8 0.7 5.7 2.4 7.3 4.2 1.5 1.7 3 4.8 3.5 7 0.6 3.1 0.3 5-1.1 8-1 2.2-3.3 4.9-5.1 6-1.7 1.1-3.2 2.5-3.2 3 0 0.6 2.4 4.9 5.4 9.5 3 4.7 5.5 8.9 5.5 9.3 0 0.4-2.1 0.7-9.5 0.7l-5.7-9.5c-5.5-9.1-5.9-9.5-12.8-9.5v19h-9zm128.1 3h8.1l0.3 11.5 3.8 0.3c3.6 0.2 3.7 0.4 3.7 3.7 0 3.4-0.1 3.5-7.5 4l-0.5 26.5h-8l-0.5-26.5-2.7-0.2c-2.4-0.2-2.8-0.7-2.8-3.8 0-3.1 0.4-3.5 2.8-3.7 2.6-0.3 2.7-0.6 3-6zm-119.1 19c7.4 0 11-0.4 12.8-1 1.8-0.6 3.7-1.9 4.2-3 0.6-1.1 1-2.9 1-4 0-1.1-1.1-3.1-2.5-4.5-2.1-2.2-3.4-2.5-9-2.5h-6.5zm96-8.3c2 0.3 4.7 1.1 6 1.8 1.4 0.7 3.1 2 3.8 2.9 1 1.3 0.8 1.8-1.8 3.1-2.6 1.3-3.2 1.3-5.2 0-1.3-0.9-3.7-1.5-5.5-1.5-2.3 0-3.7 0.7-4.8 2.2-1.2 1.8-1.2 2.5-0.2 3.4 0.7 0.6 3.7 1.9 6.7 2.9 3.1 0.9 7 2.8 8.8 4.1 2.7 2 3.2 3 3.2 6.4 0 3.2-0.6 4.6-3.2 7-2.3 2.1-4.7 3.2-7.8 3.6-2.4 0.4-6.2 0.1-8.2-0.5-2.1-0.6-5-2.2-9.3-6l3.5-1.5c3.1-1.3 3.8-1.3 5.8-0.1 1.2 0.8 3.6 1.5 5.2 1.5 1.7 0 3.7-0.2 4.5-0.5 0.9-0.3 1.5-1.6 1.5-3 0-2.2-0.7-2.7-5.7-4.1-3.2-0.9-7-2.3-8.5-3-1.5-0.8-3.4-2.8-4.3-4.4-1.1-2.3-1.2-3.8-0.5-6.5 0.6-2 2.2-4.3 3.8-5.2 1.5-1 4.1-2.1 5.7-2.4 1.7-0.4 4.6-0.5 6.5-0.2zm336 0c2 0.3 5.1 1.2 6.9 2.1 1.9 0.9 3.6 2.2 3.8 2.9 0.2 0.7-1 2-2.7 2.8-2.6 1.3-3.2 1.3-5.2 0-1.3-0.9-3.4-1.5-4.8-1.5-1.3-0.1-3.3 0.5-4.3 1.2-1 0.7-1.7 2.1-1.5 3.2 0.2 1.3 2.3 2.5 7.3 4.1 5.1 1.7 7.8 3.2 9.9 5.6 2.3 2.7 2.8 4 2.2 6.4-0.4 1.6-1.4 3.8-2.4 4.9-0.9 1-3.1 2.5-4.9 3.2-1.8 0.8-5 1.4-7 1.4-2.1-0.1-5.6-0.9-7.8-1.9-2.2-1-4.5-2.6-5.2-3.5-1.1-1.4-0.8-1.8 2.2-3.1 3.1-1.4 3.8-1.4 5.8 0 1.2 0.8 3.8 1.5 5.7 1.5 2 0.1 4.1-0.6 4.8-1.5 0.7-0.8 1-2.2 0.7-3-0.2-0.8-1-1.7-1.7-2-0.7-0.2-3.7-1.1-6.8-1.9-3-0.8-6.7-2.6-8.2-4.1-2.1-1.9-2.8-3.5-2.8-6.3 0-2.8 0.7-4.4 2.8-6.5 1.5-1.5 4.3-3.2 6.2-3.6 2-0.5 5.1-0.7 7-0.4zm-380.5 0.3c3.8-0.1 5.9 0.5 8.8 2.4 3.6 2.5 3.7 2.5 3.7 0.6 0-1.7 0.7-2 9-2v34h-4.5c-3.8 0-4.5-0.3-4.5-2 0-1.9-0.2-1.9-3.7 0.6-3.3 2.3-4.4 2.5-9.8 2-4.3-0.4-7-1.3-9.9-3.3-2.1-1.6-4.7-4.4-5.8-6.3-1-1.9-1.9-5.5-1.9-8-0.1-2.5 0.6-5.9 1.4-7.5 0.9-1.7 2.8-4.2 4.4-5.7 1.6-1.5 4-3.2 5.3-3.7 1.4-0.5 4.8-1 7.5-1.1zm110.3 0c2.3 0 4.2 0.2 4.2 0.5 0 0.3-0.8 2.1-1.7 4-1.4 2.8-2.4 3.5-4.5 3.5-1.5 0-3.7 0.4-4.8 1-1.1 0.5-2.4 2.4-3 4.2-0.5 1.8-1 7.4-1 21.8h-8v-34h4c2.2 0 4.1 0.5 4.3 1.1 0.2 0.8 1.2 0.7 3.2-0.4 1.7-0.9 4.9-1.7 7.3-1.7zm25.3 0.2c5.3 0.2 7.3 0.8 10.3 3 2 1.5 4.5 4.6 5.6 6.8 1.1 2.2 2 5.3 2 10h-14c-11.7 0-14 0.2-14 1.5 0 0.8 1.3 2.6 2.8 4 1.8 1.7 3.9 2.5 6.2 2.5 2 0 4.6-0.8 6-1.9 2.3-1.8 3-1.9 11.2 0.4l-1.9 2.5c-1.1 1.4-3.9 3.5-6.3 4.7-2.5 1.2-6.3 2.3-8.5 2.3-2.2 0-5.5-0.6-7.5-1.4-1.9-0.8-4.9-3-6.7-5-1.8-2-3.7-5.5-4.3-7.9-0.6-2.3-0.8-5.6-0.4-7.2 0.3-1.7 1.6-4.5 2.8-6.4 1.2-1.9 3.9-4.5 6.1-5.8 3.4-2 5.1-2.4 10.6-2.1zm41.9-0.2c4.3 0 6.4 0.5 9.3 2.5 3.6 2.4 3.7 2.4 3.7 0.5 0-1.7 0.7-2 8-2v34h-4.5c-4 0-4.5-0.3-4.4-4.5l-2.3 2.3c-1.5 1.5-3.9 2.4-7.3 2.8q-5 0.6-9-1c-2.2-0.8-5.7-3.3-7.7-5.6-2.4-2.5-4-5.4-4.4-7.8-0.3-2-0.3-5.3 0-7.2 0.4-1.9 1.7-5 3-6.8 1.3-1.8 4.1-4.1 6.2-5.2 2.4-1.2 6.1-2 9.4-2zm93 0c4 0 6.6 0.7 9.5 2.3 2.2 1.3 5 3.9 6.2 5.8 1.3 1.8 2.6 5.4 2.9 7.9 0.6 3.6 0.3 5.4-1.7 9.4-1.5 3.2-3.8 5.9-6.3 7.5-2.5 1.6-5.8 2.7-9 3-3.9 0.3-6.2-0.2-10-2-2.9-1.4-5.9-3.9-7.3-5.9-1.3-1.9-2.6-5.5-2.9-8-0.4-3 0-5.9 1-8.5 0.9-2.2 2.6-5 3.8-6.2 1.3-1.1 3.7-2.8 5.3-3.7 1.7-0.8 5.5-1.6 8.5-1.6zm44.8 0c2.3 0 4.2 0.1 4.3 0.2 0 0.2-0.7 2-1.5 4-1.3 3.1-2.1 3.8-4.4 3.8-1.5 0-4 1-5.5 2.2-2.7 2.2-2.7 2.5-2.7 24.8h-9v-34h4.5c2.8 0 4.7 0.5 4.8 1.2 0.3 0.9 1 0.8 2.8-0.5 1.4-1 4.2-1.7 6.7-1.7zm24.5 0c2.6 0 6.2 0.6 8 1.4 1.8 0.7 4.4 2.6 5.9 4.2 1.5 1.6 3.2 4.1 3.8 5.6 0.6 1.5 1 4.1 1 8.8h-13.5c-9.8 0-13.6 0.3-14.1 1.2-0.4 0.8 0.6 2.4 2.5 4 2 1.8 4.3 2.8 6.4 2.8 1.8 0 4.4-0.8 5.7-1.9 2.3-1.8 3-1.9 11.2 0.4l-2.1 2.7c-1.1 1.5-3.9 3.7-6.1 4.8-2.2 1.1-5.9 2-8.2 2-2.4 0-5.8-0.6-7.8-1.4-1.9-0.8-4.6-2.7-6.1-4.3-1.4-1.5-3.2-3.9-3.9-5.3-0.7-1.4-1.3-4.5-1.3-7q0-4.5 2.5-9c1.8-3.1 3.9-5.2 6.9-6.8 2.8-1.4 6.2-2.2 9.2-2.2zm-209 7.5c-1.8 0.8-3.7 2.4-4.3 3.5-0.5 1.1-1 2.4-1 3 0 0.6 3.9 1 9.5 1 7 0 9.5-0.4 9.6-1.3 0-0.7-1.3-2.4-2.8-3.8-1.5-1.5-3.9-2.9-5.3-3.2-1.3-0.3-3.9 0.1-5.7 0.8zm205 0c-1.8 0.8-3.7 2.4-4.3 3.5-0.5 1.1-1 2.4-1 3 0 0.6 3.9 1 9.5 1 5.7 0 9.5-0.4 9.5-1 0-0.6-0.4-1.9-1-3-0.5-1.1-2.5-2.7-4.5-3.5-1.9-0.8-3.8-1.5-4.2-1.5-0.4 0-2.2 0.7-4 1.5zm-338.9 0.3c-1.2 0.5-3.1 2-4.3 3.3-1.2 1.4-2.2 4-2.4 6.1-0.1 2.4 0.5 4.6 1.9 6.5 1.2 1.5 3.8 3.3 5.8 4 3 1.1 4.3 1 7.3-0.1 2.1-0.8 4.3-2.5 5-3.8 0.8-1.3 1.3-4 1.3-6.1 0-2.7-0.8-4.6-2.7-6.8-1.8-1.9-4-3.2-6.3-3.4-1.9-0.3-4.4-0.1-5.6 0.3zm175.9 1.1c-1.8 1.2-3.7 3-4.3 4.1-0.5 1.1-1 3.4-1 5.2 0 1.8 0.9 4.5 2 6 1.1 1.5 3.5 3.2 5.3 3.7 1.8 0.4 4.4 0.7 5.7 0.5 1.4-0.3 3.8-1.7 5.3-3.2 1.5-1.5 2.9-3.8 3.1-5.2 0.2-1.4 0-4-0.5-5.8-0.5-1.8-1.9-3.9-3.1-4.7-1.3-0.8-3.8-1.8-5.8-2.1-2.5-0.4-4.4 0.1-6.7 1.5zm46.8-0.7c-1.3 0.7-3.3 2.5-4.5 4.1-1.1 1.6-2.1 4.1-2.1 5.7 0 1.5 1 4.1 2.1 5.7 1.2 1.5 3.8 3.3 5.8 4 3 1.1 4.3 1 7.3-0.1 2.1-0.8 4.3-2.5 5-3.8 0.8-1.3 1.3-4 1.3-6.1 0-2.7-0.8-4.6-2.7-6.8-1.7-1.9-4.1-3.2-6.3-3.5-1.9-0.3-4.5 0.1-5.9 0.8zm43.9 2.7c-2.1 2.2-2.8 3.9-2.9 7-0.1 3.3 0.5 4.7 2.9 7.1 2.4 2.3 3.9 3 7.1 3 3.2 0 4.7-0.7 7-3 2.3-2.3 2.9-4 2.9-7 0-3.1-0.6-4.7-3-7-2.3-2.4-3.8-3-7-3-3.2 0-4.7 0.6-7 2.9z"/>
-        <path id="Preencher com Cor Sólida 2" fill-rule="evenodd" class="s3" d="m470.8 57.6c0.2 5.4 0.5 6.4 1.9 6.4 1 0.1 3.5 1.1 5.6 2.3 2 1.2 4.4 3.5 5.1 5.2 0.8 1.7 1.7 3.8 2 4.7 0.5 1.5 1.8 1.8 6.8 1.8h6.3c-1.2-6.2-2.2-9.5-3.1-11.3-0.9-1.7-3-4.7-4.8-6.5-1.7-1.9-4.8-4.2-6.9-5.3-2-1-5.8-2.3-8.4-2.8l-4.6-0.8zm-121.9 45.3h49v114h29v-114h49v-30h-127z"/>
-        <path id="Preencher com Cor Sólida 1" fill-rule="evenodd" class="s4" d="m332.8 74.1c0.9-0.1 1.2 14.8 1.2 142.9h-30l-0.4-133.6 13.9-4.6c7.7-2.5 14.6-4.7 15.2-4.7zm430.1 0c0.9-0.1 1.2 5.6 1.2 25.4 0 14 0.2 25.5 0.5 25.5 0.3 0 2.6-1.6 5.2-3.6 2.7-2 6.8-4.6 9.3-5.6 3.4-1.5 7.6-2.1 17-2.5 6.9-0.3 15.9 0 20 0.6 4.3 0.6 9.9 2.2 13 3.8 3 1.5 7.6 4.9 10.2 7.5 2.7 2.7 6.3 7.8 11.3 18.3l0.5 73.5h-30v-67l-2.8-2.9c-1.9-2-4.1-3.1-7.7-3.6-2.8-0.4-12.2-0.6-21-0.3-10.9 0.3-16.9 0.9-18.9 1.9-1.5 0.8-3.6 2.8-4.5 4.4-1.4 2.6-1.6 7.7-2.1 67.5h-29l-0.4-133.8 13.4-4.5c7.4-2.5 14.1-4.6 14.7-4.6zm-705.8 8.9c30.8 0 58.9 0.5 63.1 1.1 4.1 0.5 9.7 2 12.5 3.3 2.7 1.3 7 4.1 9.4 6.2 2.5 2.3 5.6 6.5 7.5 10.4 2.8 5.9 3.1 7.3 3.1 16 0 8.2-0.4 10.2-2.7 15-1.5 3.2-4.6 7.3-7.5 9.8-2.6 2.3-4.2 4.3-3.6 4.2 0.7 0 3.2 1.7 5.4 3.8 2.3 2 5.3 6 6.8 8.7 2.3 4.5 2.6 6.1 2.6 15.5 0 9.4-0.3 11.1-2.8 16.3-1.5 3.1-4.9 8.1-7.6 11-2.7 2.8-7.3 6.4-10.2 7.9-3 1.5-7.9 3.2-10.9 3.8-3.4 0.6-28.1 1-122 1l-0.2-66.3c-0.1-36.5 0.2-66.7 0.7-67 0.5-0.4 25.8-0.7 56.4-0.7zm170.6 30.1c11 0 22.7 0.3 26 0.8 3.3 0.4 8.6 2 11.7 3.5 3.4 1.5 8.1 4.9 11.3 8.1 3 3 6.7 8.1 8.2 11.3 2.8 5.7 2.8 5.7 2.8 28.2 0 22.1 0 22.6-2.6 28-1.4 3-4.6 7.8-7.1 10.5-2.5 2.8-7.1 6.4-10.4 8.2-3.3 1.8-8.7 3.6-12.4 4.2-3.6 0.6-15.5 1.1-26.5 1.1-11 0-22.9-0.5-26.5-1.1-3.7-0.6-9-2.4-12.4-4.2-3.2-1.8-7.8-5.3-10.2-7.9-2.4-2.7-5.6-7.4-7.1-10.5-1.4-3.2-3-8.7-3.4-12.3-0.5-3.6-0.8-10.8-0.8-16 0-5.2 0.3-12.4 0.8-16 0.4-3.6 1.9-9 3.3-12 1.4-3 4.7-7.9 7.4-10.9 3-3.2 7.3-6.5 10.9-8.3 3.3-1.6 8.5-3.3 11.5-3.7 3-0.5 14.5-0.9 25.5-1zm306 0c11 0 22.7 0.3 26 0.8 3.3 0.4 8.6 2 11.7 3.5 3.2 1.4 8.1 4.7 10.9 7.4 2.9 2.7 6.3 7.3 8 10.7 1.7 3.4 3.4 9.1 4 13 0.5 3.9 0.8 11.1 0.4 25l-89.5 0.5v3.5c0 2.6 0.8 4.3 6 9.5h39.7c21.9 0 40 0.2 40.3 0.4 0.3 0.3-0.3 6.7-1.2 14.3-1 7.6-1.7 14.1-1.8 14.6 0 0.4-16.5 0.7-36.8 0.7-20.2 0-39.5-0.5-43-1-3.4-0.6-8.5-2.1-11.2-3.5-2.8-1.4-6.7-4-8.8-5.9-2-1.8-5.1-5.3-6.7-7.7-1.7-2.4-3.8-6.8-4.8-9.9-1.4-4.4-1.7-9-1.7-24 0-13.9 0.4-19.8 1.6-23.5 0.8-2.7 3-7.2 4.9-10 1.8-2.7 5.3-6.6 7.6-8.7 2.4-2 6.6-4.6 9.4-5.9 2.7-1.2 7.2-2.5 10-2.9 2.7-0.4 14-0.8 25-0.9zm134.5 0c11.3 0 23.2 0.3 26.5 0.8 3.3 0.5 8.7 2.1 12 3.7 3.3 1.5 8.5 5.2 17 13.3l-7 6.4c-3.9 3.5-8.9 8-15.5 13.7l-3.3-3.4c-2.3-2.5-4.4-3.6-7.7-4.1-2.5-0.3-13.5-0.5-24.5-0.3-15.7 0.2-20.5 0.6-22.2 1.8-1.3 0.8-2.8 2.6-3.5 3.9-0.9 1.6-1.3 6.9-1.3 16.1 0 9.2 0.4 14.5 1.3 16.1 0.7 1.3 2.2 3.1 3.5 3.9 1.7 1.2 6.6 1.6 23.2 1.8 11.5 0.2 22.6 0 24.5-0.3 2.2-0.5 4.7-2.1 10.1-8l4.2 4c2.3 2.2 7.2 6.9 17.7 16.5l-4.8 5.1c-2.7 2.9-7.2 6.3-10.7 8-3.3 1.6-8.5 3.3-11.5 3.9-3 0.6-15 1-26.5 1-11.6 0-23.9-0.5-27.5-1.1-3.6-0.5-8.9-2.2-11.9-3.7-2.9-1.5-7.9-5.4-11-8.7-3.7-3.9-6.6-8.1-8.1-12-2.3-5.7-2.5-7.1-2.5-26.5 0-19.4 0.2-20.8 2.5-26.5 1.5-3.8 4.4-8.1 8-11.8 3.3-3.6 7.9-7 11.5-8.8 3.3-1.7 8.5-3.4 11.5-3.8 3-0.5 14.7-0.9 26-1zm-638 20.9h88.2c5-5.2 5.8-7 5.8-9.5 0-1.9-0.5-4.5-1.2-5.7-0.6-1.3-1.8-2.8-2.7-3.5-1.2-0.9-12.6-1.2-45.9-1.3h-44.2zm478 10.9c-2.2 2.3-2.9 3.9-2.9 7.5l-0.1 4.6 59.5-0.5c-0.4-8.1-1-9.5-3.5-11.7l-3-2.8h-47.2zm-301.3-1.3c-1.5 0.3-3.9 1.7-5.2 3.2-2.5 2.6-2.5 3-2.5 17.9 0 12.9 0.3 15.7 1.8 17.8 1 1.4 3.1 3 4.7 3.5 1.7 0.6 12 1 23 1 11 0 21.4-0.4 23-1 1.7-0.5 3.8-2.1 4.8-3.5 1.5-2.1 1.7-4.9 1.8-17.8v-15.2l-6.2-6c-32.8-0.2-43.6-0.1-45.2 0.1zm-176.7 43.4c68.2 0 85.8-0.4 87.8-1 2-0.6 3.8-2.2 4.7-4 0.9-1.7 1.5-4.6 1.5-6.5 0-1.9-0.4-4.5-1-5.8-0.6-1.2-2-2.9-3.2-3.7-1.9-1.3-9.1-1.6-46-1.8l-43.7-0.3z"/>
-        </svg>
-    
-</div>
+    .botao-whatsapp:hover {
+        width: 192px; /* hover:w-48 */
+    }
 
-<!-- Conteúdo Principal/Containers -->
-<div class="lg:ml-56 h-auto overflow-y-auto flex flex-col justify-center items-center m-auto py-0 lg:py-20">
-    <div class="flex flex-col justify-center m-20 gap-18">
-        <div id="info-geral" class="grid grid-flow-col grid-rows-3 grid-cols-1 sm:grid-cols-[2fr_1fr] bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg my-5 p-5 max-w-[1000px]">
+    .texto-whatsapp {
+        margin-left: 8px; /* ml-2 */
+        font-weight: bold;
+        color: white;
+        font-size: 0.875rem; /* text-sm */
+        opacity: 0;
+        white-space: nowrap;
+        transition: opacity 0.3s ease-in-out;
+    }
 
-        <div class="row-span-3 justify-between text-white">
-            <div>
-            <h1 class="text-center text-shadow-lg/80 text-3xl text-cyan-300 font-bold mb-4">
-                Controle Total com o App e Site da Boltech
-            </h1>
-            <p class="text-xl font-sans-serif">
-            Descubra como aproveitar ao máximo as funcionalidades da Boltech! Este guia foi criado para te acompanhar passo a passo na utilização do nosso aplicativo e site.
-            </p>
-            <p class="text-xl font-sans-serif mt-2">
-                 Com eles, você tem acesso completo à gestão dos seus veículos: acompanhe a <b>localização em tempo real</b>, verifique o <b>status da ignição</b>, ative o <b>bloqueio</b> remoto e muito mais — tudo de forma <b>simples, rápida e segura</b>.
+    .botao-whatsapp:hover .texto-whatsapp {
+        opacity: 1;
+    }
+    </style>
+
+</head>
+
+<body class="fundo-personalizado">
+
+<!-- NAVBAR/MENU -->
+<div class="menu-desktop">
+        
+        <div class="header-bar bg-custom-gradient-menu">
+            <div class="svg-container">
+            <a href="https://rastreio.boltech.com.br/?from=tutoriais" style="text-decoration: none;">
+                <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 50 852 160" class="svg-boltech bg-custom-gradient-menu m-auto">
+                    <title>logotipo-boltech-2</title>
+                    <style>
+                        .s0 { fill: #54ae7b } 
+                        .s1 { fill: #26a8ab } 
+                        .s2 { fill: #1a93d0 } 
+                        .s3 { fill: #81c34d } 
+                        .s4 { fill: #fefefe } 
+                    </style>
+                <path id="Preencher com Cor Sólida 5" class="s0" d="m471 37.8v4.7c7.4 0.8 12 2.3 15 3.7 3 1.5 7.5 4.6 9.9 7 2.4 2.4 5.4 6.4 6.7 9.1 1.3 2.6 3 7.2 3.6 10.2l1.3 5.5h9.5c-0.9-6.6-1.6-10.1-2.2-12-0.6-1.9-2.3-6-3.9-9-1.6-3-5-7.7-7.6-10.3-2.7-2.7-7.1-6.1-9.8-7.7-2.8-1.6-7.9-3.6-11.5-4.4-3.6-0.9-7.5-1.6-8.8-1.6-2 0-2.2 0.5-2.2 4.8z"/>
+                <path id="Preencher com Cor Sólida 4" class="s1" d="m471 20c0 3.8 0.1 4 3.3 4 1.7 0 6.1 0.7 9.7 1.6 3.6 0.8 9.2 2.9 12.5 4.7 3.3 1.7 9.2 6.3 13.1 10.2 4.6 4.6 8.2 9.2 10.3 13.5 1.7 3.6 3.9 10.4 4.9 15.3l1.7 8.7c6.4 0 6.5-0.1 6.5-4.3 0-2.3-0.7-6.9-1.5-10.2-0.8-3.3-3.2-9.4-5.2-13.5-2.7-5.4-5.8-9.6-11.2-15.1-5.9-5.9-9.5-8.5-16.1-11.8-4.7-2.3-11.6-4.8-15.5-5.6-3.9-0.8-8.2-1.5-9.7-1.5-2.6 0-2.8 0.3-2.8 4z"/>
+                <path id="Preencher com Cor Sólida 3" fill-rule="evenodd" class="s2" d="m470.8 1.1l5.9 0.6c3.2 0.3 8.7 1.2 12.3 2 3.6 0.8 9.9 3 14 4.9 4.1 2 10.2 5.5 13.5 7.8 3.3 2.4 8.5 7 11.5 10.4 3 3.3 7 8.4 8.7 11.4 1.8 2.9 4.5 8.2 5.9 11.8 1.5 3.6 3.3 9.4 4 13 0.8 3.6 1.4 8.4 1.4 10.7 0 4.1-0.1 4.3-3 4.3-2.8 0-3-0.3-3-3.8 0-2-0.7-6.6-1.4-10.2-0.8-3.6-2.6-9.4-4.1-13-1.5-3.6-4.4-9-6.5-12-2.1-3-6.2-7.9-9.1-10.8-3-3-7.9-7-10.9-9-3-2-8.4-4.8-12-6.3-3.6-1.5-9.6-3.3-13.5-3.9-3.9-0.6-8.5-1.3-10.3-1.6-2.8-0.3-3.2-0.8-3.3-3.3zm223.2 232.8h9v52h-4.5c-3.9 0-4.5-0.3-4.5-2 0-1.9-0.2-1.9-3.8 0.6-2.6 1.8-5 2.5-8.2 2.4-2.6 0-6.4-1-9-2.2-2.4-1.3-5.5-3.8-7-5.7-1.6-2.2-2.7-5.2-2.9-8-0.2-2.5-0.1-5.8 0.2-7.3 0.4-1.5 2.1-4.4 3.9-6.3 1.8-2 5.1-4.3 7.3-5.1 2.4-0.9 6.1-1.4 9.1-1.2 3.8 0.2 5.9 1 10.4 5.3zm-296 3h10c5.5 0 12.1 0.6 14.7 1.3 2.8 0.7 5.7 2.4 7.3 4.2 1.5 1.7 3 4.8 3.5 7 0.6 3.1 0.3 5-1.1 8-1 2.2-3.3 4.9-5.1 6-1.7 1.1-3.2 2.5-3.2 3 0 0.6 2.4 4.9 5.4 9.5 3 4.7 5.5 8.9 5.5 9.3 0 0.4-2.1 0.7-9.5 0.7l-5.7-9.5c-5.5-9.1-5.9-9.5-12.8-9.5v19h-9zm128.1 3h8.1l0.3 11.5 3.8 0.3c3.6 0.2 3.7 0.4 3.7 3.7 0 3.4-0.1 3.5-7.5 4l-0.5 26.5h-8l-0.5-26.5-2.7-0.2c-2.4-0.2-2.8-0.7-2.8-3.8 0-3.1 0.4-3.5 2.8-3.7 2.6-0.3 2.7-0.6 3-6zm-119.1 19c7.4 0 11-0.4 12.8-1 1.8-0.6 3.7-1.9 4.2-3 0.6-1.1 1-2.9 1-4 0-1.1-1.1-3.1-2.5-4.5-2.1-2.2-3.4-2.5-9-2.5h-6.5zm96-8.3c2 0.3 4.7 1.1 6 1.8 1.4 0.7 3.1 2 3.8 2.9 1 1.3 0.8 1.8-1.8 3.1-2.6 1.3-3.2 1.3-5.2 0-1.3-0.9-3.7-1.5-5.5-1.5-2.3 0-3.7 0.7-4.8 2.2-1.2 1.8-1.2 2.5-0.2 3.4 0.7 0.6 3.7 1.9 6.7 2.9 3.1 0.9 7 2.8 8.8 4.1 2.7 2 3.2 3 3.2 6.4 0 3.2-0.6 4.6-3.2 7-2.3 2.1-4.7 3.2-7.8 3.6-2.4 0.4-6.2 0.1-8.2-0.5-2.1-0.6-5-2.2-9.3-6l3.5-1.5c3.1-1.3 3.8-1.3 5.8-0.1 1.2 0.8 3.6 1.5 5.2 1.5 1.7 0 3.7-0.2 4.5-0.5 0.9-0.3 1.5-1.6 1.5-3 0-2.2-0.7-2.7-5.7-4.1-3.2-0.9-7-2.3-8.5-3-1.5-0.8-3.4-2.8-4.3-4.4-1.1-2.3-1.2-3.8-0.5-6.5 0.6-2 2.2-4.3 3.8-5.2 1.5-1 4.1-2.1 5.7-2.4 1.7-0.4 4.6-0.5 6.5-0.2zm336 0c2 0.3 5.1 1.2 6.9 2.1 1.9 0.9 3.6 2.2 3.8 2.9 0.2 0.7-1 2-2.7 2.8-2.6 1.3-3.2 1.3-5.2 0-1.3-0.9-3.4-1.5-4.8-1.5-1.3-0.1-3.3 0.5-4.3 1.2-1 0.7-1.7 2.1-1.5 3.2 0.2 1.3 2.3 2.5 7.3 4.1 5.1 1.7 7.8 3.2 9.9 5.6 2.3 2.7 2.8 4 2.2 6.4-0.4 1.6-1.4 3.8-2.4 4.9-0.9 1-3.1 2.5-4.9 3.2-1.8 0.8-5 1.4-7 1.4-2.1-0.1-5.6-0.9-7.8-1.9-2.2-1-4.5-2.6-5.2-3.5-1.1-1.4-0.8-1.8 2.2-3.1 3.1-1.4 3.8-1.4 5.8 0 1.2 0.8 3.8 1.5 5.7 1.5 2 0.1 4.1-0.6 4.8-1.5 0.7-0.8 1-2.2 0.7-3-0.2-0.8-1-1.7-1.7-2-0.7-0.2-3.7-1.1-6.8-1.9-3-0.8-6.7-2.6-8.2-4.1-2.1-1.9-2.8-3.5-2.8-6.3 0-2.8 0.7-4.4 2.8-6.5 1.5-1.5 4.3-3.2 6.2-3.6 2-0.5 5.1-0.7 7-0.4zm-380.5 0.3c3.8-0.1 5.9 0.5 8.8 2.4 3.6 2.5 3.7 2.5 3.7 0.6 0-1.7 0.7-2 9-2v34h-4.5c-3.8 0-4.5-0.3-4.5-2 0-1.9-0.2-1.9-3.7 0.6-3.3 2.3-4.4 2.5-9.8 2-4.3-0.4-7-1.3-9.9-3.3-2.1-1.6-4.7-4.4-5.8-6.3-1-1.9-1.9-5.5-1.9-8-0.1-2.5 0.6-5.9 1.4-7.5 0.9-1.7 2.8-4.2 4.4-5.7 1.6-1.5 4-3.2 5.3-3.7 1.4-0.5 4.8-1 7.5-1.1zm110.3 0c2.3 0 4.2 0.2 4.2 0.5 0 0.3-0.8 2.1-1.7 4-1.4 2.8-2.4 3.5-4.5 3.5-1.5 0-3.7 0.4-4.8 1-1.1 0.5-2.4 2.4-3 4.2-0.5 1.8-1 7.4-1 21.8h-8v-34h4c2.2 0 4.1 0.5 4.3 1.1 0.2 0.8 1.2 0.7 3.2-0.4 1.7-0.9 4.9-1.7 7.3-1.7zm25.3 0.2c5.3 0.2 7.3 0.8 10.3 3 2 1.5 4.5 4.6 5.6 6.8 1.1 2.2 2 5.3 2 10h-14c-11.7 0-14 0.2-14 1.5 0 0.8 1.3 2.6 2.8 4 1.8 1.7 3.9 2.5 6.2 2.5 2 0 4.6-0.8 6-1.9 2.3-1.8 3-1.9 11.2 0.4l-1.9 2.5c-1.1 1.4-3.9 3.5-6.3 4.7-2.5 1.2-6.3 2.3-8.5 2.3-2.2 0-5.5-0.6-7.5-1.4-1.9-0.8-4.9-3-6.7-5-1.8-2-3.7-5.5-4.3-7.9-0.6-2.3-0.8-5.6-0.4-7.2 0.3-1.7 1.6-4.5 2.8-6.4 1.2-1.9 3.9-4.5 6.1-5.8 3.4-2 5.1-2.4 10.6-2.1zm41.9-0.2c4.3 0 6.4 0.5 9.3 2.5 3.6 2.4 3.7 2.4 3.7 0.5 0-1.7 0.7-2 8-2v34h-4.5c-4 0-4.5-0.3-4.4-4.5l-2.3 2.3c-1.5 1.5-3.9 2.4-7.3 2.8q-5 0.6-9-1c-2.2-0.8-5.7-3.3-7.7-5.6-2.4-2.5-4-5.4-4.4-7.8-0.3-2-0.3-5.3 0-7.2 0.4-1.9 1.7-5 3-6.8 1.3-1.8 4.1-4.1 6.2-5.2 2.4-1.2 6.1-2 9.4-2zm93 0c4 0 6.6 0.7 9.5 2.3 2.2 1.3 5 3.9 6.2 5.8 1.3 1.8 2.6 5.4 2.9 7.9 0.6 3.6 0.3 5.4-1.7 9.4-1.5 3.2-3.8 5.9-6.3 7.5-2.5 1.6-5.8 2.7-9 3-3.9 0.3-6.2-0.2-10-2-2.9-1.4-5.9-3.9-7.3-5.9-1.3-1.9-2.6-5.5-2.9-8-0.4-3 0-5.9 1-8.5 0.9-2.2 2.6-5 3.8-6.2 1.3-1.1 3.7-2.8 5.3-3.7 1.7-0.8 5.5-1.6 8.5-1.6zm44.8 0c2.3 0 4.2 0.1 4.3 0.2 0 0.2-0.7 2-1.5 4-1.3 3.1-2.1 3.8-4.4 3.8-1.5 0-4 1-5.5 2.2-2.7 2.2-2.7 2.5-2.7 24.8h-9v-34h4.5c2.8 0 4.7 0.5 4.8 1.2 0.3 0.9 1 0.8 2.8-0.5 1.4-1 4.2-1.7 6.7-1.7zm24.5 0c2.6 0 6.2 0.6 8 1.4 1.8 0.7 4.4 2.6 5.9 4.2 1.5 1.6 3.2 4.1 3.8 5.6 0.6 1.5 1 4.1 1 8.8h-13.5c-9.8 0-13.6 0.3-14.1 1.2-0.4 0.8 0.6 2.4 2.5 4 2 1.8 4.3 2.8 6.4 2.8 1.8 0 4.4-0.8 5.7-1.9 2.3-1.8 3-1.9 11.2 0.4l-2.1 2.7c-1.1 1.5-3.9 3.7-6.1 4.8-2.2 1.1-5.9 2-8.2 2-2.4 0-5.8-0.6-7.8-1.4-1.9-0.8-4.6-2.7-6.1-4.3-1.4-1.5-3.2-3.9-3.9-5.3-0.7-1.4-1.3-4.5-1.3-7q0-4.5 2.5-9c1.8-3.1 3.9-5.2 6.9-6.8 2.8-1.4 6.2-2.2 9.2-2.2zm-209 7.5c-1.8 0.8-3.7 2.4-4.3 3.5-0.5 1.1-1 2.4-1 3 0 0.6 3.9 1 9.5 1 7 0 9.5-0.4 9.6-1.3 0-0.7-1.3-2.4-2.8-3.8-1.5-1.5-3.9-2.9-5.3-3.2-1.3-0.3-3.9 0.1-5.7 0.8zm205 0c-1.8 0.8-3.7 2.4-4.3 3.5-0.5 1.1-1 2.4-1 3 0 0.6 3.9 1 9.5 1 5.7 0 9.5-0.4 9.5-1 0-0.6-0.4-1.9-1-3-0.5-1.1-2.5-2.7-4.5-3.5-1.9-0.8-3.8-1.5-4.2-1.5-0.4 0-2.2 0.7-4 1.5zm-338.9 0.3c-1.2 0.5-3.1 2-4.3 3.3-1.2 1.4-2.2 4-2.4 6.1-0.1 2.4 0.5 4.6 1.9 6.5 1.2 1.5 3.8 3.3 5.8 4 3 1.1 4.3 1 7.3-0.1 2.1-0.8 4.3-2.5 5-3.8 0.8-1.3 1.3-4 1.3-6.1 0-2.7-0.8-4.6-2.7-6.8-1.8-1.9-4-3.2-6.3-3.4-1.9-0.3-4.4-0.1-5.6 0.3zm175.9 1.1c-1.8 1.2-3.7 3-4.3 4.1-0.5 1.1-1 3.4-1 5.2 0 1.8 0.9 4.5 2 6 1.1 1.5 3.5 3.2 5.3 3.7 1.8 0.4 4.4 0.7 5.7 0.5 1.4-0.3 3.8-1.7 5.3-3.2 1.5-1.5 2.9-3.8 3.1-5.2 0.2-1.4 0-4-0.5-5.8-0.5-1.8-1.9-3.9-3.1-4.7-1.3-0.8-3.8-1.8-5.8-2.1-2.5-0.4-4.4 0.1-6.7 1.5zm46.8-0.7c-1.3 0.7-3.3 2.5-4.5 4.1-1.1 1.6-2.1 4.1-2.1 5.7 0 1.5 1 4.1 2.1 5.7 1.2 1.5 3.8 3.3 5.8 4 3 1.1 4.3 1 7.3-0.1 2.1-0.8 4.3-2.5 5-3.8 0.8-1.3 1.3-4 1.3-6.1 0-2.7-0.8-4.6-2.7-6.8-1.7-1.9-4.1-3.2-6.3-3.5-1.9-0.3-4.5 0.1-5.9 0.8zm43.9 2.7c-2.1 2.2-2.8 3.9-2.9 7-0.1 3.3 0.5 4.7 2.9 7.1 2.4 2.3 3.9 3 7.1 3 3.2 0 4.7-0.7 7-3 2.3-2.3 2.9-4 2.9-7 0-3.1-0.6-4.7-3-7-2.3-2.4-3.8-3-7-3-3.2 0-4.7 0.6-7 2.9z"/>
+                <path id="Preencher com Cor Sólida 2" fill-rule="evenodd" class="s3" d="m470.8 57.6c0.2 5.4 0.5 6.4 1.9 6.4 1 0.1 3.5 1.1 5.6 2.3 2 1.2 4.4 3.5 5.1 5.2 0.8 1.7 1.7 3.8 2 4.7 0.5 1.5 1.8 1.8 6.8 1.8h6.3c-1.2-6.2-2.2-9.5-3.1-11.3-0.9-1.7-3-4.7-4.8-6.5-1.7-1.9-4.8-4.2-6.9-5.3-2-1-5.8-2.3-8.4-2.8l-4.6-0.8zm-121.9 45.3h49v114h29v-114h49v-30h-127z"/>
+                <path id="Preencher com Cor Sólida 1" fill-rule="evenodd" class="s4" d="m332.8 74.1c0.9-0.1 1.2 14.8 1.2 142.9h-30l-0.4-133.6 13.9-4.6c7.7-2.5 14.6-4.7 15.2-4.7zm430.1 0c0.9-0.1 1.2 5.6 1.2 25.4 0 14 0.2 25.5 0.5 25.5 0.3 0 2.6-1.6 5.2-3.6 2.7-2 6.8-4.6 9.3-5.6 3.4-1.5 7.6-2.1 17-2.5 6.9-0.3 15.9 0 20 0.6 4.3 0.6 9.9 2.2 13 3.8 3 1.5 7.6 4.9 10.2 7.5 2.7 2.7 6.3 7.8 11.3 18.3l0.5 73.5h-30v-67l-2.8-2.9c-1.9-2-4.1-3.1-7.7-3.6-2.8-0.4-12.2-0.6-21-0.3-10.9 0.3-16.9 0.9-18.9 1.9-1.5 0.8-3.6 2.8-4.5 4.4-1.4 2.6-1.6 7.7-2.1 67.5h-29l-0.4-133.8 13.4-4.5c7.4-2.5 14.1-4.6 14.7-4.6zm-705.8 8.9c30.8 0 58.9 0.5 63.1 1.1 4.1 0.5 9.7 2 12.5 3.3 2.7 1.3 7 4.1 9.4 6.2 2.5 2.3 5.6 6.5 7.5 10.4 2.8 5.9 3.1 7.3 3.1 16 0 8.2-0.4 10.2-2.7 15-1.5 3.2-4.6 7.3-7.5 9.8-2.6 2.3-4.2 4.3-3.6 4.2 0.7 0 3.2 1.7 5.4 3.8 2.3 2 5.3 6 6.8 8.7 2.3 4.5 2.6 6.1 2.6 15.5 0 9.4-0.3 11.1-2.8 16.3-1.5 3.1-4.9 8.1-7.6 11-2.7 2.8-7.3 6.4-10.2 7.9-3 1.5-7.9 3.2-10.9 3.8-3.4 0.6-28.1 1-122 1l-0.2-66.3c-0.1-36.5 0.2-66.7 0.7-67 0.5-0.4 25.8-0.7 56.4-0.7zm170.6 30.1c11 0 22.7 0.3 26 0.8 3.3 0.4 8.6 2 11.7 3.5 3.4 1.5 8.1 4.9 11.3 8.1 3 3 6.7 8.1 8.2 11.3 2.8 5.7 2.8 5.7 2.8 28.2 0 22.1 0 22.6-2.6 28-1.4 3-4.6 7.8-7.1 10.5-2.5 2.8-7.1 6.4-10.4 8.2-3.3 1.8-8.7 3.6-12.4 4.2-3.6 0.6-15.5 1.1-26.5 1.1-11 0-22.9-0.5-26.5-1.1-3.7-0.6-9-2.4-12.4-4.2-3.2-1.8-7.8-5.3-10.2-7.9-2.4-2.7-5.6-7.4-7.1-10.5-1.4-3.2-3-8.7-3.4-12.3-0.5-3.6-0.8-10.8-0.8-16 0-5.2 0.3-12.4 0.8-16 0.4-3.6 1.9-9 3.3-12 1.4-3 4.7-7.9 7.4-10.9 3-3.2 7.3-6.5 10.9-8.3 3.3-1.6 8.5-3.3 11.5-3.7 3-0.5 14.5-0.9 25.5-1zm306 0c11 0 22.7 0.3 26 0.8 3.3 0.4 8.6 2 11.7 3.5 3.2 1.4 8.1 4.7 10.9 7.4 2.9 2.7 6.3 7.3 8 10.7 1.7 3.4 3.4 9.1 4 13 0.5 3.9 0.8 11.1 0.4 25l-89.5 0.5v3.5c0 2.6 0.8 4.3 6 9.5h39.7c21.9 0 40 0.2 40.3 0.4 0.3 0.3-0.3 6.7-1.2 14.3-1 7.6-1.7 14.1-1.8 14.6 0 0.4-16.5 0.7-36.8 0.7-20.2 0-39.5-0.5-43-1-3.4-0.6-8.5-2.1-11.2-3.5-2.8-1.4-6.7-4-8.8-5.9-2-1.8-5.1-5.3-6.7-7.7-1.7-2.4-3.8-6.8-4.8-9.9-1.4-4.4-1.7-9-1.7-24 0-13.9 0.4-19.8 1.6-23.5 0.8-2.7 3-7.2 4.9-10 1.8-2.7 5.3-6.6 7.6-8.7 2.4-2 6.6-4.6 9.4-5.9 2.7-1.2 7.2-2.5 10-2.9 2.7-0.4 14-0.8 25-0.9zm134.5 0c11.3 0 23.2 0.3 26.5 0.8 3.3 0.5 8.7 2.1 12 3.7 3.3 1.5 8.5 5.2 17 13.3l-7 6.4c-3.9 3.5-8.9 8-15.5 13.7l-3.3-3.4c-2.3-2.5-4.4-3.6-7.7-4.1-2.5-0.3-13.5-0.5-24.5-0.3-15.7 0.2-20.5 0.6-22.2 1.8-1.3 0.8-2.8 2.6-3.5 3.9-0.9 1.6-1.3 6.9-1.3 16.1 0 9.2 0.4 14.5 1.3 16.1 0.7 1.3 2.2 3.1 3.5 3.9 1.7 1.2 6.6 1.6 23.2 1.8 11.5 0.2 22.6 0 24.5-0.3 2.2-0.5 4.7-2.1 10.1-8l4.2 4c2.3 2.2 7.2 6.9 17.7 16.5l-4.8 5.1c-2.7 2.9-7.2 6.3-10.7 8-3.3 1.6-8.5 3.3-11.5 3.9-3 0.6-15 1-26.5 1-11.6 0-23.9-0.5-27.5-1.1-3.6-0.5-8.9-2.2-11.9-3.7-2.9-1.5-7.9-5.4-11-8.7-3.7-3.9-6.6-8.1-8.1-12-2.3-5.7-2.5-7.1-2.5-26.5 0-19.4 0.2-20.8 2.5-26.5 1.5-3.8 4.4-8.1 8-11.8 3.3-3.6 7.9-7 11.5-8.8 3.3-1.7 8.5-3.4 11.5-3.8 3-0.5 14.7-0.9 26-1zm-638 20.9h88.2c5-5.2 5.8-7 5.8-9.5 0-1.9-0.5-4.5-1.2-5.7-0.6-1.3-1.8-2.8-2.7-3.5-1.2-0.9-12.6-1.2-45.9-1.3h-44.2zm478 10.9c-2.2 2.3-2.9 3.9-2.9 7.5l-0.1 4.6 59.5-0.5c-0.4-8.1-1-9.5-3.5-11.7l-3-2.8h-47.2zm-301.3-1.3c-1.5 0.3-3.9 1.7-5.2 3.2-2.5 2.6-2.5 3-2.5 17.9 0 12.9 0.3 15.7 1.8 17.8 1 1.4 3.1 3 4.7 3.5 1.7 0.6 12 1 23 1 11 0 21.4-0.4 23-1 1.7-0.5 3.8-2.1 4.8-3.5 1.5-2.1 1.7-4.9 1.8-17.8v-15.2l-6.2-6c-32.8-0.2-43.6-0.1-45.2 0.1zm-176.7 43.4c68.2 0 85.8-0.4 87.8-1 2-0.6 3.8-2.2 4.7-4 0.9-1.7 1.5-4.6 1.5-6.5 0-1.9-0.4-4.5-1-5.8-0.6-1.2-2-2.9-3.2-3.7-1.9-1.3-9.1-1.6-46-1.8l-43.7-0.3z"/>
+                </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- BOTÕES DO MENU DESKTOP -->
+        <div class="content-menu scrollbar-nav">
+            <div class="buttons-container">
+                <button onclick="scrollToSection('info-geral')" class="buttons-menu">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="svg">
+                    <path d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
+                    <path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
+                </svg>
+                <span class="mx-auto fs-5">Início</span>
+                </button>
             </div>
 
-            <img src="/Images/Tela_app.png" alt="Tela do App"
-                class="hidden mt-2 sm:block w-auto h-auto object-cover rounded-md">
-        </div>
-        <div class="flex flex-col row-span-3 justify-center items-center">
-            <img src="/Images/app_boltech.png" alt="App Boltech"
-                class="hidden sm:block w-auto h-100 object-contain">
-        </div>
-
-        </div>
-        <div id="ult-loc" class="bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg flex flex-col items-center gap-y-6 my-8 p-5 ">
-                <div class="text-white max-w-2xl">
-                    <h1 class="text-center text-shadow-lg/80 text-cyan-300 text-3xl font-bold mb-2">Como Descbrir Sua Última Localização?</h1>
-                    <p class="text-lg font-sans-serif">
-                        Neste vídeo, você aprende a <b>localizar seu carro no mapa</b>, o <b>status de ignição</b>, a <b>velocidade</b> e o <b>horário da última comunicação</b> — tudo direto na plataforma.
-                    </p>
-                </div>
-
+            <div class="buttons-container">
+                <h1 class="texto-titulo-menu">Tutoriais do Aplicativo</h1>
+            
+            
+                <button onclick="scrollToSection('ult-loc')" class="buttons-menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="svg">
+                    <path fill-rule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="m-auto">Última Localização</span>
+                </button>
                 
-                <div class="w-[300px] h-[533px] max-w-full rounded-xl overflow-hidden drop-shadow-xl/80">
-                    <iframe
-                        class="w-full h-full"
-                        src="https://youtube.com/embed/f4Nj-831WSA"
-                        frameborder="0"
-                        allowfullscreen>
-                    </iframe>
-                </div>
-        </div>
-
-        <div id="bloq" class="bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg flex flex-col items-center gap-y-6 my-8 p-5 ">
-                <div class="text-white max-w-2xl">
-                    <h1 class="text-center text-shadow-lg/80 text-cyan-300 text-3xl font-bold mb-4">Como Funciona o Bloqueio?</h1>
-                    <p class="text-lg font-sans-serif">
-                       Neste vídeo, mostramos como <b>bloquear e desbloquear</b> seu veículo, além de explicar as funcionalidades disponíveis para você ter controle total sobre o seu carro.
-                    </p>
-                </div>
+                <button onclick="scrollToSection('bloq')" class="buttons-menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="svg ">
+                    <path fill-rule="evenodd" d="M12 1.5a5.25 5.25 0 0 0-5.25 5.25v3a3 3 0 0 0-3 3v6.75a3 3 0 0 0 3 3h10.5a3 3 0 0 0 3-3v-6.75a3 3 0 0 0-3-3v-3c0-2.9-2.35-5.25-5.25-5.25Zm3.75 8.25v-3a3.75 3.75 0 1 0-7.5 0v3h7.5Z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="m-auto">Bloqueio</span>
+                </button>
                 
-                <div class="w-[300px] h-[533px] max-w-full rounded-xl overflow-hidden drop-shadow-xl/80">
-                    <iframe
-                        class="w-full h-full"
-                        src="https://youtube.com/embed/91yPx5y_cdU"
-                        frameborder="0"
-                        allowfullscreen>
-                    </iframe>
-                </div>
+                <button onclick="scrollToSection('rela-traj')" class="buttons-menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="svg">
+                    <path fill-rule="evenodd" d="M7.502 6h7.128A3.375 3.375 0 0 1 18 9.375v9.375a3 3 0 0 0 3-3V6.108c0-1.505-1.125-2.811-2.664-2.94a48.972 48.972 0 0 0-.673-.05A3 3 0 0 0 15 1.5h-1.5a3 3 0 0 0-2.663 1.618c-.225.015-.45.032-.673.05C8.662 3.295 7.554 4.542 7.502 6ZM13.5 3A1.5 1.5 0 0 0 12 4.5h4.5A1.5 1.5 0 0 0 15 3h-1.5Z" clip-rule="evenodd" />
+                    <path fill-rule="evenodd" d="M3 9.375C3 8.339 3.84 7.5 4.875 7.5h9.75c1.036 0 1.875.84 1.875 1.875v11.25c0 1.035-.84 1.875-1.875 1.875h-9.75A1.875 1.875 0 0 1 3 20.625V9.375ZM6 12a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H6.75a.75.75 0 0 1-.75-.75V12Zm2.25 0a.75.75 0 0 1 .75-.75h3.75a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75ZM6 15a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H6.75a.75.75 0 0 1-.75-.75V15Zm2.25 0a.75.75 0 0 1 .75-.75h3.75a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75ZM6 18a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H6.75a.75.75 0 0 1-.75-.75V18Zm2.25 0a.75.75 0 0 1 .75-.75h3.75a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="m-auto">Relátorios e Trajetos</span>
+                </button>
+            </div>
+
+            <div class="buttons-container">
+                <h1 class="texto-titulo-menu">Tutoriais do Site</h1>
+                <button onclick="scrollToSection('rotas')" class="buttons-menu">
+                    <svg class="svg animationnew" fill="#82C34C" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M44,14H4a2,2,0,0,0-2,2V32a2,2,0,0,0,2,2H44a2,2,0,0,0,2-2V16A2,2,0,0,0,44,14ZM17.3,29H14.8l-3-5-.7-1.3h0V29H8.7V19h2.5l3,5,.6,1.3h.1s-.1-1.2-.1-1.6V19h2.5Zm9.1,0H18.7V19h7.6v2H21.2v1.8h4.4v2H21.2v2.1h5.2Zm10.9,0H34.8l-1-4.8c-.2-.8-.4-1.9-.4-1.9h0s-.2,1.1-.3,1.9L32,29H29.6L26.8,19h2.5l1,4.2a20.1,20.1,0,0,1,.5,2.5h0l.5-2.4,1-4.3h2.3l.9,4.3.5,2.4h0l.5-2.5,1-4.2H40Z"/>
+                    </svg>
+                    <span class="m-auto">(NEW) Rotas</span>
+                </button>
+                <button onclick="scrollToSection('trajeto-site')" class="buttons-menu">
+                    <svg version="1.0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="svg fill-none stroke-[#82C34C]" stroke="#82C34C" stroke-width="2" stroke-linecap="round">
+                        <path d="M9.09557 20.7929L11.9274 14.6574C11.9505 14.6073 11.962 14.5822 11.978 14.5744C11.9919 14.5676 12.0081 14.5676 12.022 14.5744C12.038 14.5822 12.0495 14.6073 12.0726 14.6574L14.9044 20.7929C14.9337 20.8564 14.9484 20.8882 14.9425 20.9067C14.9374 20.9227 14.9247 20.9351 14.9085 20.9396C14.8899 20.9449 14.8586 20.9293 14.796 20.898L12.0358 19.5179C12.0227 19.5113 12.0161 19.508 12.0092 19.5068C12.0031 19.5056 11.9969 19.5056 11.9908 19.5068C11.9839 19.508 11.9773 19.5113 11.9642 19.5179L9.20399 20.898C9.14142 20.9293 9.11014 20.9449 9.09149 20.9396C9.07533 20.9351 9.06256 20.9227 9.05748 20.9067C9.0516 20.8882 9.06626 20.8564 9.09557 20.7929Z"/>
+                        <path d="M4 18L7 4"/>
+                        <path d="M20 18L17 4"/>
+                        <path d="M12 11L12 9"/>
+                        <path d="M12 6L12 4"/>
+                    </svg>
+                    <span class="m-auto">Trajeto do Site</span>
+                </button>
+
+                <button onclick="scrollToSection('cerca')" class="buttons-menu">
+                    <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 578" fill="#82C34C" class="svg">
+                        <path fill-rule="evenodd" d="m70 0.3c36.6 0.2 37.6 0.3 42.3 2.5 2.6 1.2 6.8 4.2 9.5 6.6 2.6 2.4 5.8 6.6 7.2 9.2 2.1 4.2 2.5 6.5 3 27.4h486v-9.2c0-5.7 0.6-11.4 1.6-14.8 1.3-4.4 2.9-6.7 7.8-11.5 4.3-4.3 7.7-6.6 11.6-8 5.1-1.9 8.1-2 85.5-2l5.5 2.7c3 1.4 7.4 4.7 9.8 7.2 2.3 2.5 5 6.5 6.1 8.9 1 2.3 2.4 5.8 3 7.7 0.8 2.5 1.1 75.2 1 258 0 140-0.3 257.6-0.8 261.5-0.4 3.9-1.7 9-3 11.5-1.3 2.5-3.8 6.4-5.7 8.8-2.3 2.8-5.7 5.3-16.9 10.7l-37.5 0.3c-36 0.3-37.8 0.2-44.5-1.9-6-1.8-7.8-3-13-8.3-3.3-3.3-6.9-7.9-8-10.1-1.9-3.8-2-6.4-2.5-125.5h-486l-0.5 122.5-3 5.4c-1.7 3-5 7.1-7.5 9.3-2.5 2.1-7 4.9-10 6.1-5.3 2.1-6.6 2.2-85.5 2.2l-5.9-3c-3.2-1.7-7.9-5.3-10.5-8-3-3.4-5.3-7.1-6.6-11-2-5.9-2-9.4-2.3-265-0.2-192.5 0-260 0.9-263 0.6-2.2 2.1-6.2 3.3-8.9 1.1-2.6 4.2-6.8 6.9-9.2 2.6-2.4 6.4-5.1 8.5-6 2-0.9 5.7-2 8.2-2.4 2.5-0.5 21.4-0.8 42-0.7zm62 205.7h486v-91h-486zm0 157h486v-89h-486z"/>
+                    </svg>
+                    <span class="m-auto">Cerca</span>
+                </button>
+                
+                <button onclick="scrollToSection('comandos')" class="buttons-menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="svg">
+                        <path fill-rule="evenodd" d="M2.25 6a3 3 0 0 1 3-3h13.5a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V6Zm3.97.97a.75.75 0 0 1 1.06 0l2.25 2.25a.75.75 0 0 1 0 1.06l-2.25 2.25a.75.75 0 0 1-1.06-1.06l1.72-1.72-1.72-1.72a.75.75 0 0 1 0-1.06Zm4.28 4.28a.75.75 0 0 0 0 1.5h3a.75.75 0 0 0 0-1.5h-3Z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="m-auto">Comandos</span>
+                </button>
+                
+                <button onclick="scrollToSection('his-velo')" class="buttons-menu">
+                    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="#82C34C" class="svg">
+                    <path d="M425.7,118.25A240,240,0,0,0,76.32,447l.18.2c.33.35.64.71,1,1.05.74.84,1.58,1.79,2.57,2.78a41.17,41.17,0,0,0,60.36-.42,157.13,157.13,0,0,1,231.26,0,41.18,41.18,0,0,0,60.65.06l3.21-3.5.18-.2a239.93,239.93,0,0,0-10-328.76ZM240,128a16,16,0,0,1,32,0v32a16,16,0,0,1-32,0ZM128,304H96a16,16,0,0,1,0-32h32a16,16,0,0,1,0,32Zm48.8-95.2a16,16,0,0,1-22.62,0l-22.63-22.62a16,16,0,0,1,22.63-22.63l22.62,22.63A16,16,0,0,1,176.8,208.8Zm149.3,23.1-47.5,75.5a31,31,0,0,1-7,7,30.11,30.11,0,0,1-35-49l75.5-47.5a10.23,10.23,0,0,1,11.7,0A10.06,10.06,0,0,1,326.1,231.9Zm31.72-23.1a16,16,0,0,1-22.62-22.62l22.62-22.63a16,16,0,0,1,22.63,22.63ZM423.7,436.4h0ZM416,304H384a16,16,0,0,1,0-32h32a16,16,0,0,1,0,32Z"/>
+                    </svg>
+                <span class="m-auto">Histórico de Velocidade</span>
+                
+                <button onclick="scrollToSection('odometro')" class="buttons-menu">
+                    <svg fill="#82C34C" class="svg " viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12,2A10,10,0,1,0,22,12,10.011,10.011,0,0,0,12,2Zm7.411,13H12.659L9.919,8.606a1,1,0,1,0-1.838.788L10.484,15H4.589a8,8,0,1,1,14.822,0Z"/>
+                    </svg>
+                    <span class="m-auto"> Histórico Odômetro</span>
+                </button>
+
+                <button onclick="scrollToSection('link-compar')" class="buttons-menu" style="margin-bottom: 150px;">
+                    <svg version="1.2" xmlns="http://www.w3.org/2000/svg" fill="#82C34C" class="svg" viewBox="0 0 261 260">
+                        <path  d="m170 2.1c-4.1 1.1-11.1 3.8-15.5 6.1-7.3 3.8-10.3 6.5-34.5 30.7-20 20-27.5 28.2-30.3 33.1-2.1 3.6-4.9 10.1-6.3 14.5-1.7 5.4-2.8 11.3-3.1 18-0.4 7.2-0.1 12.3 1.1 18.5 1.1 5.2 3.4 12 6.1 17.5 3 6.2 6.3 11.1 10.7 15.8 4.4 4.8 7.6 7.3 10.8 8.4 3.1 1.1 6 1.4 9.5 1 3-0.4 6.6-1.8 9-3.5 2.2-1.5 5-4.6 6.2-6.7 1.6-2.9 2.3-5.7 2.3-9.8 0-3.1-0.5-6.9-1.1-8.5-0.6-1.5-2.8-4.7-4.9-7.2-2.2-2.5-4.8-6.5-5.9-9-1-2.5-2.3-6.5-2.6-9-0.6-3.3-0.2-6.4 1.5-12l2.2-7.5c41.3-41.5 47.4-47 51.3-48.7 3.7-1.7 7-2.2 12.5-2.3 6.1 0 8.5 0.5 13 2.7 3 1.4 7.3 4.6 9.4 7 2.2 2.3 4.9 6.3 6 8.8 1.4 3.1 2 6.7 2.1 11.5 0 4.5-0.7 8.8-1.9 12-1.5 4-5 8.2-17.6 21-8.7 8.8-16.5 17.5-17.4 19.3-0.9 1.7-1.6 5.3-1.7 8l-0.1 4.7c-2.1-7.8-4.5-13.6-6.7-18-2.5-5-6.3-10.5-10.3-14.8-4.5-4.9-7.6-7.3-10.8-8.4-3.1-1.1-6-1.4-9.5-1-3 0.4-6.6 1.8-9 3.5-2.2 1.5-5 4.6-6.2 6.7-1.6 2.9-2.3 5.7-2.3 9.8 0 3.1 0.5 6.9 1.1 8.5 0.6 1.5 2.8 4.7 4.9 7.2 2.2 2.5 4.9 6.8 6.1 9.5 1.5 3.3 2.3 7 2.3 11 0 3.3-0.8 8.5-1.8 11.5-1.7 5-4 7.6-25 28.8-18.1 18.2-24.2 23.7-28.1 25.4-3.7 1.7-7 2.2-12.5 2.2-5.4 0.1-8.7-0.5-12-2-2.5-1.1-6.5-3.8-8.8-6-2.4-2.1-5.6-6.4-7-9.4-2.1-4.4-2.7-7-2.7-12.5 0-4.5 0.7-8.8 1.9-12 1.5-3.9 4.8-8 14.6-18 7-7.2 13.5-14.5 14.4-16.3 0.9-1.9 1.6-5.6 1.6-9.2 0-3.3-0.6-7.2-1.4-8.7-0.8-1.6-2.9-4.2-4.8-5.9-1.8-1.8-4.4-3.7-5.8-4.4-1.4-0.8-5-1.3-8-1.4-3.1 0-7 0.7-9 1.7-1.9 0.9-10 8.3-18 16.4-12 12.2-15.3 16.2-18.7 22.8-2.3 4.4-5.1 11.6-6.3 16-1.4 5.6-2 11.2-2 18.5 0 7.3 0.6 12.9 2 18.5 1.2 4.4 3.6 10.9 5.5 14.5 1.9 3.6 5.6 9.2 8.3 12.5 2.6 3.3 7.5 8.1 10.7 10.8 3.3 2.6 8.9 6.3 12.5 8.2 3.6 1.9 10.1 4.3 14.5 5.5 5.6 1.4 11.2 2 18.5 2 7.3 0 12.9-0.6 18.5-2 4.4-1.2 11.6-4 16-6.2 7.3-3.8 10.3-6.5 34.5-30.7 20-20 27.5-28.2 30.3-33.1 2.1-3.6 4.9-10.1 6.4-14.5 2.2-6.8 2.6-9.8 2.7-20.5l0.1-12.6c4 6.3 6.4 9 8.1 10 1.6 1 5.2 2.3 7.9 2.9 3.6 0.7 6.3 0.6 9.5-0.2 3.9-1.1 6.9-3.6 23.1-19.9 16.1-16.3 19.1-19.7 22.7-26.7 2.2-4.4 5-11.6 6.2-16 1.4-5.6 2-11.2 2-18.5 0-7.3-0.6-12.9-2-18.5-1.2-4.4-3.6-10.9-5.5-14.5-1.9-3.6-5.5-9.1-8-12.3-2.5-3.1-7.3-8-10.7-10.8-3.5-2.9-9.4-6.7-13.3-8.7-3.8-1.9-10.4-4.3-14.5-5.3-5.2-1.3-10.8-1.9-18.5-1.9-7.6 0.1-13.3 0.7-18.5 2.1z"/>
+                    </svg>
+                    <span class="m-auto">Link Compartilhado</span>
+                </button> 
+            </div>
+        </div>
+    </div>
+<div name="menu-mobile">
+    <!-- MENU DO MOBILE/TABLET -->
+    <div id="Menu" class="menu-mobile">
+        <div class="content-menu-mobile scrollbar-nav">
+            <div class="buttons-container">
+                <button onclick="scrollToSection('info-geral')" class="buttons-menu">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="svg">
+                    <path d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
+                    <path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
+                </svg>
+                <span class="mx-auto fs-5">Início</span>
+                </button>
+            </div>
+            <div class="buttons-container">
+                <h1 class="texto-titulo-menu">Tutoriais do Aplicativo</h1>
+                <!-- Botões de navegação -->
+            
+                <button onclick="scrollToSection('ult-loc')" class="buttons-menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="svg">
+                    <path fill-rule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="m-auto">Última Localização</span>
+                </button>
+                
+                <button onclick="scrollToSection('bloq')" class="buttons-menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="svg ">
+                    <path fill-rule="evenodd" d="M12 1.5a5.25 5.25 0 0 0-5.25 5.25v3a3 3 0 0 0-3 3v6.75a3 3 0 0 0 3 3h10.5a3 3 0 0 0 3-3v-6.75a3 3 0 0 0-3-3v-3c0-2.9-2.35-5.25-5.25-5.25Zm3.75 8.25v-3a3.75 3.75 0 1 0-7.5 0v3h7.5Z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="m-auto">Bloqueio</span>
+                </button>
+                
+                <button onclick="scrollToSection('rela-traj')" class="buttons-menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="svg">
+                    <path fill-rule="evenodd" d="M7.502 6h7.128A3.375 3.375 0 0 1 18 9.375v9.375a3 3 0 0 0 3-3V6.108c0-1.505-1.125-2.811-2.664-2.94a48.972 48.972 0 0 0-.673-.05A3 3 0 0 0 15 1.5h-1.5a3 3 0 0 0-2.663 1.618c-.225.015-.45.032-.673.05C8.662 3.295 7.554 4.542 7.502 6ZM13.5 3A1.5 1.5 0 0 0 12 4.5h4.5A1.5 1.5 0 0 0 15 3h-1.5Z" clip-rule="evenodd" />
+                    <path fill-rule="evenodd" d="M3 9.375C3 8.339 3.84 7.5 4.875 7.5h9.75c1.036 0 1.875.84 1.875 1.875v11.25c0 1.035-.84 1.875-1.875 1.875h-9.75A1.875 1.875 0 0 1 3 20.625V9.375ZM6 12a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H6.75a.75.75 0 0 1-.75-.75V12Zm2.25 0a.75.75 0 0 1 .75-.75h3.75a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75ZM6 15a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H6.75a.75.75 0 0 1-.75-.75V15Zm2.25 0a.75.75 0 0 1 .75-.75h3.75a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75ZM6 18a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H6.75a.75.75 0 0 1-.75-.75V18Zm2.25 0a.75.75 0 0 1 .75-.75h3.75a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="m-auto">Relátorios e Trajetos</span>
+                </button>
+            
+            </div>
+            <div class="buttons-container">
+                <h1 class="texto-titulo-menu">Tutoriais do Site</h1>
+                <button onclick="scrollToSection('rotas')" class="buttons-menu">
+                    <svg class="svg animationnew" fill="#82C34C" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M44,14H4a2,2,0,0,0-2,2V32a2,2,0,0,0,2,2H44a2,2,0,0,0,2-2V16A2,2,0,0,0,44,14ZM17.3,29H14.8l-3-5-.7-1.3h0V29H8.7V19h2.5l3,5,.6,1.3h.1s-.1-1.2-.1-1.6V19h2.5Zm9.1,0H18.7V19h7.6v2H21.2v1.8h4.4v2H21.2v2.1h5.2Zm10.9,0H34.8l-1-4.8c-.2-.8-.4-1.9-.4-1.9h0s-.2,1.1-.3,1.9L32,29H29.6L26.8,19h2.5l1,4.2a20.1,20.1,0,0,1,.5,2.5h0l.5-2.4,1-4.3h2.3l.9,4.3.5,2.4h0l.5-2.5,1-4.2H40Z"/>
+                    </svg>
+                    <span class="m-auto">(NEW) Rotas</span>
+                </button>
+                <button onclick="scrollToSection('trajeto-site')" class="buttons-menu">
+                    <svg version="1.0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="svg fill-none stroke-[#82C34C]" stroke="#82C34C" stroke-width="2" stroke-linecap="round">
+                        <path d="M9.09557 20.7929L11.9274 14.6574C11.9505 14.6073 11.962 14.5822 11.978 14.5744C11.9919 14.5676 12.0081 14.5676 12.022 14.5744C12.038 14.5822 12.0495 14.6073 12.0726 14.6574L14.9044 20.7929C14.9337 20.8564 14.9484 20.8882 14.9425 20.9067C14.9374 20.9227 14.9247 20.9351 14.9085 20.9396C14.8899 20.9449 14.8586 20.9293 14.796 20.898L12.0358 19.5179C12.0227 19.5113 12.0161 19.508 12.0092 19.5068C12.0031 19.5056 11.9969 19.5056 11.9908 19.5068C11.9839 19.508 11.9773 19.5113 11.9642 19.5179L9.20399 20.898C9.14142 20.9293 9.11014 20.9449 9.09149 20.9396C9.07533 20.9351 9.06256 20.9227 9.05748 20.9067C9.0516 20.8882 9.06626 20.8564 9.09557 20.7929Z"/>
+                        <path d="M4 18L7 4"/>
+                        <path d="M20 18L17 4"/>
+                        <path d="M12 11L12 9"/>
+                        <path d="M12 6L12 4"/>
+                    </svg>
+                    <span class="m-auto">Trajeto do Site</span>
+                </button>
+
+                <button onclick="scrollToSection('cerca')" class="buttons-menu">
+                    <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 578" fill="#82C34C" class="svg">
+                        <path fill-rule="evenodd" d="m70 0.3c36.6 0.2 37.6 0.3 42.3 2.5 2.6 1.2 6.8 4.2 9.5 6.6 2.6 2.4 5.8 6.6 7.2 9.2 2.1 4.2 2.5 6.5 3 27.4h486v-9.2c0-5.7 0.6-11.4 1.6-14.8 1.3-4.4 2.9-6.7 7.8-11.5 4.3-4.3 7.7-6.6 11.6-8 5.1-1.9 8.1-2 85.5-2l5.5 2.7c3 1.4 7.4 4.7 9.8 7.2 2.3 2.5 5 6.5 6.1 8.9 1 2.3 2.4 5.8 3 7.7 0.8 2.5 1.1 75.2 1 258 0 140-0.3 257.6-0.8 261.5-0.4 3.9-1.7 9-3 11.5-1.3 2.5-3.8 6.4-5.7 8.8-2.3 2.8-5.7 5.3-16.9 10.7l-37.5 0.3c-36 0.3-37.8 0.2-44.5-1.9-6-1.8-7.8-3-13-8.3-3.3-3.3-6.9-7.9-8-10.1-1.9-3.8-2-6.4-2.5-125.5h-486l-0.5 122.5-3 5.4c-1.7 3-5 7.1-7.5 9.3-2.5 2.1-7 4.9-10 6.1-5.3 2.1-6.6 2.2-85.5 2.2l-5.9-3c-3.2-1.7-7.9-5.3-10.5-8-3-3.4-5.3-7.1-6.6-11-2-5.9-2-9.4-2.3-265-0.2-192.5 0-260 0.9-263 0.6-2.2 2.1-6.2 3.3-8.9 1.1-2.6 4.2-6.8 6.9-9.2 2.6-2.4 6.4-5.1 8.5-6 2-0.9 5.7-2 8.2-2.4 2.5-0.5 21.4-0.8 42-0.7zm62 205.7h486v-91h-486zm0 157h486v-89h-486z"/>
+                    </svg>
+                    <span class="m-auto">Cerca</span>
+                </button>
+                
+                <button onclick="scrollToSection('comandos')" class="buttons-menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#82C34C" class="svg">
+                        <path fill-rule="evenodd" d="M2.25 6a3 3 0 0 1 3-3h13.5a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V6Zm3.97.97a.75.75 0 0 1 1.06 0l2.25 2.25a.75.75 0 0 1 0 1.06l-2.25 2.25a.75.75 0 0 1-1.06-1.06l1.72-1.72-1.72-1.72a.75.75 0 0 1 0-1.06Zm4.28 4.28a.75.75 0 0 0 0 1.5h3a.75.75 0 0 0 0-1.5h-3Z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="m-auto">Comandos</span>
+                </button>
+                
+                <button onclick="scrollToSection('his-velo')" class="buttons-menu">
+                    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="#82C34C" class="svg">
+                    <path d="M425.7,118.25A240,240,0,0,0,76.32,447l.18.2c.33.35.64.71,1,1.05.74.84,1.58,1.79,2.57,2.78a41.17,41.17,0,0,0,60.36-.42,157.13,157.13,0,0,1,231.26,0,41.18,41.18,0,0,0,60.65.06l3.21-3.5.18-.2a239.93,239.93,0,0,0-10-328.76ZM240,128a16,16,0,0,1,32,0v32a16,16,0,0,1-32,0ZM128,304H96a16,16,0,0,1,0-32h32a16,16,0,0,1,0,32Zm48.8-95.2a16,16,0,0,1-22.62,0l-22.63-22.62a16,16,0,0,1,22.63-22.63l22.62,22.63A16,16,0,0,1,176.8,208.8Zm149.3,23.1-47.5,75.5a31,31,0,0,1-7,7,30.11,30.11,0,0,1-35-49l75.5-47.5a10.23,10.23,0,0,1,11.7,0A10.06,10.06,0,0,1,326.1,231.9Zm31.72-23.1a16,16,0,0,1-22.62-22.62l22.62-22.63a16,16,0,0,1,22.63,22.63ZM423.7,436.4h0ZM416,304H384a16,16,0,0,1,0-32h32a16,16,0,0,1,0,32Z"/>
+                    </svg>
+                <span class="m-auto">Histórico de Velocidade</span>
+                
+                <button onclick="scrollToSection('odometro')" class="buttons-menu">
+                    <svg fill="#82C34C" class="svg " viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12,2A10,10,0,1,0,22,12,10.011,10.011,0,0,0,12,2Zm7.411,13H12.659L9.919,8.606a1,1,0,1,0-1.838.788L10.484,15H4.589a8,8,0,1,1,14.822,0Z"/>
+                    </svg>
+                    <span class="m-auto"> Histórico Odômetro</span>
+                </button>
+                <button onclick="scrollToSection('link-compar')" class="buttons-menu">
+                    <svg version="1.2" xmlns="http://www.w3.org/2000/svg" fill="#82C34C" class="svg" viewBox="0 0 261 260">
+                        <path  d="m170 2.1c-4.1 1.1-11.1 3.8-15.5 6.1-7.3 3.8-10.3 6.5-34.5 30.7-20 20-27.5 28.2-30.3 33.1-2.1 3.6-4.9 10.1-6.3 14.5-1.7 5.4-2.8 11.3-3.1 18-0.4 7.2-0.1 12.3 1.1 18.5 1.1 5.2 3.4 12 6.1 17.5 3 6.2 6.3 11.1 10.7 15.8 4.4 4.8 7.6 7.3 10.8 8.4 3.1 1.1 6 1.4 9.5 1 3-0.4 6.6-1.8 9-3.5 2.2-1.5 5-4.6 6.2-6.7 1.6-2.9 2.3-5.7 2.3-9.8 0-3.1-0.5-6.9-1.1-8.5-0.6-1.5-2.8-4.7-4.9-7.2-2.2-2.5-4.8-6.5-5.9-9-1-2.5-2.3-6.5-2.6-9-0.6-3.3-0.2-6.4 1.5-12l2.2-7.5c41.3-41.5 47.4-47 51.3-48.7 3.7-1.7 7-2.2 12.5-2.3 6.1 0 8.5 0.5 13 2.7 3 1.4 7.3 4.6 9.4 7 2.2 2.3 4.9 6.3 6 8.8 1.4 3.1 2 6.7 2.1 11.5 0 4.5-0.7 8.8-1.9 12-1.5 4-5 8.2-17.6 21-8.7 8.8-16.5 17.5-17.4 19.3-0.9 1.7-1.6 5.3-1.7 8l-0.1 4.7c-2.1-7.8-4.5-13.6-6.7-18-2.5-5-6.3-10.5-10.3-14.8-4.5-4.9-7.6-7.3-10.8-8.4-3.1-1.1-6-1.4-9.5-1-3 0.4-6.6 1.8-9 3.5-2.2 1.5-5 4.6-6.2 6.7-1.6 2.9-2.3 5.7-2.3 9.8 0 3.1 0.5 6.9 1.1 8.5 0.6 1.5 2.8 4.7 4.9 7.2 2.2 2.5 4.9 6.8 6.1 9.5 1.5 3.3 2.3 7 2.3 11 0 3.3-0.8 8.5-1.8 11.5-1.7 5-4 7.6-25 28.8-18.1 18.2-24.2 23.7-28.1 25.4-3.7 1.7-7 2.2-12.5 2.2-5.4 0.1-8.7-0.5-12-2-2.5-1.1-6.5-3.8-8.8-6-2.4-2.1-5.6-6.4-7-9.4-2.1-4.4-2.7-7-2.7-12.5 0-4.5 0.7-8.8 1.9-12 1.5-3.9 4.8-8 14.6-18 7-7.2 13.5-14.5 14.4-16.3 0.9-1.9 1.6-5.6 1.6-9.2 0-3.3-0.6-7.2-1.4-8.7-0.8-1.6-2.9-4.2-4.8-5.9-1.8-1.8-4.4-3.7-5.8-4.4-1.4-0.8-5-1.3-8-1.4-3.1 0-7 0.7-9 1.7-1.9 0.9-10 8.3-18 16.4-12 12.2-15.3 16.2-18.7 22.8-2.3 4.4-5.1 11.6-6.3 16-1.4 5.6-2 11.2-2 18.5 0 7.3 0.6 12.9 2 18.5 1.2 4.4 3.6 10.9 5.5 14.5 1.9 3.6 5.6 9.2 8.3 12.5 2.6 3.3 7.5 8.1 10.7 10.8 3.3 2.6 8.9 6.3 12.5 8.2 3.6 1.9 10.1 4.3 14.5 5.5 5.6 1.4 11.2 2 18.5 2 7.3 0 12.9-0.6 18.5-2 4.4-1.2 11.6-4 16-6.2 7.3-3.8 10.3-6.5 34.5-30.7 20-20 27.5-28.2 30.3-33.1 2.1-3.6 4.9-10.1 6.4-14.5 2.2-6.8 2.6-9.8 2.7-20.5l0.1-12.6c4 6.3 6.4 9 8.1 10 1.6 1 5.2 2.3 7.9 2.9 3.6 0.7 6.3 0.6 9.5-0.2 3.9-1.1 6.9-3.6 23.1-19.9 16.1-16.3 19.1-19.7 22.7-26.7 2.2-4.4 5-11.6 6.2-16 1.4-5.6 2-11.2 2-18.5 0-7.3-0.6-12.9-2-18.5-1.2-4.4-3.6-10.9-5.5-14.5-1.9-3.6-5.5-9.1-8-12.3-2.5-3.1-7.3-8-10.7-10.8-3.5-2.9-9.4-6.7-13.3-8.7-3.8-1.9-10.4-4.3-14.5-5.3-5.2-1.3-10.8-1.9-18.5-1.9-7.6 0.1-13.3 0.7-18.5 2.1z"/>
+                    </svg>
+                    <span class="m-auto">Link Compartilhado</span>
+                </button>   
+            </div>
+        </div>
+    </div>
+
+    <!-- BOTÃO DO MENU MOBILE/TABLET -->
+    <div class= "navbar-mobile">
+        
+        <button id="menuBtn" onclick="toggleMenu()" class="menu-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="svgbtn-menu">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+        </button>
+        <a href="https://rastreio.boltech.com.br/?from=tutoriais" style="text-decoration: none;">
+            <svg class="svg-mobile-boltech"version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 37.8 852 150" preserveAspectRatio="xMidYMid meet">
+            <title>logotipo-boltech-2</title>
+            <style>
+                .s0 { fill: #54ae7b } 
+                .s1 { fill: #26a8ab } 
+                .s2 { fill: #1a93d0 } 
+                .s3 { fill: #81c34d } 
+                .s4 { fill: #fefefe } 
+            </style>
+            <path id="Preencher com Cor Sólida 5" class="s0" d="m471 37.8v4.7c7.4 0.8 12 2.3 15 3.7 3 1.5 7.5 4.6 9.9 7 2.4 2.4 5.4 6.4 6.7 9.1 1.3 2.6 3 7.2 3.6 10.2l1.3 5.5h9.5c-0.9-6.6-1.6-10.1-2.2-12-0.6-1.9-2.3-6-3.9-9-1.6-3-5-7.7-7.6-10.3-2.7-2.7-7.1-6.1-9.8-7.7-2.8-1.6-7.9-3.6-11.5-4.4-3.6-0.9-7.5-1.6-8.8-1.6-2 0-2.2 0.5-2.2 4.8z"/>
+            <path id="Preencher com Cor Sólida 4" class="s1" d="m471 20c0 3.8 0.1 4 3.3 4 1.7 0 6.1 0.7 9.7 1.6 3.6 0.8 9.2 2.9 12.5 4.7 3.3 1.7 9.2 6.3 13.1 10.2 4.6 4.6 8.2 9.2 10.3 13.5 1.7 3.6 3.9 10.4 4.9 15.3l1.7 8.7c6.4 0 6.5-0.1 6.5-4.3 0-2.3-0.7-6.9-1.5-10.2-0.8-3.3-3.2-9.4-5.2-13.5-2.7-5.4-5.8-9.6-11.2-15.1-5.9-5.9-9.5-8.5-16.1-11.8-4.7-2.3-11.6-4.8-15.5-5.6-3.9-0.8-8.2-1.5-9.7-1.5-2.6 0-2.8 0.3-2.8 4z"/>
+            <path id="Preencher com Cor Sólida 3" fill-rule="evenodd" class="s2" d="m470.8 1.1l5.9 0.6c3.2 0.3 8.7 1.2 12.3 2 3.6 0.8 9.9 3 14 4.9 4.1 2 10.2 5.5 13.5 7.8 3.3 2.4 8.5 7 11.5 10.4 3 3.3 7 8.4 8.7 11.4 1.8 2.9 4.5 8.2 5.9 11.8 1.5 3.6 3.3 9.4 4 13 0.8 3.6 1.4 8.4 1.4 10.7 0 4.1-0.1 4.3-3 4.3-2.8 0-3-0.3-3-3.8 0-2-0.7-6.6-1.4-10.2-0.8-3.6-2.6-9.4-4.1-13-1.5-3.6-4.4-9-6.5-12-2.1-3-6.2-7.9-9.1-10.8-3-3-7.9-7-10.9-9-3-2-8.4-4.8-12-6.3-3.6-1.5-9.6-3.3-13.5-3.9-3.9-0.6-8.5-1.3-10.3-1.6-2.8-0.3-3.2-0.8-3.3-3.3zm223.2 232.8h9v52h-4.5c-3.9 0-4.5-0.3-4.5-2 0-1.9-0.2-1.9-3.8 0.6-2.6 1.8-5 2.5-8.2 2.4-2.6 0-6.4-1-9-2.2-2.4-1.3-5.5-3.8-7-5.7-1.6-2.2-2.7-5.2-2.9-8-0.2-2.5-0.1-5.8 0.2-7.3 0.4-1.5 2.1-4.4 3.9-6.3 1.8-2 5.1-4.3 7.3-5.1 2.4-0.9 6.1-1.4 9.1-1.2 3.8 0.2 5.9 1 10.4 5.3zm-296 3h10c5.5 0 12.1 0.6 14.7 1.3 2.8 0.7 5.7 2.4 7.3 4.2 1.5 1.7 3 4.8 3.5 7 0.6 3.1 0.3 5-1.1 8-1 2.2-3.3 4.9-5.1 6-1.7 1.1-3.2 2.5-3.2 3 0 0.6 2.4 4.9 5.4 9.5 3 4.7 5.5 8.9 5.5 9.3 0 0.4-2.1 0.7-9.5 0.7l-5.7-9.5c-5.5-9.1-5.9-9.5-12.8-9.5v19h-9zm128.1 3h8.1l0.3 11.5 3.8 0.3c3.6 0.2 3.7 0.4 3.7 3.7 0 3.4-0.1 3.5-7.5 4l-0.5 26.5h-8l-0.5-26.5-2.7-0.2c-2.4-0.2-2.8-0.7-2.8-3.8 0-3.1 0.4-3.5 2.8-3.7 2.6-0.3 2.7-0.6 3-6zm-119.1 19c7.4 0 11-0.4 12.8-1 1.8-0.6 3.7-1.9 4.2-3 0.6-1.1 1-2.9 1-4 0-1.1-1.1-3.1-2.5-4.5-2.1-2.2-3.4-2.5-9-2.5h-6.5zm96-8.3c2 0.3 4.7 1.1 6 1.8 1.4 0.7 3.1 2 3.8 2.9 1 1.3 0.8 1.8-1.8 3.1-2.6 1.3-3.2 1.3-5.2 0-1.3-0.9-3.7-1.5-5.5-1.5-2.3 0-3.7 0.7-4.8 2.2-1.2 1.8-1.2 2.5-0.2 3.4 0.7 0.6 3.7 1.9 6.7 2.9 3.1 0.9 7 2.8 8.8 4.1 2.7 2 3.2 3 3.2 6.4 0 3.2-0.6 4.6-3.2 7-2.3 2.1-4.7 3.2-7.8 3.6-2.4 0.4-6.2 0.1-8.2-0.5-2.1-0.6-5-2.2-9.3-6l3.5-1.5c3.1-1.3 3.8-1.3 5.8-0.1 1.2 0.8 3.6 1.5 5.2 1.5 1.7 0 3.7-0.2 4.5-0.5 0.9-0.3 1.5-1.6 1.5-3 0-2.2-0.7-2.7-5.7-4.1-3.2-0.9-7-2.3-8.5-3-1.5-0.8-3.4-2.8-4.3-4.4-1.1-2.3-1.2-3.8-0.5-6.5 0.6-2 2.2-4.3 3.8-5.2 1.5-1 4.1-2.1 5.7-2.4 1.7-0.4 4.6-0.5 6.5-0.2zm336 0c2 0.3 5.1 1.2 6.9 2.1 1.9 0.9 3.6 2.2 3.8 2.9 0.2 0.7-1 2-2.7 2.8-2.6 1.3-3.2 1.3-5.2 0-1.3-0.9-3.4-1.5-4.8-1.5-1.3-0.1-3.3 0.5-4.3 1.2-1 0.7-1.7 2.1-1.5 3.2 0.2 1.3 2.3 2.5 7.3 4.1 5.1 1.7 7.8 3.2 9.9 5.6 2.3 2.7 2.8 4 2.2 6.4-0.4 1.6-1.4 3.8-2.4 4.9-0.9 1-3.1 2.5-4.9 3.2-1.8 0.8-5 1.4-7 1.4-2.1-0.1-5.6-0.9-7.8-1.9-2.2-1-4.5-2.6-5.2-3.5-1.1-1.4-0.8-1.8 2.2-3.1 3.1-1.4 3.8-1.4 5.8 0 1.2 0.8 3.8 1.5 5.7 1.5 2 0.1 4.1-0.6 4.8-1.5 0.7-0.8 1-2.2 0.7-3-0.2-0.8-1-1.7-1.7-2-0.7-0.2-3.7-1.1-6.8-1.9-3-0.8-6.7-2.6-8.2-4.1-2.1-1.9-2.8-3.5-2.8-6.3 0-2.8 0.7-4.4 2.8-6.5 1.5-1.5 4.3-3.2 6.2-3.6 2-0.5 5.1-0.7 7-0.4zm-380.5 0.3c3.8-0.1 5.9 0.5 8.8 2.4 3.6 2.5 3.7 2.5 3.7 0.6 0-1.7 0.7-2 9-2v34h-4.5c-3.8 0-4.5-0.3-4.5-2 0-1.9-0.2-1.9-3.7 0.6-3.3 2.3-4.4 2.5-9.8 2-4.3-0.4-7-1.3-9.9-3.3-2.1-1.6-4.7-4.4-5.8-6.3-1-1.9-1.9-5.5-1.9-8-0.1-2.5 0.6-5.9 1.4-7.5 0.9-1.7 2.8-4.2 4.4-5.7 1.6-1.5 4-3.2 5.3-3.7 1.4-0.5 4.8-1 7.5-1.1zm110.3 0c2.3 0 4.2 0.2 4.2 0.5 0 0.3-0.8 2.1-1.7 4-1.4 2.8-2.4 3.5-4.5 3.5-1.5 0-3.7 0.4-4.8 1-1.1 0.5-2.4 2.4-3 4.2-0.5 1.8-1 7.4-1 21.8h-8v-34h4c2.2 0 4.1 0.5 4.3 1.1 0.2 0.8 1.2 0.7 3.2-0.4 1.7-0.9 4.9-1.7 7.3-1.7zm25.3 0.2c5.3 0.2 7.3 0.8 10.3 3 2 1.5 4.5 4.6 5.6 6.8 1.1 2.2 2 5.3 2 10h-14c-11.7 0-14 0.2-14 1.5 0 0.8 1.3 2.6 2.8 4 1.8 1.7 3.9 2.5 6.2 2.5 2 0 4.6-0.8 6-1.9 2.3-1.8 3-1.9 11.2 0.4l-1.9 2.5c-1.1 1.4-3.9 3.5-6.3 4.7-2.5 1.2-6.3 2.3-8.5 2.3-2.2 0-5.5-0.6-7.5-1.4-1.9-0.8-4.9-3-6.7-5-1.8-2-3.7-5.5-4.3-7.9-0.6-2.3-0.8-5.6-0.4-7.2 0.3-1.7 1.6-4.5 2.8-6.4 1.2-1.9 3.9-4.5 6.1-5.8 3.4-2 5.1-2.4 10.6-2.1zm41.9-0.2c4.3 0 6.4 0.5 9.3 2.5 3.6 2.4 3.7 2.4 3.7 0.5 0-1.7 0.7-2 8-2v34h-4.5c-4 0-4.5-0.3-4.4-4.5l-2.3 2.3c-1.5 1.5-3.9 2.4-7.3 2.8q-5 0.6-9-1c-2.2-0.8-5.7-3.3-7.7-5.6-2.4-2.5-4-5.4-4.4-7.8-0.3-2-0.3-5.3 0-7.2 0.4-1.9 1.7-5 3-6.8 1.3-1.8 4.1-4.1 6.2-5.2 2.4-1.2 6.1-2 9.4-2zm93 0c4 0 6.6 0.7 9.5 2.3 2.2 1.3 5 3.9 6.2 5.8 1.3 1.8 2.6 5.4 2.9 7.9 0.6 3.6 0.3 5.4-1.7 9.4-1.5 3.2-3.8 5.9-6.3 7.5-2.5 1.6-5.8 2.7-9 3-3.9 0.3-6.2-0.2-10-2-2.9-1.4-5.9-3.9-7.3-5.9-1.3-1.9-2.6-5.5-2.9-8-0.4-3 0-5.9 1-8.5 0.9-2.2 2.6-5 3.8-6.2 1.3-1.1 3.7-2.8 5.3-3.7 1.7-0.8 5.5-1.6 8.5-1.6zm44.8 0c2.3 0 4.2 0.1 4.3 0.2 0 0.2-0.7 2-1.5 4-1.3 3.1-2.1 3.8-4.4 3.8-1.5 0-4 1-5.5 2.2-2.7 2.2-2.7 2.5-2.7 24.8h-9v-34h4.5c2.8 0 4.7 0.5 4.8 1.2 0.3 0.9 1 0.8 2.8-0.5 1.4-1 4.2-1.7 6.7-1.7zm24.5 0c2.6 0 6.2 0.6 8 1.4 1.8 0.7 4.4 2.6 5.9 4.2 1.5 1.6 3.2 4.1 3.8 5.6 0.6 1.5 1 4.1 1 8.8h-13.5c-9.8 0-13.6 0.3-14.1 1.2-0.4 0.8 0.6 2.4 2.5 4 2 1.8 4.3 2.8 6.4 2.8 1.8 0 4.4-0.8 5.7-1.9 2.3-1.8 3-1.9 11.2 0.4l-2.1 2.7c-1.1 1.5-3.9 3.7-6.1 4.8-2.2 1.1-5.9 2-8.2 2-2.4 0-5.8-0.6-7.8-1.4-1.9-0.8-4.6-2.7-6.1-4.3-1.4-1.5-3.2-3.9-3.9-5.3-0.7-1.4-1.3-4.5-1.3-7q0-4.5 2.5-9c1.8-3.1 3.9-5.2 6.9-6.8 2.8-1.4 6.2-2.2 9.2-2.2zm-209 7.5c-1.8 0.8-3.7 2.4-4.3 3.5-0.5 1.1-1 2.4-1 3 0 0.6 3.9 1 9.5 1 7 0 9.5-0.4 9.6-1.3 0-0.7-1.3-2.4-2.8-3.8-1.5-1.5-3.9-2.9-5.3-3.2-1.3-0.3-3.9 0.1-5.7 0.8zm205 0c-1.8 0.8-3.7 2.4-4.3 3.5-0.5 1.1-1 2.4-1 3 0 0.6 3.9 1 9.5 1 5.7 0 9.5-0.4 9.5-1 0-0.6-0.4-1.9-1-3-0.5-1.1-2.5-2.7-4.5-3.5-1.9-0.8-3.8-1.5-4.2-1.5-0.4 0-2.2 0.7-4 1.5zm-338.9 0.3c-1.2 0.5-3.1 2-4.3 3.3-1.2 1.4-2.2 4-2.4 6.1-0.1 2.4 0.5 4.6 1.9 6.5 1.2 1.5 3.8 3.3 5.8 4 3 1.1 4.3 1 7.3-0.1 2.1-0.8 4.3-2.5 5-3.8 0.8-1.3 1.3-4 1.3-6.1 0-2.7-0.8-4.6-2.7-6.8-1.8-1.9-4-3.2-6.3-3.4-1.9-0.3-4.4-0.1-5.6 0.3zm175.9 1.1c-1.8 1.2-3.7 3-4.3 4.1-0.5 1.1-1 3.4-1 5.2 0 1.8 0.9 4.5 2 6 1.1 1.5 3.5 3.2 5.3 3.7 1.8 0.4 4.4 0.7 5.7 0.5 1.4-0.3 3.8-1.7 5.3-3.2 1.5-1.5 2.9-3.8 3.1-5.2 0.2-1.4 0-4-0.5-5.8-0.5-1.8-1.9-3.9-3.1-4.7-1.3-0.8-3.8-1.8-5.8-2.1-2.5-0.4-4.4 0.1-6.7 1.5zm46.8-0.7c-1.3 0.7-3.3 2.5-4.5 4.1-1.1 1.6-2.1 4.1-2.1 5.7 0 1.5 1 4.1 2.1 5.7 1.2 1.5 3.8 3.3 5.8 4 3 1.1 4.3 1 7.3-0.1 2.1-0.8 4.3-2.5 5-3.8 0.8-1.3 1.3-4 1.3-6.1 0-2.7-0.8-4.6-2.7-6.8-1.7-1.9-4.1-3.2-6.3-3.5-1.9-0.3-4.5 0.1-5.9 0.8zm43.9 2.7c-2.1 2.2-2.8 3.9-2.9 7-0.1 3.3 0.5 4.7 2.9 7.1 2.4 2.3 3.9 3 7.1 3 3.2 0 4.7-0.7 7-3 2.3-2.3 2.9-4 2.9-7 0-3.1-0.6-4.7-3-7-2.3-2.4-3.8-3-7-3-3.2 0-4.7 0.6-7 2.9z"/>
+            <path id="Preencher com Cor Sólida 2" fill-rule="evenodd" class="s3" d="m470.8 57.6c0.2 5.4 0.5 6.4 1.9 6.4 1 0.1 3.5 1.1 5.6 2.3 2 1.2 4.4 3.5 5.1 5.2 0.8 1.7 1.7 3.8 2 4.7 0.5 1.5 1.8 1.8 6.8 1.8h6.3c-1.2-6.2-2.2-9.5-3.1-11.3-0.9-1.7-3-4.7-4.8-6.5-1.7-1.9-4.8-4.2-6.9-5.3-2-1-5.8-2.3-8.4-2.8l-4.6-0.8zm-121.9 45.3h49v114h29v-114h49v-30h-127z"/>
+            <path id="Preencher com Cor Sólida 1" fill-rule="evenodd" class="s4" d="m332.8 74.1c0.9-0.1 1.2 14.8 1.2 142.9h-30l-0.4-133.6 13.9-4.6c7.7-2.5 14.6-4.7 15.2-4.7zm430.1 0c0.9-0.1 1.2 5.6 1.2 25.4 0 14 0.2 25.5 0.5 25.5 0.3 0 2.6-1.6 5.2-3.6 2.7-2 6.8-4.6 9.3-5.6 3.4-1.5 7.6-2.1 17-2.5 6.9-0.3 15.9 0 20 0.6 4.3 0.6 9.9 2.2 13 3.8 3 1.5 7.6 4.9 10.2 7.5 2.7 2.7 6.3 7.8 11.3 18.3l0.5 73.5h-30v-67l-2.8-2.9c-1.9-2-4.1-3.1-7.7-3.6-2.8-0.4-12.2-0.6-21-0.3-10.9 0.3-16.9 0.9-18.9 1.9-1.5 0.8-3.6 2.8-4.5 4.4-1.4 2.6-1.6 7.7-2.1 67.5h-29l-0.4-133.8 13.4-4.5c7.4-2.5 14.1-4.6 14.7-4.6zm-705.8 8.9c30.8 0 58.9 0.5 63.1 1.1 4.1 0.5 9.7 2 12.5 3.3 2.7 1.3 7 4.1 9.4 6.2 2.5 2.3 5.6 6.5 7.5 10.4 2.8 5.9 3.1 7.3 3.1 16 0 8.2-0.4 10.2-2.7 15-1.5 3.2-4.6 7.3-7.5 9.8-2.6 2.3-4.2 4.3-3.6 4.2 0.7 0 3.2 1.7 5.4 3.8 2.3 2 5.3 6 6.8 8.7 2.3 4.5 2.6 6.1 2.6 15.5 0 9.4-0.3 11.1-2.8 16.3-1.5 3.1-4.9 8.1-7.6 11-2.7 2.8-7.3 6.4-10.2 7.9-3 1.5-7.9 3.2-10.9 3.8-3.4 0.6-28.1 1-122 1l-0.2-66.3c-0.1-36.5 0.2-66.7 0.7-67 0.5-0.4 25.8-0.7 56.4-0.7zm170.6 30.1c11 0 22.7 0.3 26 0.8 3.3 0.4 8.6 2 11.7 3.5 3.4 1.5 8.1 4.9 11.3 8.1 3 3 6.7 8.1 8.2 11.3 2.8 5.7 2.8 5.7 2.8 28.2 0 22.1 0 22.6-2.6 28-1.4 3-4.6 7.8-7.1 10.5-2.5 2.8-7.1 6.4-10.4 8.2-3.3 1.8-8.7 3.6-12.4 4.2-3.6 0.6-15.5 1.1-26.5 1.1-11 0-22.9-0.5-26.5-1.1-3.7-0.6-9-2.4-12.4-4.2-3.2-1.8-7.8-5.3-10.2-7.9-2.4-2.7-5.6-7.4-7.1-10.5-1.4-3.2-3-8.7-3.4-12.3-0.5-3.6-0.8-10.8-0.8-16 0-5.2 0.3-12.4 0.8-16 0.4-3.6 1.9-9 3.3-12 1.4-3 4.7-7.9 7.4-10.9 3-3.2 7.3-6.5 10.9-8.3 3.3-1.6 8.5-3.3 11.5-3.7 3-0.5 14.5-0.9 25.5-1zm306 0c11 0 22.7 0.3 26 0.8 3.3 0.4 8.6 2 11.7 3.5 3.2 1.4 8.1 4.7 10.9 7.4 2.9 2.7 6.3 7.3 8 10.7 1.7 3.4 3.4 9.1 4 13 0.5 3.9 0.8 11.1 0.4 25l-89.5 0.5v3.5c0 2.6 0.8 4.3 6 9.5h39.7c21.9 0 40 0.2 40.3 0.4 0.3 0.3-0.3 6.7-1.2 14.3-1 7.6-1.7 14.1-1.8 14.6 0 0.4-16.5 0.7-36.8 0.7-20.2 0-39.5-0.5-43-1-3.4-0.6-8.5-2.1-11.2-3.5-2.8-1.4-6.7-4-8.8-5.9-2-1.8-5.1-5.3-6.7-7.7-1.7-2.4-3.8-6.8-4.8-9.9-1.4-4.4-1.7-9-1.7-24 0-13.9 0.4-19.8 1.6-23.5 0.8-2.7 3-7.2 4.9-10 1.8-2.7 5.3-6.6 7.6-8.7 2.4-2 6.6-4.6 9.4-5.9 2.7-1.2 7.2-2.5 10-2.9 2.7-0.4 14-0.8 25-0.9zm134.5 0c11.3 0 23.2 0.3 26.5 0.8 3.3 0.5 8.7 2.1 12 3.7 3.3 1.5 8.5 5.2 17 13.3l-7 6.4c-3.9 3.5-8.9 8-15.5 13.7l-3.3-3.4c-2.3-2.5-4.4-3.6-7.7-4.1-2.5-0.3-13.5-0.5-24.5-0.3-15.7 0.2-20.5 0.6-22.2 1.8-1.3 0.8-2.8 2.6-3.5 3.9-0.9 1.6-1.3 6.9-1.3 16.1 0 9.2 0.4 14.5 1.3 16.1 0.7 1.3 2.2 3.1 3.5 3.9 1.7 1.2 6.6 1.6 23.2 1.8 11.5 0.2 22.6 0 24.5-0.3 2.2-0.5 4.7-2.1 10.1-8l4.2 4c2.3 2.2 7.2 6.9 17.7 16.5l-4.8 5.1c-2.7 2.9-7.2 6.3-10.7 8-3.3 1.6-8.5 3.3-11.5 3.9-3 0.6-15 1-26.5 1-11.6 0-23.9-0.5-27.5-1.1-3.6-0.5-8.9-2.2-11.9-3.7-2.9-1.5-7.9-5.4-11-8.7-3.7-3.9-6.6-8.1-8.1-12-2.3-5.7-2.5-7.1-2.5-26.5 0-19.4 0.2-20.8 2.5-26.5 1.5-3.8 4.4-8.1 8-11.8 3.3-3.6 7.9-7 11.5-8.8 3.3-1.7 8.5-3.4 11.5-3.8 3-0.5 14.7-0.9 26-1zm-638 20.9h88.2c5-5.2 5.8-7 5.8-9.5 0-1.9-0.5-4.5-1.2-5.7-0.6-1.3-1.8-2.8-2.7-3.5-1.2-0.9-12.6-1.2-45.9-1.3h-44.2zm478 10.9c-2.2 2.3-2.9 3.9-2.9 7.5l-0.1 4.6 59.5-0.5c-0.4-8.1-1-9.5-3.5-11.7l-3-2.8h-47.2zm-301.3-1.3c-1.5 0.3-3.9 1.7-5.2 3.2-2.5 2.6-2.5 3-2.5 17.9 0 12.9 0.3 15.7 1.8 17.8 1 1.4 3.1 3 4.7 3.5 1.7 0.6 12 1 23 1 11 0 21.4-0.4 23-1 1.7-0.5 3.8-2.1 4.8-3.5 1.5-2.1 1.7-4.9 1.8-17.8v-15.2l-6.2-6c-32.8-0.2-43.6-0.1-45.2 0.1zm-176.7 43.4c68.2 0 85.8-0.4 87.8-1 2-0.6 3.8-2.2 4.7-4 0.9-1.7 1.5-4.6 1.5-6.5 0-1.9-0.4-4.5-1-5.8-0.6-1.2-2-2.9-3.2-3.7-1.9-1.3-9.1-1.6-46-1.8l-43.7-0.3z"/>
+            </svg>
+        </a>
+    </div>
+</div>
+<div class="containers">
+    <div class="lista-container">
+        <div id="info-geral" class="container">
+            <div class="grid-container">
+
+                    <div class="texto-container" style="grid-row: span 2;">
+                    <h1 class="titulo-container">
+                        Controle Total com o App e Site da Boltech
+                    </h1>
+                    <p>
+                        Descubra como aproveitar ao máximo as funcionalidades da Boltech! Este guia foi criado para te acompanhar passo a passo na utilização do nosso aplicativo e site.
+                    </p>
+                    <p>
+                        Com eles, você tem acesso completo à gestão dos seus veículos: acompanhe a <b>localização em tempo real</b>, verifique o <b>status da ignição</b>, ative o <b>bloqueio</b> remoto e muito mais — tudo de forma <b>simples, rápida e segura</b>.
+                    </p>
+                    </div>
+                    <div class="bloco-imagens">
+                        <img src="/images/tutoriais/app_boltech.png" alt="App Boltech" class="imagem-app">
+                        <img src="/images/tutoriais/tela_sistema.png" alt="Tela do site" class="imagem-site">
+                    </div>
+            </div>
+        </div>
+        
+    
+        <div id="ult-loc" class="container">
+            <div class="texto-container">
+                <h1 class="titulo-container">
+                    Como Descbrir Sua Última Localização?
+                </h1>
+                <p>
+                    Neste vídeo, você aprende a <b>localizar seu carro no mapa</b>, o <b>status de ignição</b>, a <b>velocidade</b> e o <b>horário da última comunicação</b> — tudo direto na plataforma.
+                </p>
+            </div>
+            <div class="frame-9-16">
+            <iframe
+                    src="https://youtube.com/embed/f4Nj-831WSA"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+            </div>
         </div>
 
-        <div id="rela-traj" class="bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg flex flex-col items-center gap-y-6 my-8 p-5 ">
-                <div class="text-white max-w-2xl">
-                    <h1 class="text-center text-shadow-lg/80 text-3xl text-cyan-300 font-bold mb-4">Como Ver Relátorios e Trajetos?</h1>
-                <p class="text-lg font-sans-serif">
+        <div id="bloq" class="container">
+            <div class="texto-container">
+                <h1 class="titulo-container">
+                    Como Funciona o Bloqueio?
+                </h1>
+                <p>
+                    Neste vídeo, mostramos como <b>bloquear e desbloquear</b> seu veículo, além de explicar as funcionalidades disponíveis para você ter controle total sobre o seu carro.
+                </p>
+            </div>
+            <div class="frame-9-16">
+            <iframe
+                    src="https://youtube.com/embed/91yPx5y_cdU"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <div id="rela-traj" class="container">
+            <div class="texto-container">
+                <h1 class="titulo-container">
+                    Como Ver Relátorios e Trajetos?
+                </h1>
+                <p>
                     Este vídeo tutorial mostra passo a passo como visualizar informações essenciais, como <b>local onde veículo esteve</b> em certo horário, a <b>velocidade</b> que estava, entre outras opções, para que você possa gerenciar melhor o uso do seu carro.
                 </p>
-                </div>
-                
-                  <div class="w-[300px] h-[533px] max-w-full rounded-xl overflow-hidden drop-shadow-xl/80">
-                    <iframe
-                        class="w-full h-full"
-                        src="https://youtube.com/embed/-tOuNVb796o?feature=share"
-                        frameborder="0"
-                        allowfullscreen>
-                    </iframe>
-                </div>
+            </div>
+            <div class="frame-9-16">
+            <iframe
+                    src="https://youtube.com/embed/-tOuNVb796o"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <div id="rotas" class="container">
+            <div class="texto-container">
+                <h1 class="titulo-container">
+                    Como Ver as Rotas do seu Veículo nas Últimas 24 horas!
+                </h1>
+                <p>
+                    Este vídeo tutorial mostra como acessar o <b>histórico de trajetos</b> nas <b>últimas 24 horas</b>, permitindo que você monitore os deslocamentos do seu carro de forma fácil e eficiente.
+                </p>
+            </div>
+            <div class="frame-16-9">
+            <iframe
+                    src="https://www.youtube.com/embed/9QYpimkkZdo"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+            </div>
         </div>
         
-        <div id="rotas" class="bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg flex flex-col items-center gap-y-6 my-8 p-5 ">
-                <div class="text-white max-w-2xl">
-                    <h1 class="text-center text-shadow-lg/80 text-cyan-300 text-3xl font-bold mb-4">Como Ver as Rotas do seu Veículo nas Últimas 24 horas!</h1>
-                    <p class="text-lg font-sans-serif">
-                     Este vídeo tutorial mostra como acessar o <b>histórico de trajetos</b> nas <b>últimas 24 horas</b>, permitindo que você monitore os deslocamentos do seu carro de forma fácil e eficiente.
-                    </p>
-                </div>
-                
-                <iframe class="aspect-video drop-shadow-xl/80 w-full max-w-3xl rounded-lg" 
-                    src="https://www.youtube.com/embed/9QYpimkkZdo" allowfullscreen>
+        <div id="trajeto-site" class="container">
+            <div class="texto-container">
+                <h1 class="titulo-container">
+                    Como ver seu Trajeto no Site
+                </h1>
+                <p>
+                    Este vídeo tutorial guia você passo a passo para acessar o <b>histórico de deslocamentos</b>, permitindo que você monitore facilmente onde seu carro esteve e em quais horários.
+                </p>
+            </div>
+            <div class="frame-16-9">
+            <iframe
+                    src="https://www.youtube.com/embed/AqKxVdtIwxM"
+                    frameborder="0"
+                    allowfullscreen>
                 </iframe>
+            </div>
         </div>
 
-        <div id="trajeto-site" class="bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg flex flex-col items-center gap-y-6 my-8 p-5 ">
-                <div class="text-white max-w-2xl">
-                    <h1 class="text-center text-shadow-lg/80 text-cyan-300 text-3xl font-bold mb-4">Como ver seu Trajeto no Site</h1>
-                    <p class="text-lg font-sans-serif">
-                        Este vídeo tutorial guia você passo a passo para acessar o <b>histórico de deslocamentos</b>, permitindo que você monitore facilmente onde seu carro esteve e em quais horários.
-                    </p>
-                </div>
-                
-                <iframe class="aspect-video drop-shadow-xl/80 w-full max-w-3xl rounded-lg" 
-                    src="https://www.youtube.com/embed/AqKxVdtIwxM" allowfullscreen>
+        <div id="cerca" class="container">
+            <div class="texto-container">
+                <h1 class="titulo-container">
+                    Como Funciona a Cerca no Site da Boltech
+                </h1>
+                <p>
+                    Este vídeo tutorial mostra como criar a <b>cerca</b> e definir <b>áreas seguras</b> para o seu veículo, <b>receber notificações</b> em caso de movimentação fora dessas zonas e garantir a segurança do seu carro de forma prática e eficiente.
+                </p>
+            </div>
+            <div class="frame-16-9">
+            <iframe
+                    src="https://www.youtube.com/embed/n5ELukmUB14"
+                    frameborder="0"
+                    allowfullscreen>
                 </iframe>
+            </div>
         </div>
 
-        <div id="cerca" class="bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg flex flex-col items-center gap-y-6 my-8 p-5 ">
-                <div class="text-white max-w-2xl">
-                    <h1 class="text-center text-shadow-lg/80 text-cyan-300 text-3xl font-bold mb-4">Como Funciona a Cerca no Site da Boltech</h1>
-                    <p class="text-lg font-sans-serif">
-                        Este vídeo tutorial mostra como criar a <b>cerca</b> e definir <b>áreas seguras</b> para o seu veículo, <b>receber notificações</b> em caso de movimentação fora dessas zonas e garantir a segurança do seu carro de forma prática e eficiente.
-                    </p>
-                </div>
-                
-                <iframe class="aspect-video drop-shadow-xl/80 w-full max-w-3xl rounded-lg" 
-                    src="https://www.youtube.com/embed/n5ELukmUB14" allowfullscreen>
+        <div id="comandos" class="container">
+            <div class="texto-container">
+                <h1 class="titulo-container">
+                    Como Funciona a Aba de Comandos?
+                </h1>
+                <p>
+                    Este vídeo tutorial ensina você a utilizar funcionalidades como <b>bloqueio, desbloqueio</b> e ter acesso ao <b>histórico de comandos</b> proporcionando controle total sobre o seu carro de maneira simples e segura.
+                </p>
+            </div>
+            <div class="frame-16-9">
+            <iframe
+                    src="https://www.youtube.com/embed/inwnAz3WPWk"
+                    frameborder="0"
+                    allowfullscreen>
                 </iframe>
+            </div>
         </div>
 
-        <div id="comandos" class="bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg flex flex-col items-center gap-y-6 my-8 p-5 ">
-                <div class="text-white max-w-2xl">
-                    <h1 class="text-center text-shadow-lg/80 text-cyan-300 text-3xl font-bold mb-4">Como Funciona a Cerca no Site da Boltech</h1>
-                    <p class="text-lg font-sans-serif">
-                        Este vídeo tutorial ensina você a utilizar funcionalidades como <b>bloqueio, desbloqueio</b> e ter acesso ao <b>histórico de comandos</b> proporcionando controle total sobre o seu carro de maneira simples e segura.
-                    </p>
-                </div>
-                
-                <iframe class="aspect-video drop-shadow-xl/80 w-full max-w-3xl rounded-lg" 
-                    src="https://www.youtube.com/embed/inwnAz3WPWk" allowfullscreen>
+        <div id="his-velo" class="container">
+            <div class="texto-container">
+                <h1 class="titulo-container">
+                    Como Ver o Historico de Velocidade
+                </h1>
+                <p>
+                    Este vídeo tutorial mostra como visualizar <b>registros detalhados das velocidades atingidas</b>, ajudando você a monitorar o historico do seu carro e garantir uma condução segura.
+                </p>
+            </div>
+            <div class="frame-16-9">
+            <iframe
+                    src="https://www.youtube.com/embed/QilouF2asJU"
+                    frameborder="0"
+                    allowfullscreen>
                 </iframe>
+            </div>
         </div>
 
-        <div id="his-velo" class="bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg flex flex-col items-center gap-y-6 my-8 p-5 ">
-                <div class="text-white max-w-2xl">
-                    <h1 class="text-center text-shadow-lg/80 text-cyan-300 text-3xl font-bold mb-4">Como Ver o Historico de Velocidade</h1>
-                    <p class="text-lg font-sans-serif">
-                        Este vídeo tutorial mostra como visualizar <b>registros detalhados das velocidades atingidas</b>, ajudando você a monitorar o historico do seu carro e garantir uma condução segura.
-                    </p>
-                </div>
-                
-                <iframe class="aspect-video drop-shadow-xl/80 w-full max-w-3xl rounded-lg" 
-                    src="https://www.youtube.com/embed/QilouF2asJU" allowfullscreen>
+        <div id="odometro" class="container">
+            <div class="texto-container">
+                <h1 class="titulo-container">
+                    Como Ver o Historico do Odometro
+                </h1>
+                <p>
+                    Este vídeo tutorial ensina você a acessar informações detalhadas sobre a <b>quilometragem percorrida</b>, ajudando no monitoramento e manutenção do seu carro.
+                </p>
+            </div>
+            <div class="frame-16-9">
+            <iframe
+                    src="https://www.youtube.com/embed/UomszKHWIzM"
+                    frameborder="0"
+                    allowfullscreen>
                 </iframe>
-        </div>
-        
-        <div id="odometro" class="bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg flex flex-col items-center gap-y-6 my-8 p-5 ">
-                <div class="text-white max-w-2xl">
-                    <h1 class="text-center text-shadow-lg/80 text-cyan-300 text-3xl font-bold mb-4">Como Ver o Historico do Odometro</h1>
-                    <p class="text-lg font-sans-serif">
-                        Este vídeo tutorial ensina você a acessar informações detalhadas sobre a <b>quilometragem percorrida</b>, ajudando no monitoramento e manutenção do seu carro.
-                    </p>
-                </div>
-                
-                <iframe class="aspect-video drop-shadow-xl/80 w-full max-w-3xl rounded-lg" 
-                    src="https://www.youtube.com/embed/UomszKHWIzM" allowfullscreen>
-                </iframe>
+            </div>
         </div>
 
-        <div id="link-compar" class="bg-gradient-to-r from-[#7ed957]/70 to-[#007e50] backdrop-blur-[5px] rounded-lg flex flex-col items-center gap-y-6 my-8 p-5 ">
-                <div class="text-white max-w-2xl">
-                    <h1 class="text-center text-shadow-lg/80 text-cyan-300 text-3xl font-bold mb-4">Como Criar um Link de Compartilhamento do Site da Boltech</h1>
-                    <p class="text-lg font-sans-serif">
-                        Este vídeo tutorial mostra como <b>gerar e compartilhar links</b> de forma rápida e segura, permitindo que você <b>compartilhe o rastreio com quem desejar</b>.
-                    </p>
-                </div>
-                
-                <iframe class="aspect-video drop-shadow-xl/80 w-full max-w-3xl rounded-lg" 
-                    src="https://www.youtube.com/embed/TVKzYrLIQUk" allowfullscreen>
+        <div id="link-compar" class="container">
+            <div class="texto-container">
+                <h1 class="titulo-container">
+                    Como Criar um Link de Compartilhamento do Site da Boltech
+                </h1>
+                <p>
+                    Este vídeo tutorial mostra como <b>gerar e compartilhar links</b> de forma rápida e segura, permitindo que você <b>compartilhe o rastreio com quem desejar</b>.
+                </p>
+            </div>
+            <div class="frame-16-9">
+            <iframe
+                    src="https://www.youtube.com/embed/TVKzYrLIQUk"
+                    frameborder="0"
+                    allowfullscreen>
                 </iframe>
+            </div>
         </div>
-        
-        <button id="whatsapp" onclick="openWhatsApp()" class="cursor-pointer group fixed flex items-center gap-2 right-5 bottom-5 bg-green-500 border-4 border-white rounded-full overflow-hidden transition-all duration-300 ease-in-out w-14 h-14 hover:w-48 animationzap group-hover:no-zap shadow-lg">
-            <div class="h-12 w-12 flex justify-center items-center transition-all duration-300 transform group-hover:translate-x-2 ">
+        </div>
+        <button id="whatsapp" onclick="openWhatsApp()" class="botao-whatsapp animationzap">
+            <div class="conteudo-whatsapp">
                 <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="48px" height="48px" fill-rule="evenodd" clip-rule="evenodd"><path fill="#fff" d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z"/><path fill="#fff" d="M4.868,43.803c-0.132,0-0.26-0.052-0.355-0.148c-0.125-0.127-0.174-0.312-0.127-0.483l2.639-9.636c-1.636-2.906-2.499-6.206-2.497-9.556C4.532,13.238,13.273,4.5,24.014,4.5c5.21,0.002,10.105,2.031,13.784,5.713c3.679,3.683,5.704,8.577,5.702,13.781c-0.004,10.741-8.746,19.48-19.486,19.48c-3.189-0.001-6.344-0.788-9.144-2.277l-9.875,2.589C4.953,43.798,4.911,43.803,4.868,43.803z"/><path fill="#cfd8dc" d="M24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,4C24.014,4,24.014,4,24.014,4C12.998,4,4.032,12.962,4.027,23.979c-0.001,3.367,0.849,6.685,2.461,9.622l-2.585,9.439c-0.094,0.345,0.002,0.713,0.254,0.967c0.19,0.192,0.447,0.297,0.711,0.297c0.085,0,0.17-0.011,0.254-0.033l9.687-2.54c2.828,1.468,5.998,2.243,9.197,2.244c11.024,0,19.99-8.963,19.995-19.98c0.002-5.339-2.075-10.359-5.848-14.135C34.378,6.083,29.357,4.002,24.014,4L24.014,4z"/><path fill="#40c351" d="M35.176,12.832c-2.98-2.982-6.941-4.625-11.157-4.626c-8.704,0-15.783,7.076-15.787,15.774c-0.001,2.981,0.833,5.883,2.413,8.396l0.376,0.597l-1.595,5.821l5.973-1.566l0.577,0.342c2.422,1.438,5.2,2.198,8.032,2.199h0.006c8.698,0,15.777-7.077,15.78-15.776C39.795,19.778,38.156,15.814,35.176,12.832z"/><path fill="#fff" fill-rule="evenodd" d="M19.268,16.045c-0.355-0.79-0.729-0.806-1.068-0.82c-0.277-0.012-0.593-0.011-0.909-0.011c-0.316,0-0.83,0.119-1.265,0.594c-0.435,0.475-1.661,1.622-1.661,3.956c0,2.334,1.7,4.59,1.937,4.906c0.237,0.316,3.282,5.259,8.104,7.161c4.007,1.58,4.823,1.266,5.693,1.187c0.87-0.079,2.807-1.147,3.202-2.255c0.395-1.108,0.395-2.057,0.277-2.255c-0.119-0.198-0.435-0.316-0.909-0.554s-2.807-1.385-3.242-1.543c-0.435-0.158-0.751-0.237-1.068,0.238c-0.316,0.474-1.225,1.543-1.502,1.859c-0.277,0.317-0.554,0.357-1.028,0.119c-0.474-0.238-2.002-0.738-3.815-2.354c-1.41-1.257-2.362-2.81-2.639-3.285c-0.277-0.474-0.03-0.731,0.208-0.968c0.213-0.213,0.474-0.554,0.712-0.831c0.237-0.277,0.316-0.475,0.474-0.791c0.158-0.317,0.079-0.594-0.04-0.831C20.612,19.329,19.69,16.983,19.268,16.045z" clip-rule="evenodd"/>
                 </svg>
             </div>
-                <span class="ml-2 font-bold text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">Solicite Suporte</span>
+            <span class="texto-whatsapp">Solicite Suporte</span>
         </button>
+    </div>
+</div>
 
+</body>
 <script>
-    let menuOpen = false; 
+        // ===== Helpers do menu =====
+    function getMenuEl() {
+    return document.getElementById('Menu');
+    }
+    function isMenuOpen() {
+    const menu = getMenuEl();
+    return menu && menu.classList.contains('menu-aberto');
+    }
+    function openMenu() {
+    const menu = getMenuEl();
+    if (!menu) return;
+    if (!isMenuOpen()) {
+        menu.classList.remove('menu-fechado');
+        menu.classList.add('menu-aberto');
+    }
+    }
+    function closeMenu() {
+    const menu = getMenuEl();
+    if (!menu) return;
+    if (isMenuOpen()) {
+        menu.classList.remove('menu-aberto');
+        menu.classList.add('menu-fechado');
+    }
+    }
+    // Mantém seu botão funcionando:
     function toggleMenu() {
-        const menu = document.getElementById('Menu');
-        menuOpen = !menuOpen; 
-        
-        if (menuOpen) {
-        menu.classList.remove('max-w-0');
-        menu.classList.add('max-w-[400px]');
-        menu.classList.add('w-80')
+    if (isMenuOpen()) closeMenu(); else openMenu();
+    }
+
+    // ===== Lógica de swipe =====
+    // Regras:
+    // - swipe horizontal real (ignora arrastos principalmente verticais)
+    // - > 50px para acionar
+    let startX = null;
+    let startY = null;
+    const SWIPE_THRESHOLD = 50;
+
+    document.addEventListener('touchstart', function (e) {
+    const t = e.changedTouches[0];
+    startX = t.clientX;
+    startY = t.clientY;
+    }, { passive: true });
+
+    document.addEventListener('touchend', function (e) {
+    if (startX === null || startY === null) return;
+
+    const t = e.changedTouches[0];
+    const dx = t.clientX - startX;   // + direita, - esquerda
+    const dy = t.clientY - startY;
+
+    // Garante que é um gesto principalmente horizontal
+    const isMostlyHorizontal = Math.abs(dx) > Math.abs(dy);
+
+    if (isMostlyHorizontal && Math.abs(dx) >= SWIPE_THRESHOLD) {
+        if (dx < 0) {
+        // Esquerda: fecha se estiver aberto
+        if (isMenuOpen()) closeMenu();
         } else {
-        menu.classList.remove('max-w-[400px]');
-        menu.classList.add('max-w-0');
+        // Direita: abre se estiver fechado
+        if (!isMenuOpen()) openMenu();
         }
     }
+
+    startX = null;
+    startY = null;
+    }, { passive: true });
 
     function openWhatsApp() {
-        const url = `https://wa.me/5541987879447?text=Ol%C3%A1%2C%20solicito%20ajuda%20do%20suporte!`;
-        window.open(url, '_blank');
-    }
-
-    function closeMenuIfOpen() {
-        const menu = document.getElementById('Menu');
-        if (menuOpen) {
-            menu.classList.remove('max-w-[400px]');
-            menu.classList.add('max-w-0');
-            menuOpen = false;
-        }
+    const url = `https://wa.me/5541987879447?text=Ol%C3%A1%2C%20solicito%20ajuda%20do%20suporte!`;
+    window.open(url, '_blank');
     }
 
     function scrollToSection(id) {
