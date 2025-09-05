@@ -1054,7 +1054,7 @@
                 section.classList.remove('highlight-remove');
             }, 300);
             }, 1000);
-            closeMenuIfOpen();
+            closeMenu();
         }
         }
 </script>
