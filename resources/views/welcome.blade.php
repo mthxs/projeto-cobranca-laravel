@@ -786,14 +786,14 @@
             </div>
             <div class="frame-9-16">
             <iframe
-                    src="https://youtube.com/embed/f4Nj-831WSA"
+                    src="https://youtube.com/embed/l4Do1nVvdQ0"
                     frameborder="0"
                     allowfullscreen>
                 </iframe>
             </div>
         </div>
 
-        <div id="bloq" class="container">
+        <div id="bloq" class="container"> 
             <div class="texto-container">
                 <h1 class="titulo-container">
                     Como Funciona o Bloqueio?
@@ -804,7 +804,7 @@
             </div>
             <div class="frame-9-16">
             <iframe
-                    src="https://youtube.com/embed/91yPx5y_cdU"
+                    src="https://youtube.com/embed/ghBbBvK8qGM"
                     frameborder="0"
                     allowfullscreen>
                 </iframe>
@@ -822,7 +822,7 @@
             </div>
             <div class="frame-9-16">
             <iframe
-                    src="https://youtube.com/embed/-tOuNVb796o"
+                    src="https://youtube.com/embed/7pPoU6JRRu4"
                     frameborder="0"
                     allowfullscreen>
                 </iframe>
@@ -840,7 +840,7 @@
             </div>
             <div class="frame-16-9">
             <iframe
-                    src="https://www.youtube.com/embed/9QYpimkkZdo"
+                    src="https://www.youtube.com/embed/IvgAT2g7RI0"
                     frameborder="0"
                     allowfullscreen>
                 </iframe>
@@ -858,7 +858,7 @@
             </div>
             <div class="frame-16-9">
             <iframe
-                    src="https://www.youtube.com/embed/AqKxVdtIwxM"
+                    src="https://www.youtube.com/embed/0algrvxvn9g"
                     frameborder="0"
                     allowfullscreen>
                 </iframe>
@@ -876,7 +876,7 @@
             </div>
             <div class="frame-16-9">
             <iframe
-                    src="https://www.youtube.com/embed/n5ELukmUB14"
+                    src="https://www.youtube.com/embed/hVk9wq0n04c"
                     frameborder="0"
                     allowfullscreen>
                 </iframe>
@@ -894,7 +894,7 @@
             </div>
             <div class="frame-16-9">
             <iframe
-                    src="https://www.youtube.com/embed/inwnAz3WPWk"
+                    src="https://www.youtube.com/embed/RAl4Duoi3KA"
                     frameborder="0"
                     allowfullscreen>
                 </iframe>
@@ -912,7 +912,7 @@
             </div>
             <div class="frame-16-9">
             <iframe
-                    src="https://www.youtube.com/embed/QilouF2asJU"
+                    src="https://www.youtube.com/embed/FoOdR_6hQ2E"
                     frameborder="0"
                     allowfullscreen>
                 </iframe>
@@ -930,7 +930,7 @@
             </div>
             <div class="frame-16-9">
             <iframe
-                    src="https://www.youtube.com/embed/UomszKHWIzM"
+                    src="https://www.youtube.com/embed/oJshHvWlGqs"
                     frameborder="0"
                     allowfullscreen>
                 </iframe>
@@ -948,7 +948,7 @@
             </div>
             <div class="frame-16-9">
             <iframe
-                    src="https://www.youtube.com/embed/TVKzYrLIQUk"
+                    src="https://www.youtube.com/embed/eDpE6OYQZvw"
                     frameborder="0"
                     allowfullscreen>
                 </iframe>
